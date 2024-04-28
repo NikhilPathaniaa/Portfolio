@@ -1,7 +1,4 @@
-div {
-  margin: 0;
-  line-height: inherit;
-}
+
 .bg-homeBg {
   background-image: url('../public/images/background/bg.jpg');
   display: flex;

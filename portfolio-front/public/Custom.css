@@ -160,13 +160,13 @@ input:-webkit-autofill:focus {
 	border-radius: 50%;
 }
 
-/* .close-light {
-	background-image: url(../images/icons/closelight.jpg);
+.close-light {
+	background-image: url(./images/icons/closelight.jpg);
 }
 
 .close-dark {
-	background-image: url(../images/icons/closeDark.png);
-} */
+	background-image: url(./images/icons/closeDark.png);
+}
 
 .modal a.close-modal {
 	display: none;

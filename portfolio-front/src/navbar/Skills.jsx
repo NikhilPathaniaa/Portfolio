@@ -1,14 +1,14 @@
 import React from 'react'
 
-const AboutOne = () => {
+const Skills = () => {
   return (
     <div>
-      <a className='menu-active' href="aboutOne.html">
+      <a className='menu-item' href="aboutOne.html">
                         <span className="mr-2 text-xl">
                             <i className="fa-regular fa-user"></i>
-                        </span>About </a>
+                        </span>Skills</a>
     </div>
   )
 }
 
-export default AboutOne
+export default Skills

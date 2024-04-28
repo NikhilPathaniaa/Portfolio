@@ -3,9 +3,9 @@ import React from 'react'
 const PortfiloOne = () => {
   return (
     <div>
-        <a class="mobile-menu-items" href="portfiloOne.html">
-                        <span class="mr-2 text-xl">
-                            <i class="fas fa-briefcase"></i>
+        <a className="menu-item" href="portfiloOne.html">
+                        <span className="mr-2 text-xl">
+                            <i className="fas fa-briefcase"></i>
                         </span>Works </a>
     </div>
   )

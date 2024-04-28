@@ -4,26 +4,27 @@ import ResumeOne from '../navbar/ResumeOne'
 import PortfiloOne from '../navbar/PortfiloOne'
 import ContactOne from '../navbar/ContactOne'
 import '../styles/Navbar.css'
-import Skills from './Skills'
+import Skills from '../navbar/Skills'
 
 const Nav = () => {
   return (
+
     <header className='lg:w-[560px] h-[144px] hidden lg:block p-[30px] ml-auto mb-10 rounded-[16px] bg-white' >
         <nav className='hidden lg:block' id="navbar">
-            <ul>
-                <li className='menu-active'>
+            <ul className="flex">
+                <li>
                     <AboutOne/>
                 </li>
-                <li className='menu-item'>
+                <li>
                     <Skills/>
                 </li>
-                <li className='menu-item'>
+                <li >
                     <ResumeOne/>
                 </li>
-                <li className='menu-item'>
+                <li>
                     <PortfiloOne/>  
                 </li>
-                <li className='menu-item'>
+                <li>
                     <ContactOne/> 
                 </li>
             </ul>

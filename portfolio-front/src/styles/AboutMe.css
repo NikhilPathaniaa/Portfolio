@@ -1,11 +1,4 @@
-.container1
-{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    /* border: 2px solid black; */
-    height: 700px;
-}
+
 .profile-photo
 {
     height: 240px;
