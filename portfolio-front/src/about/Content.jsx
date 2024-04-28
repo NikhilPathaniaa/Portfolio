@@ -2,11 +2,20 @@ import React from 'react'
 
 const Content = () => {
   return (
-    <div>
-        <h1>About Me</h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit tenetur facere quam nam? Ab animi temporibus, earum quibusdam harum ipsa vero. Qui, facilis at ipsum, cumque quia, excepturi atque laboriosam veritatis neque voluptatum voluptates ab. Perferendis esse ratione asperiores earum repellendus. Dicta ab nulla perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum temporibus atque error velit itaque consequatur voluptatem asperiores maxime blanditiis, quaerat minima magni in, repellat aut similique quia voluptate perspiciatis nemo. Facilis labore voluptates molestiae at consequatur, molestias atque. Exercitationem nesciunt, accusantium vitae quidem facere ex! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint natus voluptates, incidunt numquam quibusdam minus ea perspiciatis reprehenderit adipisci perferendis ullam maxime? Error dicta aspernatur sapiente tempore nemo adipisci? Necessitatibus fugiat magnam eligendi aliquam sequi reiciendis! Molestiae soluta quo blanditiis odit, ab mollitia quaerat quidem.
-        </p>
+    <div class="lg:grid grid-cols-12 md:gap-10 pt-4 md:pt-[30px] items-center hidden">
+      <h2 class="after-effect after:left-52">About Me</h2>
+                                <div class="col-span-12 space-y-2.5">
+                                    <div class="lg:mr-16">
+                                        <p class="text-[#44566c] dark:text-color-910 leading-7"> I'm Creative Director
+                                            and UI/UX Designer from Sydney, Australia, working in web development and
+                                            print media. I enjoy turning complex problems into simple, beautiful and
+                                            intuitive designs. </p>
+                                        <p class="text-[#44566c] leading-7 mt-2.5 dark:text-color-910"> My aim is to
+                                            bring across your message and identity in the most creative way. I created
+                                            web design for many famous brand companies. </p>
+                                    </div>
+                                    <div></div>
+                                </div>
     </div>
   )
 }

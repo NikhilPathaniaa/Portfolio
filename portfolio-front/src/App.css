@@ -4,16 +4,21 @@ div {
 }
 .bg-homeBg {
   background-image: url('../public/images/background/bg.jpg');
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
   width: 100%;
   min-height: 100vh;
+
+  /* display: flex;
+  align-items: center;
+  justify-content: space-around; */
 }
 .container
 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-left: 10%;
 }

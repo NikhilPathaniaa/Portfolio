@@ -6,8 +6,11 @@
     /* border: 2px solid black; */
     height: 700px;
 }
-img
+.profile-photo
 {
-    height: 200px;
-    width: 200px;
+    height: 240px;
+    width: 240px;
+    transform: translateX(50%);
+    border-radius: 20px;
+    filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 }
