@@ -16,6 +16,10 @@ const NavBar = () => {
                                 </span>About
                             </Link>
                         </li>
+                        <li><a className="menu-item" href="blogOne.html">
+                                <span className="text-xl mb-1">
+                                    <i className="fa-brands fa-blogger"></i>
+                                </span> Skills </a></li>
                         <li> <a className="menu-item" href="resumeOne.html">
                                 <span className="text-xl mb-1">
                                     <i className="fa-regular fa-file-lines"></i>
@@ -27,10 +31,7 @@ const NavBar = () => {
                                 </span>work
                             </Link>
                         </li>
-                        <li><a className="menu-item" href="blogOne.html">
-                                <span className="text-xl mb-1">
-                                    <i className="fa-brands fa-blogger"></i>
-                                </span> Blogs </a></li>
+
                         <li>
                             <Link className="menu-active" to="/Contact">
                                 <span className="text-xl mb-1">

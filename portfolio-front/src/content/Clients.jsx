@@ -11,30 +11,6 @@ const Clients = () => {
                                     <img className="overflow-hidden brand-img" src="images/slider/brand.png"
                                         alt="brand icon" />
                                 </div>
-                                <div>
-                                    <img className="overflow-hidden brand-img" src="images/slider/brand1.png"
-                                        alt="brand icon" />
-                                </div>
-                                <div>
-                                    <img className="overflow-hidden brand-img" src="images/slider/brand2.png"
-                                        alt="brand icon" />
-                                </div>
-                                <div>
-                                    <img className="overflow-hidden brand-img" src="images/slider/brand3.png"
-                                        alt="brand icon" />
-                                </div>
-                                <div>
-                                    <img className="overflow-hidden brand-img" src="images/slider/brand4.png"
-                                        alt="brand icon" />
-                                </div>
-                                <div>
-                                    <img className="overflow-hidden brand-img" src="images/slider/brand1.png"
-                                        alt="brand icon" />
-                                </div>
-                                <div>
-                                    <img className="overflow-hidden brand-img" src="images/slider/brand1.png"
-                                        alt="brand icon" />
-                                </div>
                             </div>
                         </div>
                     </div>
