@@ -11,6 +11,7 @@ import Portfolio from "./portfilo/Portfolio";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from "./navigation/About";
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -45,6 +46,7 @@ function App() {
                     
                     
                     {/* <Portfolio/> */}
+
                     {/* <Contact/> */}
                     <Footer/>
                 </div>

@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
-const PopUp1 = () => {
+const PopUp1 = ({onClose}) => {
+    const modelRef = useRef();
+
+    const closeModel = (e) => {
+        if(modelRef.current === e.target)
+        {
+            onClose();
+        }
+    }
   return (
-    <div id="portfiloOne" className="modal-container modal">
+    <div ref={modelRef} onClick={closeModel} id="portfiloOne" className="modal-container model bg-black ">
     <div
         className="overflow-y-scroll scroll-hide-1700  max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight">
         <h2 className="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">
@@ -19,7 +27,7 @@ const PopUp1 = () => {
                 <p className="dark:text-white flex items-center text-[15px] sm:text-lg">
                     <i className="fa-solid fa-code text-lg mr-2 hidden sm:block"></i>
                     Langages :&nbsp;
-                    <span className="font-medium">Photoshop, Figma</span>
+                    <span className="font-medium">Wordpress</span>
                 </p>
             </div>
 
@@ -27,7 +35,7 @@ const PopUp1 = () => {
                 <p
                     className="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg">
                     <i className="fa-regular fa-user text-lg mr-2 hidden sm:block"></i>
-                    Client :&nbsp; <span className="font-medium">Envato</span>
+                    Client :&nbsp; <span className="font-medium">Sandeep Singh</span>
                 </p>
                 <p className="dark:text-white flex items-center text-[15px] sm:text-lg">
                     <i
@@ -35,9 +43,10 @@ const PopUp1 = () => {
                     Preview :&nbsp;
                     <span
                         className="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
-                        <a href="https://www.envato.com/" target="_blank"
-                            rel="noopener noreferrer">www.envato.com</a>
+                        <a href="https://khabarfilhaal.com/" target="_blank"
+                            rel="noopener noreferrer">www.khabarfilhaal.com</a>
                     </span>
+                    
                 </p>
             </div>
         </div>
@@ -57,8 +66,7 @@ const PopUp1 = () => {
                 src="images/work_images/1.jpg" alt="portfolio image" />
         </div>
     </div>
-    <a href="#close-modal" rel="modal:close"
-        className="close bg-close-light dark:bg-close-dark">Close</a>
+    <button onClick={onClose} className="close bg-close-light dark:bg-close-dark">Close</button>
 </div>
   )
 }

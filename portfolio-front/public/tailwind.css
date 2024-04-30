@@ -1008,13 +1008,13 @@ video {
 }
 
 .modal-container {
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  display: none;
+  /* display: inline-block; */
   width: 100%;
   --tw-translate-x: -50%;
   --tw-translate-y: -50%;
