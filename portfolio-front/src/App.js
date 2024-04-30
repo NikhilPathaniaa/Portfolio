@@ -10,7 +10,7 @@ import Nav1 from "./mobileResponsive/Nav1";
 import Portfolio from "./portfilo/Portfolio";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from "./navigation/About";
-
+import Skills from "./skills/Display";
 
 function App() {
   return (
@@ -41,7 +41,7 @@ function App() {
                     <Route path='/Contact' element={<Contact/>}></Route>
                     {/* <Route path='/Resume' element={<Cart/>}></Route> */}
               
-                    {/* <Route path='/Skills' element={<Skills/>}></Route> */}
+                    <Route path='/Skills' element={<Skills/>}></Route>
                 </Routes>
                     
                     

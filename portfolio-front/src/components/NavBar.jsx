@@ -16,10 +16,13 @@ const NavBar = () => {
                                 </span>About
                             </Link>
                         </li>
-                        <li><a className="menu-item" href="blogOne.html">
+                        <li>
+                            <Link className="menu-active" to="/Skills">
                                 <span className="text-xl mb-1">
-                                    <i className="fa-brands fa-blogger"></i>
-                                </span> Skills </a></li>
+                                    <i className="fa-regular fa-user"></i>
+                                </span>Skills
+                            </Link>
+                        </li>
                         <li> <a className="menu-item" href="resumeOne.html">
                                 <span className="text-xl mb-1">
                                     <i className="fa-regular fa-file-lines"></i>
