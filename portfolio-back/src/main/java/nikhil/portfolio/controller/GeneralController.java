@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import nikhil.portfolio.dto.Clients;
+import nikhil.portfolio.dto.Comments;
 import nikhil.portfolio.helper.ResponseStructur;
 import nikhil.portfolio.service.ClientService;
 
@@ -32,4 +33,15 @@ public class GeneralController {
 		return new ResponseEntity<ResponseStructur>(service.findAllRecords(),HttpStatus.NOT_FOUND);
 	}
 	
+	@PostMapping("/add/Comment")
+	public ResponseEntity<ResponseStructur> saveComment(@RequestBody Comments comments) {
+		System.out.println(comments);
+		return new ResponseEntity<ResponseStructur>(service.saveComments(comments),HttpStatus.NOT_FOUND);
+	}
+	
+	@GetMapping("/find/Comment")
+	public ResponseEntity<ResponseStructur> fetchComments() {
+		
+		return new ResponseEntity<ResponseStructur>(service.findAllComments(),HttpStatus.NOT_FOUND);
+	}
 }

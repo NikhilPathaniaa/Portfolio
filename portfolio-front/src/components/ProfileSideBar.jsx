@@ -30,7 +30,7 @@ const ProfileSideBar = () => {
                     </div>
                     {/* personal infomation end*/}
                     {/* dowanload button */}
-                    <button className="dowanload-btn"><img className="mr-3" src="images/icons/dowanload.png" alt="icon" /> Download CV </button>
+                    <button className="dowanload-btn"><img className="mr-3" src="images/icons/dowanload.png" alt="icon" /> Download Resume </button>
                 </div>
             </div>
         </div>

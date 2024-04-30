@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 import nikhil.portfolio.dao.ClientDao;
 import nikhil.portfolio.dto.Clients;
+import nikhil.portfolio.dto.Comments;
 import nikhil.portfolio.helper.ResponseStructur;
 
 @Component
@@ -39,6 +40,27 @@ public class ClientService {
 		}
 		return structure;
 		
+	}
+
+	public ResponseStructur saveComments(Comments comments) {
+		dao.saveComments(comments);
+		return structure;
+	}
+
+	public ResponseStructur findAllComments() {
+		List<Comments> list1 =  dao.findAllCommnets();
+		
+		if(list1.isEmpty())
+		{
+			System.out.print("data not found exception");
+		}
+		else
+		{
+			structure.setMessage("Data founded Success");
+			structure.setStatus(HttpStatus.FOUND.value());
+			structure.setData(list1);
+		}
+		return structure;
 	}
 
 }

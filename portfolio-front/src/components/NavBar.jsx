@@ -16,32 +16,37 @@ const NavBar = () => {
                                 </span>About
                             </Link>
                         </li>
-                        <li>
-                            <Link className="menu-active" to="/Skills">
-                                <span className="text-xl mb-1">
-                                    <i className="fa-regular fa-user"></i>
-                                </span>Skills
-                            </Link>
-                        </li>
-                        <li> <a className="menu-item" href="resumeOne.html">
+                        
+                        <li> 
+                            <Link className="menu-item" to="/Resume">
                                 <span className="text-xl mb-1">
                                     <i className="fa-regular fa-file-lines"></i>
-                                </span> Resume </a></li>
+                                </span>Resume
+                            </Link>
+                        </li>
                         <li> 
-                            <Link className="menu-active" to="/Portfolio">
+                            <Link className="menu-item" to="/Portfolio">
                                 <span className="text-xl mb-1">
-                                    <i className="fa-regular fa-user"></i>
+                                    <i className="fas fa-briefcase "></i>
                                 </span>work
                             </Link>
                         </li>
 
                         <li>
-                            <Link className="menu-active" to="/Contact">
+                            <Link className="menu-item" to="/Contact">
                                 <span className="text-xl mb-1">
-                                    <i className="fa-regular fa-user"></i>
+                                    <i className="fa-solid fa-address-book"></i>
                                 </span>Contact
                             </Link>
 
+                        </li>
+
+                        <li>
+                            <Link className="menu-item" to="/Skills">
+                                <span className="text-xl mb-1">
+                                    <i className="fa-brands fa-blogger"></i>
+                                </span>Admin
+                            </Link>
                         </li>
                     </ul>
                 </nav>
