@@ -1,6 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Contact = () => {
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+    const handleSubmit  = (e) => {
+        e.preventDefault()
+        const data = {name,email,message}
+        console.log(data);
+        
+        fetch("http://localhost/add",{
+            method:"POST",
+            headers:{"content-Type":"application/json"},
+            body:JSON.stringify(data)
+        })
+            .then(console.log("new data added"))
+            .catch((error)=> console.log(error))   
+    }
+
   return (
     <div className="bg-white lg:rounded-2xl dark:bg-[#111111]">
     <h2 className="after-effect after:left-60 after:top-[76px] mb-12 md:mb-[30px] pl-4 md:pl-[60px] pt-12">
@@ -14,7 +33,7 @@ const Contact = () => {
             <span className="font-semibold dark:text-white">design work or partnerships.</span>
         </h3>
 
-        <form action="#" method="POST">
+        <form>
             <div className="returnmessage"
                 data-success="Your message has been received, We will contact you soon."></div>
             <div className="empty_notice">
@@ -23,9 +42,12 @@ const Contact = () => {
 
             {/* <!-- name input  --> */}
             <div className="relative z-0 w-full mt-[40px] mb-8 group">
-                <input type="text" id="name" name="name"
+                <input type="text" id="name" name="name" 
+                value={name} 
+                onChange={(e)=>setName(e.target.value)}
                     className="block autofill:bg-transparent py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#FF6464] peer"
                     placeholder=" " required="" />
+                
                 <label for="name"
                     className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FF6464] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
                     Name * </label>
@@ -34,6 +56,8 @@ const Contact = () => {
             {/* <!-- email input  --> */}
             <div className="relative z-0 w-full mb-8 group">
                 <input type="email" name="email"
+                value={email}  
+                onChange={(e) => setEmail(e.target.value)}
                     className="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#5185D4] peer"
                     placeholder=" " id="email" required="" />
                 <label for="email"
@@ -44,6 +68,8 @@ const Contact = () => {
             {/* <!-- message input  --> */}
             <div className="relative z-0 w-full mb-8 group">
                 <input type="text" name="message"
+                value={message}
+                onChange={(e)=>setMessage(e.target.value)}
                     className="block py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#CA56F2] peer"
                     placeholder=" " id="message" required="" />
                 <label for="message"
@@ -52,9 +78,10 @@ const Contact = () => {
             </div>
 
             {/* <!-- submit buttons --> */}
-            <input type="submit"
+            <input type='submit' onClick= {handleSubmit}
                 className="px-6 py-2 rounded-lg border-[2px] mt-3 border-color-910 font-semibold cursor-pointer hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:text-white transition-colors duration-300 ease-in-out hover:border-transparent dark:text-white"
-                value="Submit" />
+            />
+            
         </form>
     </div>
 </div>
