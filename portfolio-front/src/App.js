@@ -2,15 +2,18 @@ import DayNight from "./components/DayNight";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import ProfileSideBar from "./components/ProfileSideBar";
+import Contact from "./contact/Contact";
 import AboutMe from "./content/AboutMe";
 import Clients from "./content/Clients";
 import Service from "./content/Service";
 import Nav1 from "./mobileResponsive/Nav1";
 import Portfolio from "./portfilo/Portfolio";
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import About from "./navigation/About";
 
 function App() {
   return (
+    <BrowserRouter>
 <div className="bg-homeBg dark:bg-homeTwoBg-dark min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
     
     <DayNight/>
@@ -23,6 +26,7 @@ function App() {
         {/* sidber personal info */}
         <ProfileSideBar/>
         <div className="col-span-12 lg:col-span-8">
+            
             {/* header for mobile devices start */}
             <NavBar/>
             {/* header for mobile devices end */}
@@ -30,22 +34,25 @@ function App() {
             {/* about me section start */}
             <div>
                 <div className="lg:rounded-2xl bg-white dark:bg-[#111111]">
-                    <AboutMe/>
-
-                    {/* what i do section start */}
-                    <Service/>
-                    {/* what i do section ends */}
+                <Routes>
+                    <Route path='/About' element={<About/>}></Route>  
+                    <Route path='/Portfolio' element={<Portfolio/>}></Route>
+                    <Route path='/Contact' element={<Contact/>}></Route>
+                    {/* <Route path='/Resume' element={<Cart/>}></Route> */}
+              
+                    {/* <Route path='/Skills' element={<Logo/>}></Route> */}
+                </Routes>
                     
-                    {/* clients section start */}
-                    <Clients/>  
-                    {/* clients section start */}
-                    <Portfolio/>
-                <Footer/>
+                    
+                    {/* <Portfolio/> */}
+                    {/* <Contact/> */}
+                    <Footer/>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</BrowserRouter>
   );
 }
 

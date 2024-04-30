@@ -99,8 +99,6 @@ const Portfolio = () => {
                                 <a href="#close-modal" rel="modal:close"
                                     className="close bg-close-light dark:bg-close-dark">Close</a>
                             </div>
-
-                            
                         </div>
                     </div>
                 </section>
