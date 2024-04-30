@@ -6,6 +6,7 @@ import AboutMe from "./content/AboutMe";
 import Clients from "./content/Clients";
 import Service from "./content/Service";
 import Nav1 from "./mobileResponsive/Nav1";
+import Portfolio from "./portfilo/Portfolio";
 
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
                     {/* clients section start */}
                     <Clients/>  
                     {/* clients section start */}
-
+                    <Portfolio/>
                 <Footer/>
                 </div>
             </div>
