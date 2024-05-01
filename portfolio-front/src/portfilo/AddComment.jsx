@@ -17,6 +17,7 @@ const AddComment = (props) => {
         })
             .then(console.log("new data added"))
             .catch((error)=> console.log(error))   
+
     }
 
   return (

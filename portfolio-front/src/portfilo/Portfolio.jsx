@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import PopUp1 from './PopUp1';
-import Post2 from './Post2';
-import Close from './Close';
+// import Post2 from './Post2';
+// import Close from './Close';
 
 const Portfolio = (props) => {
 
     const [showModel, setShowModel] = useState(false);
-
   return (
     <>
     <div className="portfolio_list-two-items isotop-item plugin custom ">

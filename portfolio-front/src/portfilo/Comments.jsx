@@ -1,10 +1,9 @@
 import ShowComment from './ShowComment'
 import AddComment from './AddComment'
-import React, { useEffect, useReducer, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Comments = (props) => {
 
-  // const [reducerValue, forceUpdate] = useReducer(x => x+1, 0)
   const [data,setData] = useState([]);
 
     useEffect(()=>{
@@ -23,6 +22,7 @@ const Comments = (props) => {
       }
       fetchComments()
     },[])
+
   return (
     <>
     {/* <p>{time.toLocaleTimeString()}</p> */}
@@ -32,6 +32,7 @@ const Comments = (props) => {
         name={values.name}
         message= {values.message}
         time={values.time}
+        
       />
     ))}
         
