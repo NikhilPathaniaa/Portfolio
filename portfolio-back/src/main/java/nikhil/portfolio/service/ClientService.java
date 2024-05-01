@@ -1,6 +1,7 @@
 package nikhil.portfolio.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -92,6 +93,27 @@ public class ClientService {
 			structure.setData(list1);
 		}
 		return structure;
+	}
+
+	public List<Comments> getCommentsByPostId(Integer postId) {
+		return  cdao.findByPostId(postId);
+	}
+
+	public ResponseStructur saveCommentById(Integer postId, Comments comment) {
+	       Optional<Post> postOptional = pdao.findCommentById(postId);
+	        if (!postOptional.isPresent()) {
+	            return null; // Post not found
+	        }
+
+	        // Associate the comment with the post
+	        Post post = postOptional.get();
+	        comment.setPost(post);
+
+	        // Save the comment
+	        Comments savedComment = cdao.saveComment(comment);
+
+	        // Return success response
+	        return structure;
 	}
 
 }

@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import Comments from './Comments';
 
-const PopUp1 = ({onClose,additionalProp }) => {
+const PopUp1 = ({onClose,additionalProp,additionalProp1}) => {
     const modelRef = useRef();
 
     const closeModel = (e) => {
@@ -15,7 +15,7 @@ const PopUp1 = ({onClose,additionalProp }) => {
     <div className="dark:scrollbarDark scrollbarLight overflow-y-scroll max-h-[60vh] lg:max-h-[80vh]">
     <div className="pr-3 pb-2">
         <h2 className="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">
-            Web Developer Project
+            Web Developer Project {additionalProp1}
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 my-6 pr-3">
             <div className="space-y-2">
@@ -67,7 +67,7 @@ const PopUp1 = ({onClose,additionalProp }) => {
                 src="images/work_images/1.jpg" alt="portfolio image" />
         </div>
     </div>
-        <Comments/>
+        <Comments id={additionalProp1}/>
     </div>
 
     

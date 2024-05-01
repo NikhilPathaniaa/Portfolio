@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const AddComment = () => {
+const AddComment = (props) => {
 
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
@@ -10,7 +10,7 @@ const AddComment = () => {
         const data = {name,message}
         console.log(data);
         
-        fetch("http://localhost/add/Comment",{
+        fetch(`http://localhost/add/${props.id}`,{
             method:"POST",
             headers:{"content-Type":"application/json"},
             body:JSON.stringify(data)

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Portfolio from './Portfolio'
-import Post2 from './Post2';
 
 const FilterPortfolio = () => {
     

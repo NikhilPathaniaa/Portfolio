@@ -1,5 +1,7 @@
 package nikhil.portfolio.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -57,4 +59,21 @@ public class GeneralController {
 		
 		return new ResponseEntity<ResponseStructur>(service.findAllPost(),HttpStatus.NOT_FOUND);
 	}
+	
+	
+	 @PostMapping("/add/{postId}")
+	    public ResponseEntity<ResponseStructur> saveCommentByPostId(@PathVariable Integer postId, @RequestBody Comments comment) {
+	        ResponseStructur response = service.saveCommentById(postId, comment);
+	        if (response != null) {
+	            return new ResponseEntity<>(response, HttpStatus.CREATED);
+	        } else {
+	            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+	        }
+	    }
+	
+	 @GetMapping("/post/{postId}")
+	    public ResponseEntity<List<Comments>> getCommentsByPostId(@PathVariable Integer postId) {
+	        List<Comments> comments = service.getCommentsByPostId(postId);
+	        return new ResponseEntity<>(comments, HttpStatus.OK);
+	    }
 }

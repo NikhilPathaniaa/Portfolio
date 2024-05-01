@@ -1,22 +1,27 @@
 import ShowComment from './ShowComment'
 import AddComment from './AddComment'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useReducer, useState } from 'react'
 
-const Comments = () => {
+const Comments = (props) => {
 
-  
+  // const [reducerValue, forceUpdate] = useReducer(x => x+1, 0)
   const [data,setData] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost/Comment')
-        .then(res=>res.json())
-        .then(result=>{
-            setData(result.data);
-        })
-        .catch(error => {
+      const fetchComments = async () => {
+      try {
+        const response = await fetch(`http://localhost/post/${props.id}`)
+        if (!response.ok) {
+          throw new Error('Failed to fetch comments');
+        }
+        const data = await response.json();
+        setData(data);
+      }
+        catch (error) {
             console.error('Error fetching data:', error);
-        });
-    
+        }
+      }
+      fetchComments()
     },[])
   return (
     <>
@@ -30,7 +35,7 @@ const Comments = () => {
       />
     ))}
         
-        <AddComment/>
+        <AddComment id={props.id}/>
     </>
   )
 }

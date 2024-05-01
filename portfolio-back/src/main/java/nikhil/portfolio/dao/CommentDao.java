@@ -27,4 +27,14 @@ public class CommentDao {
 		return commentRepository.findAll();
 	}
 
+	public List<Comments> findByPostId(Integer postId) {
+		// TODO Auto-generated method stub
+		return commentRepository.findByPostId(postId);
+	}
+
+	public Comments saveComment(Comments comment) {
+		// TODO Auto-generated method stub
+		return commentRepository.save(comment);
+	}
+
 }

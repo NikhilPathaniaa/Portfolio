@@ -3,6 +3,8 @@ package nikhil.portfolio.dto;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -21,5 +23,6 @@ public class Post {
 	 private String title;
 	 
 	 @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	 @JsonManagedReference
 	    private List<Comments> comments = new ArrayList<>();
 }

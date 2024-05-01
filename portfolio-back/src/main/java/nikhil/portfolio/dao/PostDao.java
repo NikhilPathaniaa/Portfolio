@@ -1,6 +1,7 @@
 package nikhil.portfolio.dao;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -20,6 +21,11 @@ public class PostDao {
 
 	public List<Post> findAllPost() {
 		return repository.findAll();
+	}
+
+	public Optional<Post> findCommentById(Integer postId) {
+		
+		return repository.findById(postId);
 	}
 
 }
