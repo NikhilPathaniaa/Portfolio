@@ -5,12 +5,14 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import nikhil.portfolio.dto.Clients;
 import nikhil.portfolio.dto.Comments;
+import nikhil.portfolio.dto.Post;
 import nikhil.portfolio.helper.ResponseStructur;
 import nikhil.portfolio.service.ClientService;
 
@@ -43,5 +45,16 @@ public class GeneralController {
 	public ResponseEntity<ResponseStructur> fetchComments() {
 		
 		return new ResponseEntity<ResponseStructur>(service.findAllComments(),HttpStatus.NOT_FOUND);
+	}
+	
+	@PostMapping("/add/post")
+    public ResponseEntity<ResponseStructur> savePost(@RequestBody Post post) {
+        return new ResponseEntity<ResponseStructur>(service.savePost(post), HttpStatus.NOT_FOUND);
+    }
+	
+	@GetMapping("find/Post")
+	public ResponseEntity<ResponseStructur> fetchPost() {
+		
+		return new ResponseEntity<ResponseStructur>(service.findAllPost(),HttpStatus.NOT_FOUND);
 	}
 }

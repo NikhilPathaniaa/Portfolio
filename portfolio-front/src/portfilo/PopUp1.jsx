@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import Comments from './Comments';
 
-const PopUp1 = ({onClose}) => {
+const PopUp1 = ({onClose,additionalProp }) => {
     const modelRef = useRef();
 
     const closeModel = (e) => {
@@ -11,9 +11,9 @@ const PopUp1 = ({onClose}) => {
         }
     }
   return (
-    <div ref={modelRef} onClick={closeModel} id="portfiloOne" className="modal-container model bg-black ">
-    <div
-        className="overflow-y-scroll scroll-hide-1700  max-h-[60vh] lg:max-h-[80vh] dark:scrollbarDark scrollbarLight">
+    <div ref={modelRef} onClick={closeModel} id="portfiloOne" className="modal-container model popup">
+    <div className="dark:scrollbarDark scrollbarLight overflow-y-scroll max-h-[60vh] lg:max-h-[80vh]">
+    <div className="pr-3 pb-2">
         <h2 className="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">
             Web Developer Project
         </h2>
@@ -23,7 +23,7 @@ const PopUp1 = ({onClose}) => {
                     <i
                         className="fa-regular fa-file-lines sm:text-lg hidden sm:block mr-4 md:text-xl"></i>
                     Project :&nbsp;
-                    <span className="font-medium"> Website</span>
+                    <span className="font-medium"> {additionalProp }</span>
                 </p>
                 <p className="dark:text-white flex items-center text-[15px] sm:text-lg">
                     <i className="fa-solid fa-code text-lg mr-2 hidden sm:block"></i>
@@ -31,7 +31,7 @@ const PopUp1 = ({onClose}) => {
                     <span className="font-medium">Wordpress</span>
                 </p>
             </div>
-
+           
             <div className="space-y-2">
                 <p
                     className="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px] sm:text-lg">
@@ -51,7 +51,7 @@ const PopUp1 = ({onClose}) => {
                 </p>
             </div>
         </div>
-
+    
         <p className="dark:text-white text-2line font-normal text-[15px] sm:text-sm">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Mollitia placeat magnam possimus iusto blanditiis pariatur
@@ -66,6 +66,7 @@ const PopUp1 = ({onClose}) => {
             <img className="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6"
                 src="images/work_images/1.jpg" alt="portfolio image" />
         </div>
+    </div>
         <Comments/>
     </div>
 

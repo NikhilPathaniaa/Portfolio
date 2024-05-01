@@ -4,11 +4,12 @@ import NavBar from "./components/NavBar";
 import ProfileSideBar from "./components/ProfileSideBar";
 import Contact from "./contact/Contact";
 import Nav1 from "./mobileResponsive/Nav1";
-import Portfolio from "./portfilo/Portfolio";
+// import Portfolio from "./portfilo/Portfolio";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from "./navigation/About";
 import Skills from "./skills/Display";
 import Resume from "./resume/Resume";
+import FilterPortfolio from "./portfilo/FilterPortfolio";
 
 function App() {
   return (
@@ -36,7 +37,7 @@ function App() {
                 <Routes>
                     <Route path='/' element={<About/>}></Route> 
                     <Route path='/About' element={<About/>}></Route>  
-                    <Route path='/Portfolio' element={<Portfolio/>}></Route>
+                    <Route path='/Portfolio' element={<FilterPortfolio/>}></Route>
                     <Route path='/Contact' element={<Contact/>}></Route>
                     <Route path='/Resume' element={<Resume/>}></Route>
               
