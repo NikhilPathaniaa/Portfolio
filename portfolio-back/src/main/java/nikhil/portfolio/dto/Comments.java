@@ -1,5 +1,9 @@
 package nikhil.portfolio.dto;
 
+import java.time.LocalDateTime;
+
+import org.hibernate.annotations.CreationTimestamp;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,4 +19,15 @@ public class Comments {
 	private int id;
 	private String name;
 	private String message;
+	 
+	@CreationTimestamp
+	private LocalDateTime time;
+	
+    public LocalDateTime getTime() {
+        return time;
+    }
+
+    public void setTime(LocalDateTime time) {
+        this.time = time;
+    }
 }

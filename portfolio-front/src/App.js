@@ -3,9 +3,6 @@ import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import ProfileSideBar from "./components/ProfileSideBar";
 import Contact from "./contact/Contact";
-import AboutMe from "./content/AboutMe";
-import Clients from "./content/Clients";
-import Service from "./content/Service";
 import Nav1 from "./mobileResponsive/Nav1";
 import Portfolio from "./portfilo/Portfolio";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -46,10 +43,6 @@ function App() {
                     <Route path='/Skills' element={<Skills/>}></Route>
                 </Routes>
                     
-                    
-                    {/* <Portfolio/> */}
-
-                    {/* <Contact/> */}
                     <Footer/>
                 </div>
             </div>

@@ -1,5 +1,6 @@
 package nikhil.portfolio.service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
 import nikhil.portfolio.dao.ClientDao;
+import nikhil.portfolio.dao.CommentDao;
 import nikhil.portfolio.dto.Clients;
 import nikhil.portfolio.dto.Comments;
 import nikhil.portfolio.helper.ResponseStructur;
@@ -16,6 +18,9 @@ public class ClientService {
 
 	@Autowired
 	ClientDao dao;
+	
+	@Autowired
+	CommentDao cdao;
 	
 	@Autowired
 	ResponseStructur structure;
@@ -43,12 +48,13 @@ public class ClientService {
 	}
 
 	public ResponseStructur saveComments(Comments comments) {
-		dao.saveComments(comments);
+		cdao.saveComments(comments);
+		
 		return structure;
 	}
 
 	public ResponseStructur findAllComments() {
-		List<Comments> list1 =  dao.findAllCommnets();
+		List<Comments> list1 =  cdao.findAllCommnets();
 		
 		if(list1.isEmpty())
 		{

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-
+import ClientsCount from './ClientsCount';
 const Display = () => {
 
     const [data1,setData] = useState([]);
@@ -18,23 +18,16 @@ const Display = () => {
 
   return (
     
-    <div>
-        <div className="lg:grid grid-cols-12 md:gap-10 pt-4 md:pt-[30px] items-center hidden">
-                            <div className="col-span-12 space-y-2.5">
-                                <div className="lg:mr-16">
-                                    {data1.map(values =>(
-                                    <div key={values.id}>
-                                    Id: {values.id}
-                                    Name: {values.name}
-                                    Email: {values.email}
-                                    Message: {values.message}
-                                    </div>
-                                    ))}
-
-                                </div>
-                            </div>
-                        </div>
-    </div>
+        <>
+        {data1.map(values =>(
+        <ClientsCount key={values.id}
+        id={values.id}
+        name={values.name}
+        email={values.email}
+        message={values.message}
+        />                                                       
+        ))}
+    </>
   )
 }
 

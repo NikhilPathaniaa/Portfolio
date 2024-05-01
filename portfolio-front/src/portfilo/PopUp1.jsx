@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import Comments from './Comments';
 
 const PopUp1 = ({onClose}) => {
     const modelRef = useRef();
@@ -65,7 +66,10 @@ const PopUp1 = ({onClose}) => {
             <img className="w-full md:h-[450px] h-auto object-cover rounded-xl mt-6"
                 src="images/work_images/1.jpg" alt="portfolio image" />
         </div>
+        <Comments/>
     </div>
+
+    
     <button onClick={onClose} className="close bg-close-light dark:bg-close-dark">Close</button>
 </div>
   )

@@ -39,7 +39,7 @@ public class GeneralController {
 		return new ResponseEntity<ResponseStructur>(service.saveComments(comments),HttpStatus.NOT_FOUND);
 	}
 	
-	@GetMapping("/find/Comment")
+	@GetMapping("/Comment")
 	public ResponseEntity<ResponseStructur> fetchComments() {
 		
 		return new ResponseEntity<ResponseStructur>(service.findAllComments(),HttpStatus.NOT_FOUND);

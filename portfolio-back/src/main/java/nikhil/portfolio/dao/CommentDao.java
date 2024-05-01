@@ -5,13 +5,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import nikhil.portfolio.dto.Clients;
 import nikhil.portfolio.dto.Comments;
 import nikhil.portfolio.repository.ClientRepository;
 import nikhil.portfolio.repository.CommentRepository;
 
 @Component
-public class ClientDao {
+public class CommentDao {
 	
 	@Autowired
 	ClientRepository repository;
@@ -19,14 +18,13 @@ public class ClientDao {
 	@Autowired
 	CommentRepository commentRepository;
 	
-	public void save(Clients clients) {
-		repository.save(clients);
+	public void saveComments(Comments comments) {
+		commentRepository.save(comments);
 		
 	}
 
-	public List<Clients> findAllRecords() {
-		
-		return repository.findAll();
+	public List<Comments> findAllCommnets() {
+		return commentRepository.findAll();
 	}
 
 }
