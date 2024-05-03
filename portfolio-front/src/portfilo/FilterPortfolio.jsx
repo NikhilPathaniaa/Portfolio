@@ -31,6 +31,7 @@ const FilterPortfolio = () => {
                             key={values.id}
                             id={values.id}
                             title={values.title}
+                            image={values.image}
                             />
                             ))}
                 </div>

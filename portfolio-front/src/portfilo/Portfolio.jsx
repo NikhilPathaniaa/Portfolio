@@ -4,7 +4,6 @@ import PopUp1 from './PopUp1';
 // import Close from './Close';
 
 const Portfolio = (props) => {
-
     const [showModel, setShowModel] = useState(false);
   return (
     <>

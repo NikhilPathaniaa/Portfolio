@@ -21,9 +21,13 @@ public class Post {
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
 	 private int id;
 	 private String title;
-	 private String title1;
-	 private String title2;
-	 private String title4;
+	 private String client ;
+	 private String languages ;
+	 private String preview ;
+	 
+	 private String content;
+	 private String image;
+	 private String video;
 	 
 	 @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	 @JsonManagedReference

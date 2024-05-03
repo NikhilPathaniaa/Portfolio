@@ -21,7 +21,7 @@ const Comments = (props) => {
         }
       }
       fetchComments()
-    },[])
+    },[props])
 
   return (
     <>

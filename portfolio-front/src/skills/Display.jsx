@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ClientsCount from './ClientsCount';
+import PostCreator from './PostCreator';
 const Display = () => {
 
     const [data1,setData] = useState([]);
@@ -18,7 +19,7 @@ const Display = () => {
 
   return (
     
-        <>
+    <>
         {data1.map(values =>(
         <ClientsCount key={values.id}
         id={values.id}
@@ -27,6 +28,8 @@ const Display = () => {
         message={values.message}
         />                                                       
         ))}
+
+        <PostCreator/>
     </>
   )
 }
