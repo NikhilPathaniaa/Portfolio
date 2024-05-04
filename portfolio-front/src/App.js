@@ -10,12 +10,13 @@ import About from "./navigation/About";
 import Skills from "./skills/Display";
 import Resume from "./resume/Resume";
 import FilterPortfolio from "./portfilo/FilterPortfolio";
-
+import AdminMain from "./admin/AdminMain";
+import PopUp1 from "./portfilo/PopUp1";
+import PopUp2 from "./portfilo/PopUp2";
 function App() {
   return (
     <BrowserRouter>
 <div className="bg-homeBg dark:bg-homeTwoBg-dark min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
-    
     <DayNight/>
     
     {/* mobile menu start */}
@@ -35,12 +36,14 @@ function App() {
             <div>
                 <div className="lg:rounded-2xl bg-white dark:bg-[#111111]">
                 <Routes>
+                    <Route path='/Admin' element={<AdminMain/>}></Route> 
                     <Route path='/' element={<About/>}></Route> 
                     <Route path='/About' element={<About/>}></Route>  
                     <Route path='/Portfolio' element={<FilterPortfolio/>}></Route>
+                    <Route path='/PopUp' element={<PopUp2/>}></Route>
+
                     <Route path='/Contact' element={<Contact/>}></Route>
                     <Route path='/Resume' element={<Resume/>}></Route>
-              
                     <Route path='/Skills' element={<Skills/>}></Route>
                 </Routes>
                     

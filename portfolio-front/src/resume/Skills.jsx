@@ -10,7 +10,7 @@ const Skills = () => {
                                             <span className=" font-semibold text-[#526377] dark:text-[#A6A6A6">65%</span>
                                         </div>
                                         <div className="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
-                                            <div className="bg-[#FF6464] h-1 rounded-full w-65%"></div>
+                                            <div className="bg-[#FF6464] h-1 rounded-full" style={{ width: '65%' }}></div>
                                         </div>
                                     </div>
 
@@ -20,7 +20,7 @@ const Skills = () => {
                                             <span className=" font-semibold text-[#526377] dark:text-[#A6A6A6">85%</span>
                                         </div>
                                         <div className="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
-                                            <div className="bg-[#9272d4] h-1 rounded-full w-85%"></div>
+                                            <div className="bg-[#9272d4] h-1 rounded-full" style={{ width: '85%' }}></div>
                                         </div>
                                     </div>
 
@@ -31,7 +31,7 @@ const Skills = () => {
                                             <span className=" font-semibold text-[#526377] dark:text-[#A6A6A6">90%</span>
                                         </div>
                                         <div className="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
-                                            <div className="bg-[#ca56f2] h-1 rounded-full w-90%"></div>
+                                            <div className="bg-[#ca56f2] h-1 rounded-full" style={{ width: '90%' }}></div>
                                         </div>
                                     </div>
 
@@ -42,7 +42,7 @@ const Skills = () => {
                                             <span className=" font-semibold text-[#526377] dark:text-[#A6A6A6">75%</span>
                                         </div>
                                         <div className="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
-                                            <div className="bg-[#5185d4] h-1 rounded-full w-90%"></div>
+                                            <div className="bg-[#5185d4] h-1 rounded-full" style={{ width: '75%' }}></div>
                                         </div>
                                     </div>
 

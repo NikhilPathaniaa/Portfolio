@@ -1,7 +1,8 @@
 // import React, { useState } from 'react'
 import { Cloudinary } from "@cloudinary/url-gen";
 import { createContext, useEffect, useState } from "react";
-import VideoStoring from "./VideoStoring";
+
+import CloudinaryUploadWidget from "./CloudinaryUploadWidget";
 
 // Create a context to manage the script loading state
 const CloudinaryScriptContext = createContext();
@@ -95,7 +96,7 @@ const PostCreator = () => {
                 </button>
             </CloudinaryScriptContext.Provider> 
             
-            <VideoStoring image={image} uwConfig={uwConfig} setPublicId={setPublicId}/>
+            <CloudinaryUploadWidget image={image}/>
             
         
     </div>
