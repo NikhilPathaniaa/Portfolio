@@ -32,6 +32,11 @@ const FilterPortfolio = () => {
                             id={values.id}
                             title={values.title}
                             image={values.image}
+                            video={values.video}
+                            languages={values.languages}
+                            content={values.content}
+                            client={values.client}
+                            preview={values.preview}
                             />
                             ))}
                 </div>

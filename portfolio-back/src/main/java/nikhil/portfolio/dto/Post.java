@@ -24,7 +24,7 @@ public class Post {
 	 private String client ;
 	 private String languages ;
 	 private String preview ;
-	 
+	 private String theme;
 	 private String content;
 	 private String image;
 	 private String video;

@@ -12,6 +12,12 @@ const Clients = () => {
                                         alt="brand icon" />
                                 </div>
                             </div>
+                            <div className="slickOne text-center px-2 pt-8">
+                                <div>
+                                    <img className="overflow-hidden brand-img" src="images/slider/brand.png"
+                                        alt="brand icon" />
+                                </div>
+                            </div>
                         </div>
                     </div>
   )

@@ -46,6 +46,16 @@ const Skills = () => {
                                         </div>
                                     </div>
 
+                                    <div className="mb-5">
+                                        <div className="flex justify-between mb-1">
+                                            <span className=" font-semibold text-[#526377] dark:text-[#A6A6A6]">WordPress</span>
+                                            <span className=" font-semibold text-[#526377] dark:text-[#A6A6A6">85%</span>
+                                        </div>
+                                        <div className="w-full bg-[#edf2f2] rounded-full h-1 dark:bg-[#1c1c1c]">
+                                            <div className="bg-[#9272d4] h-1 rounded-full" style={{ width: '85%' }}></div>
+                                        </div>
+                                    </div>
+
                                 </div>
   )
 }

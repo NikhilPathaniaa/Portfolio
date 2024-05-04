@@ -11,8 +11,6 @@ import Skills from "./skills/Display";
 import Resume from "./resume/Resume";
 import FilterPortfolio from "./portfilo/FilterPortfolio";
 import AdminMain from "./admin/AdminMain";
-import PopUp1 from "./portfilo/PopUp1";
-import PopUp2 from "./portfilo/PopUp2";
 function App() {
   return (
     <BrowserRouter>
@@ -40,7 +38,6 @@ function App() {
                     <Route path='/' element={<About/>}></Route> 
                     <Route path='/About' element={<About/>}></Route>  
                     <Route path='/Portfolio' element={<FilterPortfolio/>}></Route>
-                    <Route path='/PopUp' element={<PopUp2/>}></Route>
 
                     <Route path='/Contact' element={<Contact/>}></Route>
                     <Route path='/Resume' element={<Resume/>}></Route>

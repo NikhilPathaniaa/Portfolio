@@ -1,18 +1,11 @@
 package nikhil.portfolio.service;
 
-import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
-import org.springframework.web.multipart.MultipartFile;
-
-import com.cloudinary.Cloudinary;
-import com.cloudinary.utils.ObjectUtils;
 
 import nikhil.portfolio.dao.ClientDao;
 import nikhil.portfolio.dao.CommentDao;
@@ -33,6 +26,7 @@ public class ClientService {
 	
 	@Autowired
 	PostDao pdao;
+	
 	
 	@Autowired
 	ResponseStructur structure;
@@ -123,5 +117,6 @@ public class ClientService {
 	        // Return success response
 	        return structure;
 	}
+
 	
 }
