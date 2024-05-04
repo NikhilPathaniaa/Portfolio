@@ -5,7 +5,6 @@ const Otp = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Call the onSubmit function with the entered OTP
     onSubmit(otp);
   };
 
@@ -14,8 +13,9 @@ const Otp = ({ onSubmit }) => {
       <div className="pr-3 pb-4">
         <form className="w-full rounded px-8 py-6" onSubmit={handleSubmit}>
           <div className="mb-4">
-            <span className="dark:text-white text-[25px] font-medium">Enter Your OTP :</span>
+            <span className="dark:text-white text-[25px] font-medium">Enter Your OTP:</span>
             <input
+              autoFocus
               value={otp}
               onChange={(e) => setOtp(e.target.value)}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -29,7 +29,7 @@ const Otp = ({ onSubmit }) => {
           <div className="flex items-center justify-between">
             <button
               type="submit"
-              className="comment-btn bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 focus:outline-none focus:shadow-outline"
+              className="bg-teal-500 hover:bg-teal-700 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             >
               Verify
             </button>

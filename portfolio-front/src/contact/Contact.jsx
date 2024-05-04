@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import Otp from './Otp';
-
+import Modal from './Modal';
 const Contact = () => {
-  const [showOtp, setShowOtp] = useState(false); // State to manage OTP popup visibility
+  const [otp, setOtp] = useState(false); // State to manage OTP popup visibility
   const [otpSubmitted, setOtpSubmitted] = useState(false); // State to track OTP submission
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  const [id, setId] = useState('');
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = { name, email, message };
@@ -21,36 +23,50 @@ const Contact = () => {
       body: JSON.stringify(data)
     })
       .then((response) => {
+        console.log(response)
         if (response.ok) {
+            console.log(response.ok)
           // If data is successfully submitted, show OTP popup
-          setShowOtp(true);
+          setOtp(true);
+          console.log('showOtp:', otp);
         }
         return response.json();
       })
-      .then((data) => console.log(data))
+      .then((data) => console.log(data)) 
       .catch((error) => console.log(error));
   };
 
   const handleOtpSubmit = (otp) => {
-    // Handle OTP submission
     console.log('Submitted OTP:', otp);
 
-    // Send OTP to the server for verification
-    fetch('http://localhost/submit-otp', {
-      method: 'POST',
-      headers: { 'content-Type': 'application/json' },
-      body: JSON.stringify({ otp })
+    // Disable submit button or show loading (implement this in your component's state)
+    setOtpSubmitted(true); // Assume you have a `setSubmitting` function tied to component state
+
+    fetch('http://localhost/submit_otp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({otp})
     })
-      .then((response) => {
-        if (response.ok) {
-          // If OTP is verified successfully
-          console.log('OTP verified successfully');
-          setOtpSubmitted(true);
+    .then(response => response.json()) // Assume the server always responds with JSON
+    .then(data => {
+        if (data.success) { // Check for a success field or similar in your server response
+            console.log('OTP verified successfully');
+            setOtpSubmitted(true);
+        } else {
+            // Handle errors like wrong OTP
+            alert(data.message || "Verification failed, please try again."); // Consider more user-friendly error handling
         }
-        return response.json();
-      })
-      .then((data) => console.log(data))
-      .catch((error) => console.log(error));
+    })
+    .catch(error => {
+        console.error('Error verifying OTP:', error);
+        alert("There was a problem with the OTP verification."); // Consider more user-friendly error handling
+    })
+    .finally(() => {
+        setOtpSubmitted(false); // Reset submission state
+    });
+};
+    const closeOtpModal = () => {
+    setOtp(false);
   };
 
   return (
@@ -133,9 +149,12 @@ const Contact = () => {
           />
         </form>
 
-        {/* Conditionally render OTP component */}
-        {showOtp && !otpSubmitted && <Otp onSubmit={handleOtpSubmit} />}
-        {otpSubmitted && <div>OTP Submitted Successfully!</div>}
+         {/* OTP Modal */}
+      <Modal isOpen={otp} close={closeOtpModal}>
+        <Otp onSubmit={handleOtpSubmit} />
+      </Modal>
+
+      {otpSubmitted && <div>OTP Submitted Successfully!</div>}
       </div>
     </div>
   );

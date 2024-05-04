@@ -39,12 +39,12 @@ public class ClientService {
 	@Autowired
 	ResponseStructur structure;
 	
-	public ResponseStructur save(Clients clients, BindingResult result, ModelMap map) {
+	public String save(Clients clients, BindingResult result, ModelMap map) {
 		if (result.hasErrors()) {
 			System.out.println("Error - There is Some Error");
 			structure.setMessage("Data founded Success");
 			structure.setStatus(HttpStatus.FOUND.value());
-			return structure;
+			return "false";
 		} else {
 			System.out.println("No Errors");
 			int otp = new Random().nextInt(100000, 999999);
@@ -57,7 +57,7 @@ public class ClientService {
 			map.put("msg", "Otp Sent Success");
 			map.put("id", clients.getId());
 			System.out.println("Control- enter-otp.html");
-			return structure;
+			return "true";
 		}
 	}
 
@@ -68,12 +68,12 @@ public class ClientService {
 			clients.setVerified(true);
 			dao.save(clients);
 			map.put("msg", "Account Created Success");
-			return "login.html";
+			return "sccuss";
 		} else {
 			System.out.println("Failure- OTP MissMatch");
 			map.put("msg", "Incorrect Otp! Try Again");
 			map.put("id", clients.getId());
-			return "enter-otp.html";
+			return "no";
 		}
 	}
 

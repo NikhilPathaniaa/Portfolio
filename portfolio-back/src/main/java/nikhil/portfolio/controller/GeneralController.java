@@ -32,12 +32,12 @@ public class GeneralController {
 	ClientService service;
 	
 	@PostMapping("/add")
-	public ResponseEntity<ResponseStructur> saveClient(@RequestBody Clients clients,BindingResult result, ModelMap map) {
+	public String saveClient(@RequestBody Clients clients,BindingResult result, ModelMap map) {
 		System.out.println(clients);
-		return new ResponseEntity<ResponseStructur>(service.save(clients,result, map),HttpStatus.NOT_FOUND);
+		return service.save(clients,result, map);
 	}
 
-	@PostMapping("/submit-otp")
+	@PostMapping("/submit_otp")
 	public String submitOtp(@RequestParam int otp, @RequestParam int id, ModelMap map) {
 		System.out.println("Control - /submit-otp Get , Recieved otp");
 		return service.submitOtp(otp, id, map);
