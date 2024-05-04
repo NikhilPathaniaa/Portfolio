@@ -26,8 +26,8 @@ const FilterPortfolio = () => {
                 <div className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-[30px] grid gap-x-10 gap-y-7 mb-6">       
                 
                             {/* portfolio items one start */}
-                            {isLoading  && data.length > 0 ? (
-                            data.map(values => (
+                            
+                            {data.map(values => (
                             <Portfolio
                             key={values.id}
                             id={values.id}
@@ -38,8 +38,8 @@ const FilterPortfolio = () => {
                             content={values.content}
                             client={values.client}
                             preview={values.preview}
-                            />))
-                        ) : (
+                            />))}
+                        {/* ) : (
                             <div className="portfolio_list-two-items isotop-item plugin custom ">
                             <div
                                 className="rounded-lg bg-[#fff0f0] p-6 dark:bg-transparent dark:border-[2px] border-[#212425]">
@@ -55,11 +55,11 @@ const FilterPortfolio = () => {
                                 </button>
                             </div>
                             </div>
-                        )}
+                        )}*/}
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
 
     </>
 

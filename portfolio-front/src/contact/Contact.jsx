@@ -1,15 +1,10 @@
 import React, { useState } from 'react';
-import Otp from './Otp';
-import Modal from './Modal';
-const Contact = () => {
-  const [otp, setOtp] = useState(false); // State to manage OTP popup visibility
-  const [otpSubmitted, setOtpSubmitted] = useState(false); // State to track OTP submission
 
+const Contact = () => {
+ 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-
-  const [id, setId] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,50 +17,9 @@ const Contact = () => {
       headers: { 'content-Type': 'application/json' },
       body: JSON.stringify(data)
     })
-      .then((response) => {
-        console.log(response)
-        if (response.ok) {
-            console.log(response.ok)
-          // If data is successfully submitted, show OTP popup
-          setOtp(true);
-          console.log('showOtp:', otp);
-        }
-        return response.json();
-      })
-      .then((data) => console.log(data.id)) 
+      .then((response) => {return response.json()})
+      .then((data) => console.log(data)) 
       .catch((error) => console.log(error));
-  };
-  const handleOtpSubmit = (otp) => {
-    console.log('Submitted OTP:', otp);
-
-    // Disable submit button or show loading (implement this in your component's state)
-    setOtpSubmitted(true); // Assume you have a `setSubmitting` function tied to component state
-
-    fetch('http://localhost/submitOtp', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({otp,id})
-    })
-    .then(response => response.json()) // Assume the server always responds with JSON
-    .then(data => {
-        if (data.success) { // Check for a success field or similar in your server response
-            console.log('OTP verified successfully');
-            setOtpSubmitted(true);
-        } else {
-            // Handle errors like wrong OTP
-            alert(data.message || "Verification failed, please try again."); // Consider more user-friendly error handling
-        }
-    })
-    .catch(error => {
-        console.error('Error verifying OTP:', error);
-        alert("There was a problem with the OTP verification."); // Consider more user-friendly error handling
-    })
-    .finally(() => {
-        setOtpSubmitted(false); // Reset submission state
-    });
-};
-    const closeOtpModal = () => {
-    setOtp(false);
   };
 
   return (
@@ -147,13 +101,6 @@ const Contact = () => {
             className="px-6 py-2 rounded-lg border-[2px] mt-3 border-color-910 font-semibold cursor-pointer hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:text-white transition-colors duration-300 ease-in-out hover:border-transparent dark:text-white"
           />
         </form>
-
-         {/* OTP Modal */}
-      <Modal isOpen={otp} close={closeOtpModal}>
-        <Otp onSubmit={handleOtpSubmit} id={id} />
-      </Modal>
-
-      {otpSubmitted && <div>OTP Submitted Successfully!</div>}
       </div>
     </div>
   );
