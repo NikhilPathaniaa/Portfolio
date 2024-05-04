@@ -57,11 +57,14 @@ const PopUp1 = ({onClose,id,title,video,languages,content,client,preview}) => {
             <video autoPlay muted loop>
             <source src={video} />
         </video>
+        <br/>
+        <hr/>
+        <br/>
         </div>
-        <h2 class="dark:text-white sm:text-3xl mt-2 font-medium">Title</h2>
-        <p className="dark:text-white text-2line font-normal text-[15px] sm:text-sm">
-           {content}
-        </p>
+        <p  className="dark:text-white text-2line font-normal text-[15px] sm:text-sm" dangerouslySetInnerHTML={{ __html: content }} />
+        <br/>
+        <hr/>
+        <br/>
     </div>
         <Comments id={id}/>
     </div>

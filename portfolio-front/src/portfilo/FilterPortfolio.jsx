@@ -4,12 +4,13 @@ import Portfolio from './Portfolio'
 const FilterPortfolio = () => {
     
     const [data,setData] = useState([]);
-
+    const [isLoading, setIsLoading] = useState(true);
     useEffect(()=>{
         fetch('http://localhost/find/Post')
         .then(res=>res.json())
         .then(result=>{
             setData(result.data);
+            setIsLoading(false);
         })
         .catch(error => {
             console.error('Error fetching data:', error);
@@ -25,8 +26,8 @@ const FilterPortfolio = () => {
                 <div className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-[30px] grid gap-x-10 gap-y-7 mb-6">       
                 
                             {/* portfolio items one start */}
-
-                            {data.map(values => (
+                            {isLoading  && data.length > 0 ? (
+                            data.map(values => (
                             <Portfolio
                             key={values.id}
                             id={values.id}
@@ -37,8 +38,24 @@ const FilterPortfolio = () => {
                             content={values.content}
                             client={values.client}
                             preview={values.preview}
-                            />
-                            ))}
+                            />))
+                        ) : (
+                            <div className="portfolio_list-two-items isotop-item plugin custom ">
+                            <div
+                                className="rounded-lg bg-[#fff0f0] p-6 dark:bg-transparent dark:border-[2px] border-[#212425]">
+                                <div className="overflow-hidden rounded-lg">
+                                        <img className="w-full z-0 cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto"
+                                            src="../images/errors/noContent.png" alt="portfolio image" />
+                                </div>
+                                <span
+                                    className="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]">No Post Yet</span>
+                                <button
+                                    className="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2">
+                                     No Post Yet
+                                </button>
+                            </div>
+                            </div>
+                        )}
                 </div>
             </div>
         </div>

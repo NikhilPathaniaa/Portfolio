@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react'
 const Comments = (props) => {
 
   const [data,setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
     useEffect(()=>{
       const fetchComments = async () => {
@@ -15,6 +16,7 @@ const Comments = (props) => {
         }
         const data = await response.json();
         setData(data);
+        setIsLoading(false);
       }
         catch (error) {
             console.error('Error fetching data:', error);
@@ -26,15 +28,25 @@ const Comments = (props) => {
   return (
     <>
     {/* <p>{time.toLocaleTimeString()}</p> */}
-    {data.map(values => (
-      <ShowComment
-        key={values.id}
-        name={values.name}
-        message= {values.message}
-        time={values.time}
+
+    {isLoading  && data.length > 0 ? (
+        data.map((values) => (
+          <ShowComment
+            key={values.id}
+            name={values.name}
+            message={values.message}
+            time={values.time}
+          />
+        ))
+      ) : (
+        <div className="rounded-lg mt-6 bg-gradient-to-r from-[#FA5252] to-[#DD2476] p-[1px] mr-3">
+          <div className="dark:bg-[#232220] bg-[#ffffff] flex p-4 rounded-lg">
+            <p>No comments yet.</p> 
+          </div>
+        </div>
         
-      />
-    ))}
+      )}
+
         
         <AddComment id={props.id}/>
     </>

@@ -1,6 +1,10 @@
-import { useState } from "react";
+import React, { useState, useRef } from 'react';
+import JoditEditor from 'jodit-react';
 
-const PostCreator = () => {
+const PostCreator = ({ placeholder }) => {
+
+
+    const editor = useRef(null);
 
     const [title, setTitle] = useState("");
     const [client, setClient] = useState("");  
@@ -96,13 +100,14 @@ const PostCreator = () => {
     </div>
     {/* <!-- message input  --> */}
     <div className="relative z-0 w-full mb-8 group">
-        <textarea type="" name="content"
-        value={content}
-        onChange={(e)=>setContent(e.target.value)}
-            className="block py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#CA56F2] peer"
-            placeholder=" " id="message" required="" />
+    <JoditEditor className="block autofill:bg-transparent py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#FF6464] peer"
+			ref={editor}
+			value={content}
+			tabIndex={1} // tabIndex of textarea
+			onChange={newContent => setContent(newContent)} // preferred to use only this option to update the content for performance reasons
+		/>
         <label for="message"
-            className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#CA56F2] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
+            className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#CA56F2] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8 ">
             Content * </label>
     </div>
 

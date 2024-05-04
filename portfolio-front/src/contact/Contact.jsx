@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Otp from './Otp';
 
 const Contact = () => {
 
@@ -33,7 +34,7 @@ const Contact = () => {
             <span className="font-semibold dark:text-white">design work or partnerships.</span>
         </h3>
 
-        <htmlForm>
+        <form>
             <div className="returnmessage"
                 data-success="Your message has been received, We will contact you soon."></div>
             <div className="empty_notice">
@@ -48,8 +49,8 @@ const Contact = () => {
                     className="block autofill:bg-transparent py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#FF6464] peer"
                     placeholder=" " required="" />
                 
-                <label htmlFor="name"
-                    className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transhtmlForm -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FF6464] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
+                <label for="name"
+                    className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#FF6464] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
                     Name * </label>
             </div>
 
@@ -60,8 +61,8 @@ const Contact = () => {
                 onChange={(e) => setEmail(e.target.value)}
                     className="block autofill:text-red-900 needed py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#5185D4] peer"
                     placeholder=" " id="email" required="" />
-                <label htmlFor="email"
-                    className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transhtmlForm -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
+                <label for="email"
+                    className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#5185D4] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
                     Email * </label>
             </div>
 
@@ -72,8 +73,8 @@ const Contact = () => {
                 onChange={(e)=>setMessage(e.target.value)}
                     className="block py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#CA56F2] peer"
                     placeholder=" " id="message" required="" />
-                <label htmlFor="message"
-                    className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transhtmlForm -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#CA56F2] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
+                <label for="message"
+                    className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#CA56F2] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
                     Message * </label>
             </div>
 
@@ -81,8 +82,9 @@ const Contact = () => {
             <input type='submit' onClick= {handleSubmit}
                 className="px-6 py-2 rounded-lg border-[2px] mt-3 border-color-910 font-semibold cursor-pointer hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:text-white transition-colors duration-300 ease-in-out hover:border-transparent dark:text-white"
             />
+            <Otp/>
             
-        </htmlForm>
+        </form>
     </div>
 </div>
   )
