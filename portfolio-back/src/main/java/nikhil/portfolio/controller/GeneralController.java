@@ -5,15 +5,19 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cloudinary.Url;
 
+import jakarta.servlet.http.HttpSession;
 import nikhil.portfolio.dto.Clients;
 import nikhil.portfolio.dto.Comments;
 import nikhil.portfolio.dto.Post;
@@ -28,9 +32,20 @@ public class GeneralController {
 	ClientService service;
 	
 	@PostMapping("/add")
-	public ResponseEntity<ResponseStructur> saveClient(@RequestBody Clients clients) {
+	public ResponseEntity<ResponseStructur> saveClient(@RequestBody Clients clients,BindingResult result, ModelMap map) {
 		System.out.println(clients);
-		return new ResponseEntity<ResponseStructur>(service.save(clients),HttpStatus.NOT_FOUND);
+		return new ResponseEntity<ResponseStructur>(service.save(clients,result, map),HttpStatus.NOT_FOUND);
+	}
+
+	@PostMapping("/submit-otp")
+	public String submitOtp(@RequestParam int otp, @RequestParam int id, ModelMap map) {
+		System.out.println("Control - /submit-otp Get , Recieved otp");
+		return service.submitOtp(otp, id, map);
+	}
+
+	@GetMapping("/resend-otp/{id}")
+	public String resendOtp(@PathVariable int id, ModelMap map) {
+		return service.resendOtp(id, map);
 	}
 	
 	@GetMapping("/find")
@@ -78,4 +93,12 @@ public class GeneralController {
 	        List<Comments> comments = service.getCommentsByPostId(postId);
 	        return new ResponseEntity<>(comments, HttpStatus.OK);
 	    }
+	 
+	 	
+
+		@PostMapping("/login")
+		public String login(@RequestParam("email_mobile") String emph, @RequestParam String password, ModelMap map,
+				HttpSession session) {
+			return service.login(emph, password, map, session);
+		}
 }

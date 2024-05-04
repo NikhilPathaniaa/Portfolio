@@ -29,4 +29,11 @@ public class ClientDao {
 		return repository.findAll();
 	}
 
+
+
+	public Clients findUserById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

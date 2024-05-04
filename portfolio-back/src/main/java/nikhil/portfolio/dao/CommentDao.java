@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import nikhil.portfolio.dto.Clients;
 import nikhil.portfolio.dto.Comments;
 import nikhil.portfolio.repository.ClientRepository;
 import nikhil.portfolio.repository.CommentRepository;
