@@ -32,20 +32,9 @@ public class GeneralController {
 	ClientService service;
 	
 	@PostMapping("/add")
-	public String saveClient(@RequestBody Clients clients,BindingResult result, ModelMap map) {
+	public String saveClient(@RequestBody Clients clients) {
 		System.out.println(clients);
-		return service.save(clients,result, map);
-	}
-
-	@PostMapping("/submit_otp")
-	public String submitOtp(@RequestParam int otp, @RequestParam int id, ModelMap map) {
-		System.out.println("Control - /submit-otp Get , Recieved otp");
-		return service.submitOtp(otp, id, map);
-	}
-
-	@GetMapping("/resend-otp/{id}")
-	public String resendOtp(@PathVariable int id, ModelMap map) {
-		return service.resendOtp(id, map);
+		return service.save(clients);
 	}
 	
 	@GetMapping("/find")

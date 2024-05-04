@@ -39,57 +39,9 @@ public class ClientService {
 	@Autowired
 	ResponseStructur structure;
 	
-	public String save(Clients clients, BindingResult result, ModelMap map) {
-		if (result.hasErrors()) {
-			System.out.println("Error - There is Some Error");
-			structure.setMessage("Data founded Success");
-			structure.setStatus(HttpStatus.FOUND.value());
-			return "false";
-		} else {
-			System.out.println("No Errors");
-			int otp = new Random().nextInt(100000, 999999);
-			System.out.println("Otp Generated - " + otp);
-			clients.setOtp(otp);
-			dao.save(clients);
-			System.out.println("Data is Saved in db");
-			emailHelper.sendOtp(clients);
-			System.out.println("Otp is Sent to Email " + clients.getEmail());
-			map.put("msg", "Otp Sent Success");
-			map.put("id", clients.getId());
-			System.out.println("Control- enter-otp.html");
-			return "true";
-		}
-	}
-
-	public String submitOtp(int otp, int id, ModelMap map) {
-		Clients clients = dao.findUserById(id);
-		if (otp == clients.getOtp()) {
-			System.out.println("Success- OTP Matched");
-			clients.setVerified(true);
-			dao.save(clients);
-			map.put("msg", "Account Created Success");
-			return "sccuss";
-		} else {
-			System.out.println("Failure- OTP MissMatch");
-			map.put("msg", "Incorrect Otp! Try Again");
-			map.put("id", clients.getId());
-			return "no";
-		}
-	}
-
-	public String resendOtp(int id, ModelMap map) {
-		Clients clients = dao.findUserById(id);
-		int otp = new Random().nextInt(100000, 999999);
-		System.out.println("Otp ReGenerated - " + otp);
-		clients.setOtp(otp);
+	public String save(Clients clients) {
 		dao.save(clients);
-		System.out.println("Data is Updated in db");
-		emailHelper.sendOtp(clients);
-		System.out.println("Otp is Sent to Email " + clients.getEmail());
-		map.put("msg", "Otp Sent Again, Check");
-		map.put("id", clients.getId());
-		System.out.println("Control- enter-otp.html");
-		return "enter-otp.html";
+		return "success";
 	}
 	
 	public ResponseStructur findAllRecords() {

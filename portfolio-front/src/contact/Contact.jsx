@@ -10,7 +10,7 @@ const Contact = () => {
   const [message, setMessage] = useState('');
 
   const [id, setId] = useState('');
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = { name, email, message };
@@ -32,20 +32,19 @@ const Contact = () => {
         }
         return response.json();
       })
-      .then((data) => console.log(data)) 
+      .then((data) => console.log(data.id)) 
       .catch((error) => console.log(error));
   };
-
   const handleOtpSubmit = (otp) => {
     console.log('Submitted OTP:', otp);
 
     // Disable submit button or show loading (implement this in your component's state)
     setOtpSubmitted(true); // Assume you have a `setSubmitting` function tied to component state
 
-    fetch('http://localhost/submit_otp', {
+    fetch('http://localhost/submitOtp', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({otp})
+        body: JSON.stringify({otp,id})
     })
     .then(response => response.json()) // Assume the server always responds with JSON
     .then(data => {
@@ -151,7 +150,7 @@ const Contact = () => {
 
          {/* OTP Modal */}
       <Modal isOpen={otp} close={closeOtpModal}>
-        <Otp onSubmit={handleOtpSubmit} />
+        <Otp onSubmit={handleOtpSubmit} id={id} />
       </Modal>
 
       {otpSubmitted && <div>OTP Submitted Successfully!</div>}

@@ -5,7 +5,7 @@ const Otp = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(otp);
+    onSubmit(otp); // Pass only the OTP to the onSubmit function
   };
 
   return (
@@ -21,7 +21,7 @@ const Otp = ({ onSubmit }) => {
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               style={{ border: '2px solid black' }}
               id="otp"
-              type="text"
+              type="number"
               placeholder="Enter OTP"
               required
             />
