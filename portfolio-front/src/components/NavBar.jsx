@@ -5,11 +5,11 @@ import { Link, useLocation } from 'react-router-dom'
 const NavBar = () => {
     const location = useLocation(); // Get the current location
   const [activeLink, setActiveLink] = useState(location.pathname); // Set the active link initially
-
-  // Function to handle click on the navigation links
+ 
   const handleClick = (path) => {
     setActiveLink(path); // Update active link when clicked
   };
+
 
   return (
                 <header
@@ -39,13 +39,13 @@ const NavBar = () => {
                             </Link>
                         </li>
 
-                        <li> 
+                        {/* <li> 
                             <Link className={activeLink === "/Blogs" ? "menu-active" : "menu-item"} to="/Blogs" onClick={() => handleClick("/Blogs")}>
                                 <span className="text-xl mb-1">
                                     <i className="fa-brands fa-blogger "></i>
                                 </span>Blogs
                             </Link>
-                        </li>
+                        </li> */}
 
                         <li>
                             <Link className={activeLink === "/Contact" ? "menu-active" : "menu-item"} to="/Contact" onClick={() => handleClick("/Contact")}>
@@ -62,7 +62,7 @@ const NavBar = () => {
                                     <i className="fa-brands fa-blogger"></i>
                                 </span>Admin
                             </Link>
-                        </li>
+                        </li> 
                     </ul>
                 </nav>
             </header>

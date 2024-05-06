@@ -24,7 +24,7 @@ public class Comments {
 	private int id;
 	private String name;
 	private String message;
-	 
+	private String image;
 	@CreationTimestamp
 	private LocalDateTime time;
 	

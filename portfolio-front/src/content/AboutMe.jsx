@@ -18,7 +18,9 @@ const AboutMe = () => {
                             <div
                                 className="w-full mb-6 lg:mb-0 mx-auto relative bg-white text-center dark:bg-[#111111] px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
                                 {/* profile image  */}
+                                
                                 <Image/>
+                                
                                 <div className="pt-[100px] pb-8">
                                     <h2 className="mt-6 mb-1 text-[26px] font-semibold dark:text-white"> Nikhil Pathania</h2>
                                     <Designation/>
@@ -59,6 +61,7 @@ const AboutMe = () => {
                             </div>
                         </div>
 
+                        
                     </div>
   )
 }

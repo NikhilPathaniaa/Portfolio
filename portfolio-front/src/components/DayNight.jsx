@@ -1,15 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const DayNight = () => {
   return (
     <div className="section-bg">
         <div className="w-full flex justify-between px-4">
-            {/* website Logo */}
-            <Link  to="/Admin">
-                    <img className="h-[26px] lg:h-[32px]" src="images/logo/logo.png" alt="logo" />
-            </Link>
-               
 
             <div className="flex items-center">
                 {/* dark and light mode toggle */}

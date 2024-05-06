@@ -1,17 +1,16 @@
 import DayNight from "./components/DayNight";
+import 'tailwindcss/tailwind.css';
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import ProfileSideBar from "./components/ProfileSideBar";
 import Contact from "./contact/Contact";
 import Nav1 from "./mobileResponsive/Nav1";
-// import Portfolio from "./portfilo/Portfolio";
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from "./navigation/About";
-import Skills from "./skills/Display";
 import Resume from "./resume/Resume";
 import FilterPortfolio from "./portfilo/FilterPortfolio";
 import AdminMain from "./admin/AdminMain";
-import Blogs from "./blogs/Blogs";
+import AdminLoginForm from "./admin/AdminLoginForm";
 function App() {
   return (
     <BrowserRouter>
@@ -39,10 +38,10 @@ function App() {
                     <Route path='/' element={<About/>}></Route> 
                     <Route path='/About' element={<About/>}></Route>  
                     <Route path='/Portfolio' element={<FilterPortfolio/>}></Route>
-                    <Route path='/Blogs' element={<Blogs/>}></Route>
+                    {/* <Route path='/Blogs' element={<Blogs/>}></Route> */}
                     <Route path='/Contact' element={<Contact/>}></Route>
                     <Route path='/Resume' element={<Resume/>}></Route>
-                    <Route path='/Skills' element={<Skills/>}></Route>
+                    <Route path='/Skills' element={<AdminLoginForm/>}></Route>
                 </Routes>
                     
                     <Footer/>

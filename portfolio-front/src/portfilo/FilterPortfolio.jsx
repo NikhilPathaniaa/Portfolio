@@ -4,13 +4,11 @@ import Portfolio from './Portfolio'
 const FilterPortfolio = () => {
     
     const [data,setData] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
     useEffect(()=>{
         fetch('http://localhost/find/Post')
         .then(res=>res.json())
         .then(result=>{
             setData(result.data);
-            setIsLoading(false);
         })
         .catch(error => {
             console.error('Error fetching data:', error);

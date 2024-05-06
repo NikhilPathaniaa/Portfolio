@@ -5,21 +5,39 @@ const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [submitStatus, setSubmitStatus] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const data = { name, email, message };
     console.log(data);
 
     // Send data to the server
-    fetch('http://localhost/add', {
+    try {
+      const response = await fetch('http://localhost/add', {
       method: 'POST',
       headers: { 'content-Type': 'application/json' },
       body: JSON.stringify(data)
     })
-      .then((response) => {return response.json()})
-      .then((data) => console.log(data)) 
-      .catch((error) => console.log(error));
+    if (!response.ok) {
+      throw new Error('Failed to add query or request');
+    }
+    // Clear input fields
+    setName('');
+    setEmail('');
+    setMessage('');
+
+    setSubmitStatus('success');
+    // Clear the success message after a certain time
+    setTimeout(() => setSubmitStatus(null), 3000);
+
+  }
+  catch (error) {
+    console.error('Error adding comment:', error);
+    // Set submit status to error
+    setSubmitStatus('error');
+  }    
+
   };
 
   return (
@@ -100,6 +118,10 @@ const Contact = () => {
             type="submit"
             className="px-6 py-2 rounded-lg border-[2px] mt-3 border-color-910 font-semibold cursor-pointer hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:text-white transition-colors duration-300 ease-in-out hover:border-transparent dark:text-white"
           />
+<br />
+<br />
+{submitStatus === 'success' && <span style={{ color: 'green' }} className="block mt-2 text-green-500 transform transition-all duration-500 ease-in-out animate-bounce">Message sent successfully!</span>}
+{submitStatus === 'error' && <span style={{ color: 'red' }} className="block mt-2 text-red-500 transform transition-all duration-500 ease-in-out animate-pulse">Failed to send message. Please try again later.</span>}
         </form>
       </div>
     </div>

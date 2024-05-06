@@ -21,6 +21,7 @@ import jakarta.servlet.http.HttpSession;
 import nikhil.portfolio.dto.Clients;
 import nikhil.portfolio.dto.Comments;
 import nikhil.portfolio.dto.Post;
+import nikhil.portfolio.dto.User;
 import nikhil.portfolio.helper.ResponseStructur;
 import nikhil.portfolio.service.ClientService;
 
@@ -30,6 +31,17 @@ public class GeneralController {
 
 	@Autowired
 	ClientService service;
+	
+	@PostMapping("/add-User")
+	public String saveClient(@RequestBody User user) {
+		System.out.println(user);
+		return service.saveUser(user);
+	}
+	
+	@PostMapping("/find-User")
+	public String fetchUser() {
+		return service.findUser();
+	}
 	
 	@PostMapping("/add")
 	public String saveClient(@RequestBody Clients clients) {

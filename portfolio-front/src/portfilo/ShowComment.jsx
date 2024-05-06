@@ -33,22 +33,38 @@ const ShowComment = (props) => {
   }, [props.time]);
 
 
+
+
+  const imageSize = {
+    // width: '100px', // Adjust as needed
+    height: '100px', // Adjust as needed
+  };
+
+  
+  const space = {
+    // border:'2px solid black',
+    width: '100%' // Adjust as needed
+    // marginLeft: '400px', // Adjust as needed
+
+  };
+
   return (
+
     <div className="rounded-lg mt-6 bg-gradient-to-r from-[#FA5252] to-[#DD2476] p-[1px] mr-3">
         <div className="dark:bg-[#232220] bg-[#ffffff] flex p-4 rounded-lg" key={props.id}>
                                     
-                            {/* <div>
-                                <img className="md:w-[125px] rounded-xl" src="images/about/about.jpg" alt="blog image" />
-                            </div> */}
-                            <div className="pl-5">
+                            <div>
+                                <img style={imageSize} className="md:w-[125px] rounded-xl" src={props.image} alt="alt images" />
+                            </div>
+                            <div className="pl-5" style={space}> 
                                 <div className="flex justify-between items-center">
                                     <h3 className="dark:text-white text-[22px] font-medium">{props.name}</h3>
-                                    <span className="dark:text-[#dedede] mr-10 text-tiny">{timeDiff}</span>
+                                    <span className="dark:text-[#dedede] mr-10 text-tiny self-end" >{timeDiff}</span>
                                 </div>
                                 <p className="dark:text-white md:pr-16">{props.message}</p>
                                 {/* <button className="dark:text-[#dedede] text-tiny hover:text-[#FA5252] dark:hover:text-[#FA5252]">Reply</button> */}
                
-            </div>
+                            </div>
         </div>
     </div>
   )

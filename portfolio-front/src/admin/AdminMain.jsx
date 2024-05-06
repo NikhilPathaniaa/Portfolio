@@ -1,11 +1,9 @@
 import React from 'react'
-import ClientsCount from '../skills/ClientsCount'
-import Login from './Login'
+import Display from '../skills/Display'
 const AdminMain = () => {
   return (
     <div>
-        <Login/>
-        <ClientsCount/>
+        <Display/>
     </div>
   )
 }

@@ -12,10 +12,13 @@ import jakarta.servlet.http.HttpSession;
 import nikhil.portfolio.dao.ClientDao;
 import nikhil.portfolio.dao.CommentDao;
 import nikhil.portfolio.dao.PostDao;
+import nikhil.portfolio.dao.UserDao;
 import nikhil.portfolio.dto.Clients;
 import nikhil.portfolio.dto.Comments;
 import nikhil.portfolio.dto.Post;
+import nikhil.portfolio.dto.User;
 import nikhil.portfolio.helper.ResponseStructur;
+import nikhil.portfolio.repository.ClientRepository;
 
 @Component
 public class ClientService {
@@ -29,6 +32,8 @@ public class ClientService {
 	@Autowired
 	PostDao pdao;
 	
+	@Autowired
+	UserDao udao;
 
 	
 	@Autowired
@@ -126,6 +131,28 @@ public class ClientService {
 	public String login(String emph, String password, ModelMap map, HttpSession session) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+
+	public String findUser() {
+		List<User> list =  udao.findUser();
+		
+		if(list.isEmpty())
+		{
+			System.out.print("data not found exception");
+		}
+		else
+		{
+			structure.setMessage("Data founded Success");
+			structure.setStatus(HttpStatus.FOUND.value());
+			structure.setData(list);
+		}
+		return "finded";
+	}
+
+	public String saveUser(User user) {
+		udao.saveUser(user);
+		return "success";
 	}
 
 	
