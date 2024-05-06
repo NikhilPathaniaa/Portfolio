@@ -39,6 +39,14 @@ const NavBar = () => {
                             </Link>
                         </li>
 
+                        <li> 
+                            <Link className={activeLink === "/Blogs" ? "menu-active" : "menu-item"} to="/Blogs" onClick={() => handleClick("/Blogs")}>
+                                <span className="text-xl mb-1">
+                                    <i className="fa-brands fa-blogger "></i>
+                                </span>Blogs
+                            </Link>
+                        </li>
+
                         <li>
                             <Link className={activeLink === "/Contact" ? "menu-active" : "menu-item"} to="/Contact" onClick={() => handleClick("/Contact")}>
                                 <span className="text-xl mb-1">

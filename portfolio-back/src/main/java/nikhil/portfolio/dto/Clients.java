@@ -15,6 +15,4 @@ public class Clients {
 	private String name;
 	private String email;
 	private String message;
-	private int otp;
-	private boolean verified;
 }

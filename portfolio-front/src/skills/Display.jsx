@@ -21,23 +21,14 @@ const Display = () => {
   return (
     
     <>
-        {isLoading  && data.length > 0 ? (
-        data.map((values) => (
+        {data.map((values) => (
         <ClientsCount key={values.id}
         id={values.id}
         name={values.name}
         email={values.email}
         message={values.message}
         />                                                       
-        ))
-        ) : (
-            <div className="rounded-lg mt-6 bg-gradient-to-r from-[#FA5252] to-[#DD2476] p-[1px] mr-3">
-                <div className="dark:bg-[#232220] bg-[#ffffff] flex p-4 rounded-lg">
-                <p>No clients yet.</p> 
-                </div>
-            </div>
-  
-        )}
+        ))}
 
         <PostCreator/>
     </>

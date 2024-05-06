@@ -29,23 +29,14 @@ const Comments = (props) => {
     <>
     {/* <p>{time.toLocaleTimeString()}</p> */}
 
-    {isLoading  && data.length > 0 ? (
-        data.map((values) => (
+    {data.map((values) => (
           <ShowComment
             key={values.id}
             name={values.name}
             message={values.message}
             time={values.time}
           />
-        ))
-      ) : (
-        <div className="rounded-lg mt-6 bg-gradient-to-r from-[#FA5252] to-[#DD2476] p-[1px] mr-3">
-          <div className="dark:bg-[#232220] bg-[#ffffff] flex p-4 rounded-lg">
-            <p>No comments yet.</p> 
-          </div>
-        </div>
-        
-      )}
+        ))}
 
         
         <AddComment id={props.id}/>

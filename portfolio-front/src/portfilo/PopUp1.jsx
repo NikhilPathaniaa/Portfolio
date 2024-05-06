@@ -11,7 +11,7 @@ const PopUp1 = ({onClose,id,title,video,languages,content,client,preview}) => {
         }
     }
   return (
-    <div ref={modelRef} onClick={closeModel} id="portfiloOne" className="modal-container model popup">
+    <div ref={modelRef} onClick={closeModel} id="portfiloOne" className=" modal-container modal-overlay model popup">
     <div className="dark:scrollbarDark scrollbarLight overflow-y-scroll max-h-[60vh] lg:max-h-[80vh]">
     <div className="pr-3 pb-2">
         <h2 className="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">

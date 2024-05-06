@@ -11,6 +11,7 @@ import Skills from "./skills/Display";
 import Resume from "./resume/Resume";
 import FilterPortfolio from "./portfilo/FilterPortfolio";
 import AdminMain from "./admin/AdminMain";
+import Blogs from "./blogs/Blogs";
 function App() {
   return (
     <BrowserRouter>
@@ -38,7 +39,7 @@ function App() {
                     <Route path='/' element={<About/>}></Route> 
                     <Route path='/About' element={<About/>}></Route>  
                     <Route path='/Portfolio' element={<FilterPortfolio/>}></Route>
-
+                    <Route path='/Blogs' element={<Blogs/>}></Route>
                     <Route path='/Contact' element={<Contact/>}></Route>
                     <Route path='/Resume' element={<Resume/>}></Route>
                     <Route path='/Skills' element={<Skills/>}></Route>

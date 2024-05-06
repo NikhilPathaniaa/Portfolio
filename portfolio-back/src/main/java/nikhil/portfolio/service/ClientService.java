@@ -2,13 +2,11 @@ package nikhil.portfolio.service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
 
 import jakarta.servlet.http.HttpSession;
 import nikhil.portfolio.dao.ClientDao;
@@ -17,7 +15,6 @@ import nikhil.portfolio.dao.PostDao;
 import nikhil.portfolio.dto.Clients;
 import nikhil.portfolio.dto.Comments;
 import nikhil.portfolio.dto.Post;
-import nikhil.portfolio.helper.EmailSendingHelper;
 import nikhil.portfolio.helper.ResponseStructur;
 
 @Component
@@ -32,8 +29,6 @@ public class ClientService {
 	@Autowired
 	PostDao pdao;
 	
-	@Autowired
-	EmailSendingHelper emailHelper;
 
 	
 	@Autowired
