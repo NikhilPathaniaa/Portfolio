@@ -9,12 +9,33 @@ const AddComment = ({ id, onUpdateComments }) => {
     const [name, setName] = useState("");
     const [message, setMessage] = useState("");
     const [submitStatus, setSubmitStatus] = useState(null);
+    const [nameError, setNameError] = useState('');
 
     const handleSubmit  = async (e) => {
         e.preventDefault()
         const data = {name,message,image}
         console.log(data);
         try {
+
+          if (!name || name.length < 4 ||/[^a-zA-Z\s]+/.test(name) ||/\s{2,}/.test(name) || /^\s+|\s+$/.test(name))
+          {
+            let errorMessage = 'Invalid name. Please follow the name criteria:';
+            if (!name || name.length < 4) {
+              errorMessage += ' Name must be at least 4 characters long.';
+            }
+            if (/[^a-zA-Z\s]+/.test(name)) {
+              errorMessage += ' Name must contain only letters and spaces.';
+            }
+            if (/\s{2,}/.test(name)) {
+              errorMessage += ' Name cannot have more than 2 consecutive spaces.';
+            }
+            if (/^\s+|\s+$/.test(name)) {
+              errorMessage += ' Name cannot start or end with a space.';
+            }
+            setNameError(errorMessage);
+            return;
+          }
+            setNameError('');
             const response = await fetch(`http://localhost/add/${id}`,{
             method:"POST",
             headers:{"content-Type":"application/json"},
@@ -52,8 +73,9 @@ const AddComment = ({ id, onUpdateComments }) => {
                                 <label className="block mb-2">
                                 <span className="dark:text-white text-[25px] font-medium">Name</span>
                                 <input required value={name} onChange={(e)=>setName(e.target.value)} type='text' placeholder="Your name" className="block w-full mt-3 p-3 dark:text-white hover:outline-none hover:border-0 focus:outline-none rounded dark:bg-[#0b0b0b5e] bg-gray"/>
-                                
+                                {nameError && <span style={{ color: 'red', fontSize: '14px' }}>{nameError}</span>}
                                 </label>
+                                
                                 <label className="block mb-2">
                                     <span className="dark:text-white text-[25px] font-medium">Leave a Reply</span>
                                     <textarea  required value={message}  onChange={(e)=>setMessage(e.target.value)}
