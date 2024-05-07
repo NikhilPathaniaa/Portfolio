@@ -10,7 +10,13 @@ const AddComment = ({ id, onUpdateComments }) => {
     const [message, setMessage] = useState("");
     const [submitStatus, setSubmitStatus] = useState(null);
     const [nameError, setNameError] = useState('');
+    const [charCount, setCharCount] = useState(0);
 
+    const handleInputChange = (e) => {
+      setMessage(e.target.value);
+      setCharCount(e.target.value.length);
+    };
+    
     const handleSubmit  = async (e) => {
         e.preventDefault()
         const data = {name,message,image}
@@ -78,9 +84,12 @@ const AddComment = ({ id, onUpdateComments }) => {
                                 
                                 <label className="block mb-2">
                                     <span className="dark:text-white text-[25px] font-medium">Leave a Reply</span>
-                                    <textarea  required value={message}  onChange={(e)=>setMessage(e.target.value)}
+                                    <textarea  required value={message}   onChange={handleInputChange}
                                         className="block w-full mt-3 p-3 dark:text-white hover:outline-none hover:border-0 focus:outline-none rounded dark:bg-[#0b0b0b5e] bg-gray"
-                                        rows="3"></textarea>
+                                        rows="3"  maxLength="5000"></textarea>
+                                        <div style={{ fontSize: '12px', textAlign: 'right' }}>
+                                            Characters: {charCount} / 5000
+                                        </div>
                                 </label>
                                 <button className="comment-btn">Comment</button>
                                 
