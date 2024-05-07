@@ -13,7 +13,7 @@ const About = () => {
                     {/* what i do section ends */}
                     
                     {/* clients section start */}
-                    {/* <Clients/>   */}
+                    <Clients/>  
                     {/* clients section start */}
     </>
     // <a className="menu-active" href="aboutOne.html">
