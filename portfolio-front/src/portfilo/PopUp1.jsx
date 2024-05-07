@@ -10,9 +10,24 @@ const PopUp1 = ({onClose,id,title,video,languages,content,client,preview}) => {
             onClose();
         }
     }
+
+    const overlayStyles = {
+        backgroundColor: 'rgba(0, 0, 0, 0.5)', // Semi-transparent black overlay
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        zIndex: 999, // Higher z-index to overlay everything behind
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    };
+
   return (
-    <div ref={modelRef} onClick={closeModel} id="portfiloOne" className=" modal-container modal-overlay model popup">
-    <div className="dark:scrollbarDark scrollbarLight overflow-y-scroll max-h-[60vh] lg:max-h-[80vh]">
+    <div style={overlayStyles} onClick={closeModel}>
+    <div ref={modelRef}  id="portfiloOne" className=" modal-container model popup" >
+    <div  className=" dark:scrollbarDark scrollbarLight overflow-y-scroll max-h-[60vh] lg:max-h-[80vh]">
     <div className="pr-3 pb-2">
         <h2 className="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">
             Web Developer Project {id}
@@ -71,6 +86,7 @@ const PopUp1 = ({onClose,id,title,video,languages,content,client,preview}) => {
 
     
     <button onClick={onClose} className="close bg-close-light dark:bg-close-dark">Close</button>
+</div>
 </div>
   )
 }

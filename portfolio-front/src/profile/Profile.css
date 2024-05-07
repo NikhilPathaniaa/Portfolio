@@ -1,0 +1,27 @@
+/* Email.css */
+.email-link {
+    word-wrap: break-word;
+    max-width: 100%
+  }
+  
+  .email-link:hover {
+    color: blue; /* Change color on hover */
+  }
+  
+  .email-link:hover,
+  .email-link:focus {
+    text-decoration: underline; /* Add underline on hover and focus */
+  }
+  
+  @media (min-width: 640px) {
+    .email-link {
+      font-size: 0.875rem; /* Increase font size for small screens */
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .email-link {
+      font-size: 1rem; /* Increase font size for medium screens */
+    }
+  }
+  
