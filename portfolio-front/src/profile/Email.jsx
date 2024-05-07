@@ -14,7 +14,7 @@ const Email = () => {
         </span>
         <div className="text-left ml-2.5">
             <p className="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Email </p>
-            <p className="dark:text-white email-address cursor-pointer " onClick={handleEmailClick}> {email}</p>
+            <span onClick={handleEmailClick}> {email}</span>
         </div>
     </div>
   )

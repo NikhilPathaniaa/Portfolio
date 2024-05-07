@@ -24,4 +24,8 @@
       font-size: 1rem; /* Increase font size for medium screens */
     }
   }
-  
+  @media screen and (max-width: 640px) {
+    .email-address {
+      display: block; /* Display the email address as a block element */
+    }
+  }

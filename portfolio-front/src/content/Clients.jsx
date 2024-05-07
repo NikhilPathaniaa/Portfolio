@@ -8,13 +8,13 @@ const Clients = () => {
                             {/* slider and slider items */}
                             <div className="slickOne text-center px-2 pt-8">
                                 <div>
-                                    <img className="overflow-hidden brand-img" src="images/slider/brand.png"
+                                    <img className="overflow-hidden brand-img" src="images/clients/khabarfilhal.gif"
                                         alt="brand icon" />
                                 </div>
                             </div>
                             <div className="slickOne text-center px-2 pt-8">
                                 <div>
-                                    <img className="overflow-hidden brand-img" src="images/slider/brand.png"
+                                    <img className="overflow-hidden brand-img" src="images/clients/white.png"
                                         alt="brand icon" />
                                 </div>
                             </div>

@@ -18,8 +18,8 @@ const ProfileSideBar = () => {
                     <h2 className="mt-6 mb-1 text-[26px] font-semibold dark:text-white"> Nikhil Pathania </h2>
                     <Designation/>
                     <div className="flex justify-center space-x-3">
-                        <FaceBool/>
-                        <Instagram/>
+                        {/* <FaceBool/>
+                        <Instagram/> */}
                         <Github/>
                         <LinkedIn/>
                     </div>
