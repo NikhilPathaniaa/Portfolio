@@ -44,9 +44,9 @@ public class GeneralController {
 	}
 	
 	@PostMapping("/add")
-	public String saveClient(@RequestBody Clients clients) {
+	public int saveClient(@RequestBody Clients clients,BindingResult result, ModelMap map) {
 		System.out.println(clients);
-		return service.save(clients);
+		return service.save(clients,result, map);
 	}
 	
 	@GetMapping("/find")
@@ -54,6 +54,13 @@ public class GeneralController {
 		
 		return new ResponseEntity<ResponseStructur>(service.findAllRecords(),HttpStatus.NOT_FOUND);
 	}
+	
+	@PostMapping("/submit-otp")
+	public String submitOtp(@RequestParam String otp, @RequestParam String id, ModelMap map) {
+		System.out.println("Control - /submit-otp Get , Recieved otp");
+		return service.submitOtp(otp, id, map);
+	}
+	
 	
 	@PostMapping("/add/Comment")
 	public ResponseEntity<ResponseStructur> saveComment(@RequestBody Comments comments) {

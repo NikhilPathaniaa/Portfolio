@@ -2,13 +2,16 @@ package nikhil.portfolio.service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
 
 import jakarta.servlet.http.HttpSession;
+import jsp.org.jobportal.dto.PortalUser;
 import nikhil.portfolio.dao.ClientDao;
 import nikhil.portfolio.dao.CommentDao;
 import nikhil.portfolio.dao.PostDao;
@@ -17,6 +20,7 @@ import nikhil.portfolio.dto.Clients;
 import nikhil.portfolio.dto.Comments;
 import nikhil.portfolio.dto.Post;
 import nikhil.portfolio.dto.User;
+import nikhil.portfolio.helper.EmailSendingHelper;
 import nikhil.portfolio.helper.ResponseStructur;
 import nikhil.portfolio.repository.ClientRepository;
 
@@ -26,6 +30,9 @@ public class ClientService {
 	@Autowired
 	ClientDao dao;
 	
+	 @Autowired
+	 private ClientRepository repository;
+	 
 	@Autowired
 	CommentDao cdao;
 	
@@ -35,13 +42,48 @@ public class ClientService {
 	@Autowired
 	UserDao udao;
 
+	@Autowired
+	EmailSendingHelper emailHelper;
 	
 	@Autowired
 	ResponseStructur structure;
 	
-	public String save(Clients clients) {
-		dao.save(clients);
-		return "success";
+	public int save(Clients clients, BindingResult result, ModelMap map) {
+		
+		
+		if (result.hasErrors()) {
+			System.out.println("Error - There is Some Error");
+			return 0;
+		} else {
+			System.out.println("No Errors");
+			int otp = new Random().nextInt(100000, 999999);
+			System.out.println("Otp Generated - " + otp);
+			clients.setOtp(otp);
+			dao.save(clients);
+			System.out.println("Data is Saved in db");
+			emailHelper.sendOtp(clients);
+			System.out.println("Otp is Sent to Email " + clients.getEmail());
+			map.put("msg", "Otp Sent Success");
+			map.put("id", clients.getId());
+			System.out.println("Control- enter-otp.html");
+			return clients.getId();
+		}
+	}
+	
+	public String submitOtp(String otp, String id, ModelMap map) {
+		Clients clients = dao.findUserById(Integer.parseInt(id));
+		if (Integer.parseInt(otp) == clients.getOtp()) {
+			System.out.println("Success- OTP Matched");
+			clients.setVerified(true);
+			dao.save(clients);
+			map.put("msg", "Account Created Success");
+			return "login.html";
+		} else {
+			System.out.println("Failure- OTP MissMatch");
+			map.put("msg", "Incorrect Otp! Try Again");
+			map.put("id", clients.getId());
+			return "enter-otp.html";
+		}
 	}
 	
 	public ResponseStructur findAllRecords() {
@@ -154,6 +196,5 @@ public class ClientService {
 		udao.saveUser(user);
 		return "success";
 	}
-
 	
 }

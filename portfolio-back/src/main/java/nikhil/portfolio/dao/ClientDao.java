@@ -16,8 +16,6 @@ public class ClientDao {
 	@Autowired
 	ClientRepository repository;
 
-	@Autowired
-	CommentRepository commentRepository;
 	
 	public void save(Clients clients) {
 		repository.save(clients);
@@ -29,11 +27,8 @@ public class ClientDao {
 		return repository.findAll();
 	}
 
-
-
 	public Clients findUserById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository.findById(id).orElse(null);
 	}
 
 }
