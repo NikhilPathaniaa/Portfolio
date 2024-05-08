@@ -9,7 +9,7 @@ const Comments = (props) => {
     useEffect(()=>{
       const fetchComments = async () => {
       try {
-        const response = await fetch(`http://localhost/post/${postId}/comments?page=${0}&size=5`)
+        const response = await fetch(`http://localhost/post/${props.id}/comments?page=${0}&size=5`)
         if (!response.ok) {
           throw new Error('Failed to fetch comments');
         }
@@ -26,7 +26,7 @@ const Comments = (props) => {
 
     const updateComments = async() => {
       try {
-        const response = await fetch(`http://localhost/post/${postId}/comments?page=${0}&size=5`);
+        const response = await fetch(`http://localhost/post/${props.id}/comments?page=${0}&size=5`);
         if (!response.ok) {
           throw new Error('Failed to fetch comments');
         }
