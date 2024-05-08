@@ -5,13 +5,14 @@ import java.util.Optional;
 import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 
 import jakarta.servlet.http.HttpSession;
-import jsp.org.jobportal.dto.PortalUser;
 import nikhil.portfolio.dao.ClientDao;
 import nikhil.portfolio.dao.CommentDao;
 import nikhil.portfolio.dao.PostDao;
@@ -22,7 +23,6 @@ import nikhil.portfolio.dto.Post;
 import nikhil.portfolio.dto.User;
 import nikhil.portfolio.helper.EmailSendingHelper;
 import nikhil.portfolio.helper.ResponseStructur;
-import nikhil.portfolio.repository.ClientRepository;
 
 @Component
 public class ClientService {
@@ -105,20 +105,8 @@ public class ClientService {
 		return structure;
 	}
 
-	public ResponseStructur findAllComments() {
-		List<Comments> list1 =  cdao.findAllCommnets();
-		
-		if(list1.isEmpty())
-		{
-			System.out.print("data not found exception");
-		}
-		else
-		{
-			structure.setMessage("Data founded Success");
-			structure.setStatus(HttpStatus.FOUND.value());
-			structure.setData(list1);
-		}
-		return structure;
+	public Page<Comments> findAllComments(Pageable pageable) {
+		return cdao.findAllComments(pageable);
 	}
 
 	public ResponseStructur savePost(Post post) {
@@ -143,8 +131,8 @@ public class ClientService {
 		return structure;
 	}
 
-	public List<Comments> getCommentsByPostId(Integer postId) {
-		return  cdao.findByPostId(postId);
+	public Page<Comments> getCommentsByPostId(Integer postId, Pageable pageable) {
+		return  cdao.findByPostId(postId, pageable);
 	}
 
 	public ResponseStructur saveCommentById(Integer postId, Comments comment) {

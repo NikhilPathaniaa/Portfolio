@@ -26,8 +26,8 @@ const AboutMe = () => {
                                     <Designation/>
 
                                     <div className="flex justify-center space-x-3">
-                                        <FaceBool/>
-                                        <Instagram/>
+                                        {/* <FaceBool/>
+                                        <Instagram/> */}
                                         <Github/>
                                         <LinkedIn/>
                                     </div>

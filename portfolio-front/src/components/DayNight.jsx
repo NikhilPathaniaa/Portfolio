@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Style.css';
+import Nav1 from '../mobileResponsive/Nav1';
 
 const DayNight = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -48,11 +49,10 @@ const DayNight = () => {
             <i id="theme-toggle-light-icon" className={`fa-solid text-xl ${isDarkMode ? 'fa-sun' : 'fa-moon'}`}></i>
             {/* {isDarkMode ? 'fa-sun' : 'fa-moon'} */}
           </button>
+
           {/* Mobile toggle button */}
-          <button id="menu-toggle" type="button" className="menu-toggle-btn">
-            <i id="menu-toggle-open-icon" className="fa-solid fa-bars text-xl"></i>
-            <i id="menu-toggle-close-icon" className="fa-solid fa-xmark text-xl hidden"></i>
-          </button>
+          <Nav1/>
+          
         </div>
       </div>
     </div>

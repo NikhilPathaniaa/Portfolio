@@ -1,8 +1,8 @@
 package nikhil.portfolio.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.ModelMap;
@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.cloudinary.Url;
 
 import jakarta.servlet.http.HttpSession;
 import nikhil.portfolio.dto.Clients;
@@ -63,17 +61,21 @@ public class GeneralController {
 	}
 	
 	
-	@PostMapping("/add/Comment")
-	public ResponseEntity<ResponseStructur> saveComment(@RequestBody Comments comments) {
-		System.out.println(comments);
-		return new ResponseEntity<ResponseStructur>(service.saveComments(comments),HttpStatus.NOT_FOUND);
-	}
-	
-	@GetMapping("/Comment")
-	public ResponseEntity<ResponseStructur> fetchComments() {
-		
-		return new ResponseEntity<ResponseStructur>(service.findAllComments(),HttpStatus.NOT_FOUND);
-	}
+//	@PostMapping("/add/Comment")
+//	public ResponseEntity<ResponseStructur> saveComment(@RequestBody Comments comments) {
+//		System.out.println(comments);
+//		return new ResponseEntity<ResponseStructur>(service.saveComments(comments),HttpStatus.NOT_FOUND);
+//	}
+//	
+//	@GetMapping("/Comment")
+//	public ResponseEntity<Page<Comments>> fetchComments(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "5") int size) 
+//	{
+//		
+//		Pageable pageable = PageRequest.of(page, size);
+//        Page<Comments> commentsPage = service.findAllComments(pageable);
+//        
+//        return new ResponseEntity<>(commentsPage, HttpStatus.OK);
+//	}
 	
 	@PostMapping("/add/post")
     public ResponseEntity<ResponseStructur> savePost(@RequestBody Post post) {
@@ -97,10 +99,10 @@ public class GeneralController {
 	        }
 	    }
 	
-	 @GetMapping("/post/{postId}")
-	    public ResponseEntity<List<Comments>> getCommentsByPostId(@PathVariable Integer postId) {
-	        List<Comments> comments = service.getCommentsByPostId(postId);
-	        return new ResponseEntity<>(comments, HttpStatus.OK);
+	 @GetMapping("/post/{postId}/comments")
+	 	public ResponseEntity<Page<Comments>> getCommentsByPostId(@PathVariable Integer postId, Pageable pageable) {
+	        Page<Comments> commentsPage = service.getCommentsByPostId(postId, pageable);
+	        return new ResponseEntity<>(commentsPage, HttpStatus.OK);
 	    }
 	 
 	 	
