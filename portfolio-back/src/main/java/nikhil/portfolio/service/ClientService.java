@@ -30,8 +30,6 @@ public class ClientService {
 	@Autowired
 	ClientDao dao;
 	
-	 @Autowired
-	 private ClientRepository repository;
 	 
 	@Autowired
 	CommentDao cdao;
@@ -66,23 +64,21 @@ public class ClientService {
 			map.put("msg", "Otp Sent Success");
 			map.put("id", clients.getId());
 			System.out.println("Control- enter-otp.html");
+			System.out.println("ID : "+clients.getId());
 			return clients.getId();
 		}
 	}
 	
-	public String submitOtp(String otp, String id, ModelMap map) {
+	public String submitOtp(String otp, String id) {
 		Clients clients = dao.findUserById(Integer.parseInt(id));
 		if (Integer.parseInt(otp) == clients.getOtp()) {
 			System.out.println("Success- OTP Matched");
 			clients.setVerified(true);
 			dao.save(clients);
-			map.put("msg", "Account Created Success");
-			return "login.html";
+			return "success";
 		} else {
 			System.out.println("Failure- OTP MissMatch");
-			map.put("msg", "Incorrect Otp! Try Again");
-			map.put("id", clients.getId());
-			return "enter-otp.html";
+			return "failure";
 		}
 	}
 	

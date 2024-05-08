@@ -56,9 +56,10 @@ public class GeneralController {
 	}
 	
 	@PostMapping("/submit-otp")
-	public String submitOtp(@RequestParam String otp, @RequestParam String id, ModelMap map) {
+	public String submitOtp(@RequestParam String otp, @RequestParam String id) {
+		 System.out.println("Received OTP: " + otp);
 		System.out.println("Control - /submit-otp Get , Recieved otp");
-		return service.submitOtp(otp, id, map);
+		return service.submitOtp(otp, id);
 	}
 	
 	
