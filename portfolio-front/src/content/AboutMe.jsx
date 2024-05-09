@@ -11,7 +11,7 @@ import MainContent from '../AboutMe/MainContent'
 
 const AboutMe = () => {
   return (
-                        <div className="pt-12 md:py-12 px-2 sm:px-5 md:px-10 lg:px-14">
+                    <div className="pt-12 md:py-12 px-2 sm:px-5 md:px-10 lg:px-14">
                         {/* about page title */}
                         <h2 className="after-effect after:left-52">About Me</h2>
                         {/* personal info for mobile devices start */}

@@ -13,12 +13,17 @@ const MainContent = () => {
 
                                     </p>
                                     <WhyMe/>
-                                    
+
                                     <h3 className="text-[35px] dark:text-white font-bold font-robotoSlab pt-5 pb-5"> Let's Connect! </h3>
-                                    <p className="text-[#44566c] leading-7 mt-2.5 dark:text-color-910">
-                                    Ready to elevate your online presence? Let's chat and turn your ideas into reality.
-                                    Ready to rock the web? Hit me up and let's make digital dreams happen.
-                                    </p>                                     
+                                    <div className='flex items-center'>
+                                        <p className="text-[#44566c] leading-7 mt-2.5 dark:text-color-910">
+                                        Ready to elevate your online presence? <br/> 
+                                        Let's chat and turn your ideas into reality.  <br/>
+                                        Hit me up and let's make digital dreams happen.
+                                        </p> 
+                                        <button className="dowanload-btn">Get in Touch </button>                                    
+                                    </div>
+                                    
                                 </div>
                                 <div></div>
                             </div>
