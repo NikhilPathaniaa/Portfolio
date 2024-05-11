@@ -4,15 +4,14 @@ import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import ProfileSideBar from "./components/ProfileSideBar";
 import Contact from "./contact/Contact";
-import Nav1 from "./mobileResponsive/Nav1";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./navigation/About";
 import Resume from "./resume/Resume";
 import FilterPortfolio from "./portfilo/FilterPortfolio";
 import AdminMain from "./admin/AdminMain";
 import AdminLoginForm from "./admin/AdminLoginForm";
-import Error404 from "./error/Error404";
-import FeaturesAdd from "./skills/FeaturesAdd";
+// import Error404 from "./error/Error404";
+import SliderPost from "./portfilo/SliderPost";
 function App() {
   return (
     <BrowserRouter>
@@ -43,7 +42,7 @@ function App() {
 
                 <Footer />
                 {/* <Error404/> */}
-                <FeaturesAdd />
+                <SliderPost />
               </div>
             </div>
           </div>

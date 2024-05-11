@@ -28,7 +28,7 @@ public class Post {
 	 private String preview ;
 	 private String theme;
 	 
-	 private String features;
+	 private String fields;
 	 
 	 @Lob // Use @Lob annotation for large objects
 	 @Column(columnDefinition = "TEXT")
