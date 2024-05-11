@@ -1,10 +1,8 @@
 import React, { useState, useRef } from "react";
 import JoditEditor from "jodit-react";
-import FeaturesAdd from "./FeaturesAdd";
 
 const PostCreator = ({ placeholder }) => {
   const editor = useRef(null);
-  const [fields, setFields] = useState([{ imgUrl: "", title: "", content: "", color: "" }]);
 
   const [title, setTitle] = useState("");
   const [client, setClient] = useState("");
@@ -15,13 +13,9 @@ const PostCreator = ({ placeholder }) => {
   const [video, setVideo] = useState("");
   const [theme, setTheme] = useState("");
 
-  const handleAddField = () => {
-    setFields([...fields, { imgUrl: "", title: "", content: "", color: "" }]);
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    const data = { title, client, languages, theme, preview, content, image, video, fields };
+    const data = { title, client, languages, theme, preview, content, image, video };
     console.log(data);
 
     fetch("http://localhost/add/post", {
@@ -32,7 +26,6 @@ const PostCreator = ({ placeholder }) => {
       .then(console.log("new data added"))
       .catch((error) => console.log(error));
   };
-
   return (
     <div className="bg-white lg:rounded-2xl dark:bg-[#111111]">
       <h2 className="after-effect after:left-60 after:top-[76px] mb-12 md:mb-[30px] pl-4 md:pl-[60px] pt-12">Post Creation </h2>
@@ -43,7 +36,7 @@ const PostCreator = ({ placeholder }) => {
           <span className="font-semibold dark:text-white">design work or partnerships.</span>
         </h3>
 
-        <form onSubmit={handleSubmit}>
+        <form>
           <div className="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
           <div className="empty_notice">
             <span>Please Fill Required Fields</span>
@@ -194,23 +187,11 @@ const PostCreator = ({ placeholder }) => {
             </label>
           </div>
 
-          <div className="relative z-0 w-full mb-8 group">
-            {fields.map((_, index) => (
-              <FeaturesAdd key={index} index={index} fields={fields} setFields={setFields} />
-            ))}
-            <button type="button" onClick={handleAddField} className="comment-btn">
-              + Add Field
-            </button>
-            <label
-              for="message"
-              className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-color-910 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-[#CA56F2] peer-focus:dark:text-[#FF6464] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-8">
-              Features *{" "}
-            </label>
-          </div>
-
-          <button className="comment-btn" type="submit">
-            Submit
-          </button>
+          <input
+            type="submit"
+            onClick={handleSubmit}
+            className="px-6 py-2 rounded-lg border-[2px] mt-3 border-color-910 font-semibold cursor-pointer hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:text-white transition-colors duration-300 ease-in-out hover:border-transparent dark:text-white"
+          />
         </form>
       </div>
     </div>

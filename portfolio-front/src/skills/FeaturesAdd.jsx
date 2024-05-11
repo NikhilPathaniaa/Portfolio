@@ -7,8 +7,14 @@ const FeaturesAdd = ({ index, fields, setFields }) => {
     setFields(values);
   };
 
+  const re = {
+    border: "3px solid red",
+    padding: "10px",
+    borderRadius: "25px",
+  };
+
   return (
-    <div key={index} className="mb-4">
+    <div style={re} key={index} className="mb-4">
       <input type="text" name="imgUrl" value={fields[index].imgUrl} onChange={handleChange} placeholder="Image URL" className="block w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       <input type="text" name="title" value={fields[index].title} onChange={handleChange} placeholder="Title" className="block mt-2 w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
       <textarea name="content" value={fields[index].content} onChange={handleChange} placeholder="Content" className="block mt-2 w-full border rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" />
