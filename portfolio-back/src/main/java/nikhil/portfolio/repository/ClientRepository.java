@@ -7,6 +7,7 @@ import nikhil.portfolio.dto.Clients;
 
 public interface ClientRepository extends JpaRepository<Clients, Integer>{
 
-	Clients findUserById(int id);
+		Clients findUserById(int id);
+
 
 }

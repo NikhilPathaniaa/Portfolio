@@ -1,22 +1,28 @@
 import ShowComment from './ShowComment'
 import AddComment from './AddComment'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 
 const Comments = (props) => {
 
+  const size = 5;
+  
+
   const [data,setData] = useState([]);
+  // const totalElements = useRef(null);
 
   const [page, setPage] = useState(0);
+  // const [totalElements, setTotalElements] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
+  // const [number, setNumber] = useState(1);
 
     useEffect(()=>{
-      setPage(0); // Reset page to 0 when props change
+      // setPage(0); // Reset page to 0 when props change
       fetchComments()
-    },[props])
+    },[page]) // page
 
       const fetchComments = async () => {
       try {
-        const response = await fetch(`http://localhost/post/${props.id}/comments?page=${page}&size=5`)
+        const response = await fetch(`http://localhost/post/${props.id}/comments?page=${page}&size=${size}`)
         if (!response.ok) {
           throw new Error('Failed to fetch comments');
         }
@@ -24,21 +30,23 @@ const Comments = (props) => {
         const responseData = await response.json();
        
         //const reversedComments = data.content.reverse(); // Reverse comments order
-         setData(responseData.content);
-        setTotalPages(data.totalPages);
+         setData([...data ,...responseData.content]);
+         console.log(data);
+         setTotalPages(responseData.totalPages);
+        // setTotalElements(responseData.totalElements);
+        // setNumber(responseData.number);
+        // return responseData.content;
       }
         catch (error) {
             console.error('Error fetching data:', error);
         }
       }
 
-      const loadMoreComments = () => {
-        fetchComments();
-      };
-
   return (
     <>
-    {/* <p>{time.toLocaleTimeString()}</p> */}
+    {/* <p>{time.toLocaleTimeString()}</p> */
+      console.log("comment component render")
+    }
     
      <AddComment id={props.id} onUpdateComments={fetchComments} />
 
@@ -62,10 +70,13 @@ const Comments = (props) => {
             image={values.image}
           />
     ))}
-      
-        <button onClick={loadMoreComments} className="comment-btn">
+    {(page  === (totalPages - 1)) ? null : 
+    (<button onClick={() => {
+      setPage((preValue) => preValue + 1) 
+      console.log("comment btn click", page ,totalPages)}
+      } className='comment-btn'>
           Load More
-        </button>
+        </button>)}
     </>
   )
 }

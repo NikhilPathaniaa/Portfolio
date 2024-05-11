@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import Comments from './Comments';
+import SliderPost from './SliderPost';
 
 const PopUp1 = ({onClose,id,title,video,languages,content,client,preview}) => {
     const modelRef = useRef();
@@ -78,6 +79,7 @@ const PopUp1 = ({onClose,id,title,video,languages,content,client,preview}) => {
         </div>
         <p  className="dark:text-white text-2line font-normal text-[15px] sm:text-sm" dangerouslySetInnerHTML={{ __html: content }} />
         <br/>
+        <SliderPost/>
         <hr/>
         <br/>
     </div>

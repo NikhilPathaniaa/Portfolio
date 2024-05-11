@@ -26,7 +26,8 @@ public class CommentDao {
 	}
 
 	public Page<Comments> findByPostId(Integer postId, Pageable pageable) {
-        return commentRepository.findByPostId(postId, pageable);
+		
+        return commentRepository.findByPostIdOrderByTimeDesc(postId, pageable);
     }
 
 	public Comments saveComment(Comments comment) {
@@ -34,6 +35,7 @@ public class CommentDao {
 		return commentRepository.save(comment);
 	}
 
+	
 	public Page<Comments> findAllComments(Pageable pageable) {
 		 return commentRepository.findAll(pageable);	}
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Otp from './Otp.jsx';
-import Modal from './Modal.jsx';
+
 import {
   validateName,
   validateMobile,
@@ -14,9 +14,14 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [submitStatus, setSubmitStatus] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const [showModel, setShowModel] = useState(false);
+
+
   const [id, setId] = useState('');
   const [errors, setErrors] = useState({});
+
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -55,12 +60,12 @@ const Contact = () => {
     setMobile('');
     setEmail('');
     setMessage('');
-
-    setIsModalOpen(true);
     setSubmitStatus('success');
     // Clear the success message after a certain time
     setTimeout(() => setSubmitStatus(null), 3000);
 
+     // Show OTP popup after successful submission
+    setShowModel(true);
   }
   catch (error) {
     console.error('Error adding comment:', error);
@@ -69,17 +74,6 @@ const Contact = () => {
   }    
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false); // Close the modal
-     setId('');
-  };
-
-  const handleOtpSuccess = () => {
-    setIsModalOpen(false); // Close the OTP popup
-    setId('');
-    setSubmitStatus('success'); // Set submit status to success after OTP verification
-    setTimeout(() => setSubmitStatus(null), 3000); // Clear the success message after a certain time
-  };
   return (
     <div className="bg-white lg:rounded-2xl dark:bg-[#111111]">
       <h2 className="after-effect after:left-60 after:top-[76px] mb-12 md:mb-[30px] pl-4 md:pl-[60px] pt-12">
@@ -186,13 +180,13 @@ const Contact = () => {
           />
 <br />
 <br />
-{submitStatus === 'success' && <span style={{ color: 'green' }} className="block mt-2 text-green-500 transform transition-all duration-500 ease-in-out animate-bounce">Message sent successfully!</span>}
-{submitStatus === 'error' && <span style={{ color: 'red' }} className="block mt-2 text-red-500 transform transition-all duration-500 ease-in-out animate-pulse">Failed to send message. Please try again later.</span>}
+{submitStatus === 'success' && <span style={{ color: 'green' }} className="block mt-2 text-green-500 transform transition-all duration-500 ease-in-out animate-bounce">Otp sent successfully!</span>}
+{submitStatus === 'error' && <span style={{ color: 'red' }} className="block mt-2 text-red-500 transform transition-all duration-500 ease-in-out animate-pulse">Failed to send otp. Please try again later.</span>}
         </form>
 
-        <Modal isOpen={isModalOpen} onClose={closeModal}>
-          <Otp id={id} onSuccess={handleOtpSuccess} />
-        </Modal>
+        
+        {showModel &&<Otp id={id} onClose={()=>setShowModel(false)}/>}
+
       </div>
     </div>
   );

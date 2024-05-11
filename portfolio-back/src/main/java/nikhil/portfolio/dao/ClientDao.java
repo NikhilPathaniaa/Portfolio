@@ -31,4 +31,9 @@ public class ClientDao {
 		return repository.findById(id).orElse(null);
 	}
 
+	public void deleteById(int id) {
+		repository.deleteById(id);
+		
+	}
+
 }

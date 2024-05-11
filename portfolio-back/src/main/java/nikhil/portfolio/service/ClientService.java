@@ -69,14 +69,23 @@ public class ClientService {
 		}
 	}
 	
-	public String submitOtp(String otp, String id) {
+	public String submitOtp(String otp, String id, String status) {
 		Clients clients = dao.findUserById(Integer.parseInt(id));
 		if (Integer.parseInt(otp) == clients.getOtp()) {
 			System.out.println("Success- OTP Matched");
 			clients.setVerified(true);
 			dao.save(clients);
 			return "success";
-		} else {
+		}
+		else if(status.equals("false") && Integer.parseInt(otp) != clients.getOtp())
+		{
+			dao.deleteById(Integer.parseInt(id));
+			System.out.println("delete from db");
+			return "deletion";
+
+		}
+		else {
+			
 			System.out.println("Failure- OTP MissMatch");
 			return "failure";
 		}
