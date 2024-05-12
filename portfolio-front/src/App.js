@@ -42,7 +42,7 @@ function App() {
 
                 <Footer />
                 {/* <Error404/> */}
-                <SliderPost />
+                {/* <SliderPost /> */}
               </div>
             </div>
           </div>
