@@ -12,6 +12,7 @@ import AdminMain from "./admin/AdminMain";
 import AdminLoginForm from "./admin/AdminLoginForm";
 // import Error404 from "./error/Error404";
 import SliderPost from "./portfilo/SliderPost";
+import Blogs from "./blogs/Blogs";
 function App() {
   return (
     <BrowserRouter>
@@ -34,7 +35,7 @@ function App() {
                   <Route path="/" element={<About />}></Route>
                   <Route path="/About" element={<About />}></Route>
                   <Route path="/Portfolio" element={<FilterPortfolio />}></Route>
-                  {/* <Route path='/Blogs' element={<Blogs/>}></Route> */}
+                  <Route path="/Blogs" element={<Blogs />}></Route>
                   <Route path="/Contact" element={<Contact />}></Route>
                   <Route path="/Resume" element={<Resume />}></Route>
                   <Route path="/Skills" element={<AdminLoginForm />}></Route>
