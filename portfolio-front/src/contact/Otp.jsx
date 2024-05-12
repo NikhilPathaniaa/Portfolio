@@ -71,7 +71,7 @@ const Otp = ({ id, onClose }) => {
       <div id="portfiloOne" className=" modal-container popup">
         <div className="pr-3 pb-2 ">
           <h2 className="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">Web Developer Project {id}</h2>
-
+          {submitStatus === "error" && <span style={{ color: "red" }}>Wrong OTP</span>}
           <form className="w-full rounded px-8 py-6" onSubmit={handleSubmit}>
             <div className="mb-4">
               <span className="dark:text-white text-[25px] font-medium">Enter Your OTP:</span>
@@ -93,7 +93,6 @@ const Otp = ({ id, onClose }) => {
               </button>
             </div>
           </form>
-          {submitStatus === "error" && <span style={{ color: "red" }}>Wrong OTP</span>}
         </div>
 
         <div className="text-center">
