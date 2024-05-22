@@ -4,6 +4,7 @@ import Service from "../content/Service";
 import Clients from "../content/Clients";
 import WhyMe from "../AboutMe/WhyMe";
 import ContactMe from "../AboutMe/ContactMe";
+import HorizontalScrollCarousel from "./HorizontalScrollCarousel";
 
 const About = () => {
   return (
@@ -11,6 +12,9 @@ const About = () => {
       <AboutMe />
 
       <WhyMe />
+
+      <HorizontalScrollCarousel />
+
       <ContactMe />
       {/* what i do section start */}
       <Service />
