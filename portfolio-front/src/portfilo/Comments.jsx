@@ -1,6 +1,6 @@
 import ShowComment from "./ShowComment";
 import AddComment from "./AddComment";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 
 const Comments = (props) => {
   const size = 5;
