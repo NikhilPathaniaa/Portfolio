@@ -9,6 +9,7 @@ const About = () => {
   return (
     <>
       <AboutMe />
+
       <WhyMe />
       <ContactMe />
       {/* what i do section start */}

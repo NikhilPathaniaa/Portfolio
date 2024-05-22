@@ -13,6 +13,7 @@ import AdminLoginForm from "./admin/AdminLoginForm";
 // import Error404 from "./error/Error404";
 import SliderPost from "./portfilo/SliderPost";
 import Blogs from "./blogs/Blogs";
+import Example from "./navigation/HorizontalScrollCarousel";
 function App() {
   return (
     <BrowserRouter>
@@ -42,6 +43,7 @@ function App() {
                 </Routes>
 
                 <Footer />
+                <Example />
                 {/* <Error404/> */}
                 {/* <SliderPost /> */}
               </div>
