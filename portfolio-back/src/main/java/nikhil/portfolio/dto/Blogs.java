@@ -31,8 +31,8 @@ public class Blogs {
 	 
 	 private String image;
 	 
-	 @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	 @JsonManagedReference
-	 private List<Comments> comments = new ArrayList<>();
+//	 @OneToMany(mappedBy = "post", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//	 @JsonManagedReference
+//	 private List<Comments> comments = new ArrayList<>();
 
 }

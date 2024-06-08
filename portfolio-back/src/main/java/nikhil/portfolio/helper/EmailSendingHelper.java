@@ -8,7 +8,6 @@ import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
 import jakarta.mail.internet.MimeMessage;
-import jsp.org.jobportal.dto.PortalUser;
 import nikhil.portfolio.dto.Clients;
 
 @Service
