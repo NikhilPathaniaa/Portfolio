@@ -18,7 +18,7 @@ const PostCreator = ({ placeholder }) => {
     const data = { title, client, languages, theme, preview, content, image, video };
     console.log(data);
 
-    fetch("http://localhost/add/post", {
+    fetch("https://portfolio-back-g5on.onrender.com/add/post", {
       method: "POST",
       headers: { "content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -26,6 +26,7 @@ const PostCreator = ({ placeholder }) => {
       .then(console.log("new data added"))
       .catch((error) => console.log(error));
   };
+  console.log("content -", content);
   return (
     <div className="bg-white lg:rounded-2xl dark:bg-[#111111]">
       <h2 className="after-effect after:left-60 after:top-[76px] mb-12 md:mb-[30px] pl-4 md:pl-[60px] pt-12">Post Creation </h2>
@@ -118,6 +119,7 @@ const PostCreator = ({ placeholder }) => {
             </label>
           </div>
           {/* <!-- message input  --> */}
+
           <div className="relative z-0 w-full mb-8 group">
             <JoditEditor
               className="block autofill:bg-transparent py-2.5 px-0 w-full text-sm text-gray-lite bg-transparent border-0 border-b-[2px] border-[#B5B5B5] appearance-none dark:text-white dark:border-[#333333] dark:focus:border-[#FF6464] focus:outline-none focus:ring-0 focus:border-[#FF6464] peer"
