@@ -1,9 +1,9 @@
 const AboutMeText = () => {
   return (
-    <div className="lg:grid grid-cols-12 md:gap-10 pt-4 md:pt-[30px] items-center hidden">
+    <div className="lg:grid grid-cols-12 md:gap-10 pt-4 md:pt-[30px] items-center sm:hidden">
       <div className="col-span-12 space-y-2.5">
         <div className="lg:mr-16">
-          <div className="text-[#44566c] dark:text-color-910 leading-7">
+          <div className="text-[#44566c] font-poppins dark:text-color-910 leading-7">
             <h3>The Developer Who Turns Ideas into Reality </h3>
             <p>You have a vision—a website that stands out, engages users, and drives results. But finding the right developer who understands your business, your audience, and your goals? That’s the challenge.</p>
             <br />
@@ -26,8 +26,10 @@ const AboutMeText = () => {
             <ul>
               <li>❌ Struggling with a slow, outdated website? → ✅ I create fast, modern, and mobile-friendly sites. </li>
               <li>❌ Losing customers due to poor design? → ✅ I craft engaging, user-focused experiences. </li>
-              <li>❌ Confused about where to start? → ✅ I guide you through every step, hassle-free. A great website isn’t an expense—it’s an investment that brings in leads, customers, and revenue. Let’s build something incredible together.</li>
+              <li>❌ Confused about where to start? → ✅ I guide you through every step, hassle-free. </li>
             </ul>
+            <br />
+            <p>A great website isn’t an expense—it’s an investment that brings in leads, customers, and revenue. Let’s build something incredible together.</p>
           </div>
         </div>
       </div>

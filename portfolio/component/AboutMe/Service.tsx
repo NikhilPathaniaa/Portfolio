@@ -7,49 +7,34 @@ const Service = () => {
 
       <div className="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
         <div className="about-box bg-[#fcf4ff] dark:bg-transparent">
-          <img className="w-10 h-10 object-contain block" src="images/icons/wordpress.svg" alt="icon" />
+          <img className="w-10 h-10 object-contain block" src="/icons/wordpress.svg" alt="icon" />
           <div className="space-y-2">
-            <h3 className="dark:text-white text-[22px] font-semibold"> Wordpress</h3>
-            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6]"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
+            <h3 className="dark:text-white text-[22px] font-semibold font-poppins"> Wordpress</h3>
+            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6] font-poppins"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
           </div>
         </div>
 
         <div className="about-box bg-[#fefaf0] dark:bg-transparent">
-          <img className="w-10 h-10 object-contain block" src="images/icons/spring.svg" alt="icon" />
+          <img className="w-10 h-10 object-contain block" src="/icons/nextjs.svg" alt="icon" />
           <div className="space-y-2">
-            <h3 className="dark:text-white text-[22px] font-semibold"> SpringBoot</h3>
-            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6]"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
+            <h3 className="dark:text-white text-[22px] font-semibold font-poppins"> Next JS</h3>
+            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6] font-poppins"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
           </div>
         </div>
 
         <div className="about-box bg-[#f3faff] dark:bg-transparent">
-          <img className="w-10 h-10 object-contain block" src="images/icons/reactjs.svg" alt="icon" />
+          <img className="w-10 h-10 object-contain block" src="/icons/reactjs.svg" alt="icon" />
           <div className="space-y-2">
-            <h3 className="dark:text-white text-[22px] font-semibold"> React </h3>
-            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6]"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
+            <h3 className="dark:text-white text-[22px] font-semibold font-poppins"> React JS</h3>
+            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6] font-poppins"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
           </div>
         </div>
 
         <div className="about-box bg-[#fff4f4] dark:bg-transparent">
-          <img className="w-10 h-10 object-contain block" src="images/icons/database2.png" alt="icon" />
+          <img className="w-10 h-10 object-contain block" src="/icons/ux.png" alt="icon" />
           <div className="space-y-2">
-            <h3 className="dark:text-white text-[22px] font-semibold"> Database </h3>
-            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6]"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
-          </div>
-        </div>
-        <div className="about-box bg-[#fff4f4] dark:bg-transparent">
-          <img className="w-10 h-10 object-contain block" src="images/icons/RestApi.png" alt="icon" />
-          <div className="space-y-2">
-            <h3 className="dark:text-white text-[22px] font-semibold"> Rest Api </h3>
-            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6]"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
-          </div>
-        </div>
-
-        <div className="about-box bg-[#fff4f4] dark:bg-transparent">
-          <img className="w-10 h-10 object-contain block" src="images/icons/web-design.png" alt="icon" />
-          <div className="space-y-2">
-            <h3 className="dark:text-white text-[22px] font-semibold"> Web Design </h3>
-            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6]"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
+            <h3 className="dark:text-white text-[22px] font-semibold font-poppins"> UI / UX </h3>
+            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6] font-poppins"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
           </div>
         </div>
       </div>

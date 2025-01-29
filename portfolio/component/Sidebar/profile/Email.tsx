@@ -12,8 +12,8 @@ const Email = () => {
         <i className="fa-solid fa-envelope-open-text"></i>
       </span>
       <div className="text-left ml-2.5">
-        <p className="text-xs text-[#44566C] dark:text-[#A6A6A6]"> Email </p>
-        <p className="dark:text-white cursor-pointer"> {email}</p>
+        <p className="text-xs text-[#44566C] dark:text-[#A6A6A6]  font-poppins"> Email </p>
+        <p className="dark:text-white cursor-pointer  font-poppins"> {email}</p>
       </div>
     </div>
   );

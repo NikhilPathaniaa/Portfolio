@@ -1,17 +1,19 @@
 import Navbar from "@/component/Navbar";
 import ProfileSideBar from "@/component/Sidebar/ProfileSideBar";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins, Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import "./tailwind.css";
 import Footer from "@/component/Footer";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-Poppins",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const roboto_Slab = Roboto_Slab({
+  variable: "--font-Roboto_Slab",
   subsets: ["latin"],
 });
 
@@ -27,13 +29,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-homeBg dark:bg-homeTwoBg-dark min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full ${geistSans.variable} ${geistMono.variable} antialiased `}>
-        <div className="flex mt-24 justify-between px-[10rem]">
+      <body className={`container bg-homeBg dark:bg-homeTwoBg-dark min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full ${poppins.variable} ${roboto_Slab.variable} antialiased `}>
+        <div className="flex mt-24 justify-between">
           {/* Side bar*/}
           <ProfileSideBar />
           <div className="col-span-12 lg:col-span-8">
             <Navbar />
-            <div className="bg-white w-[50vw] border-2 border-gray-50 shadow-md rounded-xl">
+            <div className="bg-white w-[55vw] border-2 border-gray-50 shadow-md rounded-xl">
               {children}
               <Footer />
             </div>
