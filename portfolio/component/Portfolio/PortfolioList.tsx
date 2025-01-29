@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import DataPopUp from "./DataPopUp";
-
+import { HiOutlineExternalLink } from "react-icons/hi";
 interface portfolioData {
   id: number;
   preview: string;
@@ -27,7 +27,12 @@ const PortfolioList = (props: portfolioData) => {
             {props.id}
           </button>
         </div>
-
+        <div className="mt-2">
+          <button className="flex items-center text-[15px] gap-2">
+            <HiOutlineExternalLink />
+            Live Preview
+          </button>
+        </div>
         {showModel && <DataPopUp title={props.title} id={props.id} video={props.video} content={props.content} preview={props.preview} client={props.client} languages={props.languages} onClose={() => setShowModel(false)} />}
       </div>
     </>
