@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./tailwind.css";
+import Footer from "@/component/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,12 +28,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`bg-homeBg dark:bg-homeTwoBg-dark min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full ${geistSans.variable} ${geistMono.variable} antialiased `}>
-        <div className="flex justify-between px-[10rem]">
+        <div className="flex mt-24 justify-between px-[10rem]">
           {/* Side bar*/}
           <ProfileSideBar />
           <div className="col-span-12 lg:col-span-8">
             <Navbar />
-            <div className="bg-white w-[50vw] border-2 border-gray-50 shadow-md rounded-xl">{children}</div>
+            <div className="bg-white w-[50vw] border-2 border-gray-50 shadow-md rounded-xl">
+              {children}
+              <Footer />
+            </div>
           </div>
         </div>
       </body>

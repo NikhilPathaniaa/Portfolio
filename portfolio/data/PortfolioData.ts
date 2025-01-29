@@ -1,0 +1,1 @@
+export const portfolio = [{ id: 1, preview: "qwe", title: "Chai", client: "asd", image: "/Products/Shop/Chai.webp", video: "/Products/Shop/Chai_Back.webp", languages: "Chai (200g)", content: "sda" }];
