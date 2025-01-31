@@ -3,7 +3,6 @@ import ContactMe from "@/components/AboutMe/ContactMe";
 import Service from "@/components/AboutMe/Service";
 import Header from "@/components/Common/Header";
 import TestimonialComponent from "@/components/Testimonial/TestimonialComponent";
-import Image from "next/image";
 
 export default function Home() {
   return (

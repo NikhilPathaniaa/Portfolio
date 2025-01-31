@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import DataPopUp from "./DataPopUp";
-import { HiOutlineExternalLink } from "react-icons/hi";
 interface portfolioData {
   id: number;
   preview: string;

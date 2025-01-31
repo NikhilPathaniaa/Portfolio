@@ -8,7 +8,7 @@ const WhyMe = () => {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-lg font-semibold text-red-500 mb-4">Versatile Solutions</h3>
-            <p className="text-gray-700">Whether you prefer custom coding or the convenience of platforms like WordPress, I've got you covered.</p>
+            <p className="text-gray-700">Whether you prefer custom coding or the convenience of platforms like WordPress, I&apos;ve got you covered.</p>
           </div>
 
           <div className="bg-white rounded-lg shadow-md p-6">
@@ -17,7 +17,7 @@ const WhyMe = () => {
           </div>
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-lg font-semibold text-red-500 mb-4">Tailored Approach</h3>
-            <p className="text-gray-700">Your project is unique, and I'm here to ensure it stands out with responsive designs and robust backend systems.</p>
+            <p className="text-gray-700">Your project is unique, and I&apos;m here to ensure it stands out with responsive designs and robust backend systems.</p>
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@ const WhyMe = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6 transition-transform hover:-translate-y-1">
             <h3 className="text-lg font-semibold text-red-500 mb-4">Versatility</h3>
-            <p className="text-gray-700">Whether it's ReactJS for stunning frontends or Spring Boot for robust backend solutions, I've got the tools for every job.</p>
+            <p className="text-gray-700">Whether it&apos;s ReactJS for stunning frontends or Spring Boot for robust backend solutions, I&apos;ve got the tools for every job.</p>
           </div>
           <div className="bg-white rounded-lg shadow-md p-6 transition-transform hover:-translate-y-1">
             <h3 className="text-lg font-semibold text-red-500 mb-4">Design Savvy</h3>
@@ -34,11 +34,11 @@ const WhyMe = () => {
           </div>
           <div className="bg-white rounded-lg shadow-md p-6 transition-transform hover:-translate-y-1">
             <h3 className="text-lg font-semibold text-red-500 mb-4">Data Dynamo</h3>
-            <p className="text-gray-700">From databases to APIs, I've got you covered, ensuring seamless integration and functionality.</p>
+            <p className="text-gray-700">From databases to APIs, I&apos;ve got you covered, ensuring seamless integration and functionality.</p>
           </div>
           <div className="bg-white rounded-lg shadow-md p-6 transition-transform hover:-translate-y-1">
-            <h3 className="text-lg font-semibold text-red-500 mb-4">Let's Talk Tech</h3>
-            <p className="text-gray-700">Fluent in geek speak, I'm here to understand your vision and bring it to life with precision and passion.</p>
+            <h3 className="text-lg font-semibold text-red-500 mb-4">Let&apos;s Talk Tech</h3>
+            <p className="text-gray-700">Fluent in geek speak, I&apos;m here to understand your vision and bring it to life with precision and passion.</p>
           </div>
         </div>
       </div>

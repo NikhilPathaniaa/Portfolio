@@ -7,7 +7,7 @@ import { testimonials } from "@/data/testimonials";
 const TestimonialComponent = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [testimonial, setTestimonial] = useState(testimonials[0]);
-
+  console.log(testimonial);
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentIndex((currentIndex + 1) % testimonials.length);
