@@ -33,7 +33,7 @@ const PortfolioList = (props: portfolioData) => {
             Live Preview
           </button>
         </div> */}
-        {showModel && <DataPopUp title={props.title} id={props.id} video={props.video} content={props.content} preview={props.preview} client={props.client} languages={props.languages} onClose={() => setShowModel(false)} />}
+        {showModel && <DataPopUp title={props.title} image={props.image} id={props.id} video={props.video} content={props.content} preview={props.preview} client={props.client} languages={props.languages} onClose={() => setShowModel(false)} />}
       </div>
     </>
   );
