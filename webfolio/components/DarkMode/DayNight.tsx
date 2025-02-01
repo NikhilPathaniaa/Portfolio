@@ -15,7 +15,7 @@ const DayNight: React.FC = () => {
   };
 
   return (
-    <div className="section-bg">
+    <div className="">
       <div className="w-full flex justify-between px-4">
         {/* Dark Mode Toggle Button */}
         <div className="flex items-center">

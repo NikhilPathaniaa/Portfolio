@@ -37,7 +37,7 @@ export default function RootLayout({
             {/* mini Navbar */}
             <Navbar />
             <DayNight />
-            <div className="bg-white dark:bg-[#111111] w-[55vw] border-2 border-gray-50 shadow-md rounded-xl">
+            <div className="bg-white dark:bg-[#111111] w-[55vw]  shadow-md rounded-xl">
               {/* all pages content */}
               {children}
               {/* common footer */}
