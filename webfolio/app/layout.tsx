@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Common/Navbar";
 import Footer from "@/components/Common/Footer";
 import ProfileSideBar from "@/components/Sidebar/ProfileSideBar";
+import DayNight from "@/components/DarkMode/DayNight";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -35,7 +36,8 @@ export default function RootLayout({
           <div className="col-span-12 lg:col-span-8">
             {/* mini Navbar */}
             <Navbar />
-            <div className="bg-white w-[55vw] border-2 border-gray-50 shadow-md rounded-xl">
+            <DayNight />
+            <div className="bg-white dark:bg-[#111111] w-[55vw] border-2 border-gray-50 shadow-md rounded-xl">
               {/* all pages content */}
               {children}
               {/* common footer */}

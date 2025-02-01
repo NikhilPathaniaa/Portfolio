@@ -1,4 +1,5 @@
 import Header from "@/components/Common/Header";
+import Link from "next/link";
 import { MdCheckCircleOutline } from "react-icons/md";
 
 const tiers = [
@@ -30,7 +31,7 @@ function classNames(...classes: string[]) {
 
 export default function Example() {
   return (
-    <div className="relative isolate bg-white pt-12 md:py-12 px-2 sm:px-5 md:px-10 lg:px-14">
+    <div className="relative isolate bg-white dark:bg-[#111111] pt-12 md:py-12 px-2 sm:px-5 md:px-10 lg:px-14">
       <Header title="My Pricing" />
       <div aria-hidden="true" className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl">
         <div
@@ -42,7 +43,7 @@ export default function Example() {
       </div>
 
       <p className="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-600 sm:text-xl/8">
-        Choose an affordable plan that’s packed with the best features for engaging your audience, creating customer loyalty, and driving sales.
+        Choose an affordable plan that&apos;s packed with the best features for engaging your audience, creating customer loyalty, and driving sales.
       </p>
       <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
         {tiers.map((tier, tierIdx) => (
@@ -69,15 +70,15 @@ export default function Example() {
                 </li>
               ))}
             </ul>
-            <a
-              href={tier.href}
+            <Link
+              href="/contact"
               aria-describedby={tier.id}
               className={classNames(
                 tier.featured ? "bg-indigo-500 text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-indigo-500" : "text-indigo-600 ring-1 ring-indigo-200 ring-inset hover:ring-indigo-300 focus-visible:outline-indigo-600",
                 "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 sm:mt-10"
               )}>
               Get started today
-            </a>
+            </Link>
           </div>
         ))}
       </div>

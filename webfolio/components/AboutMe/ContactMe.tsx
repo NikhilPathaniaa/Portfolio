@@ -10,7 +10,7 @@ const ContactMe = () => {
           Let&apos;s chat and turn your ideas into reality. <br />
           Hit me up and let&apos;s make digital dreams happen.
         </p>
-        <Link href="/Contact" className="mx-auto mt-6 flex items-center rounded-[35px] bg-gradient-to-r from-[#fa5252] via-[#fa5252] to-[#dd2476] px-8 py-3 text-lg text-white transition-all duration-200 ease-linear hover:bg-gradient-to-l">
+        <Link href="/contact" className="mx-auto mt-6 flex items-center rounded-[35px] bg-gradient-to-r from-[#fa5252] via-[#fa5252] to-[#dd2476] px-8 py-3 text-lg text-white transition-all duration-200 ease-linear hover:bg-gradient-to-l">
           Get in Touch
         </Link>
       </div>
