@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect } from "react";
 
 interface portfolioData {
@@ -126,10 +127,10 @@ const DataPopUp = ({ onClose, image, id, title, video, languages, content, clien
               <h3 className="text-xl font-semibold text-[#ef4060]">Project Preview</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <img src={image} alt="Project Screenshot 1" className="w-full rounded-lg shadow-md" />
+                  <Image src={image} alt="Project Screenshot 1" className="w-full rounded-lg shadow-md" />
                 </div>
                 <div>
-                  <img src={image} alt="Project Screenshot 2" className="w-full rounded-lg shadow-md" />
+                  <Image src={image} alt="Project Screenshot 2" className="w-full rounded-lg shadow-md" />
                 </div>
               </div>
             </div>

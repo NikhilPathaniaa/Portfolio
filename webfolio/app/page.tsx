@@ -2,7 +2,6 @@ import AboutMeText from "@/components/AboutMe/AboutMeText";
 import ContactMe from "@/components/AboutMe/ContactMe";
 import Service from "@/components/AboutMe/Service";
 import Header from "@/components/Common/Header";
-import TestimonialComponent from "@/components/Testimonial/TestimonialComponent";
 
 export default function Home() {
   return (
@@ -14,7 +13,6 @@ export default function Home() {
       </div>
       <ContactMe />
       <Service />
-      <TestimonialComponent />
       {/* <WhyMe /> */}
     </div>
   );
