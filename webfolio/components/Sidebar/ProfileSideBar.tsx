@@ -32,7 +32,7 @@ const ProfileSideBar = () => {
           {/* https://drive.google.com/file/d/1MXwZfzVVhm7fQENOqP9XBHT6vBpSGCoj/view?usp=sharing */}
           {/* <Link href="https://drive.google.com/file/d/1MXwZfzVVhm7fQENOqP9XBHT6vBpSGCoj/view?usp=sharing">
             <button className="dowanload-btn">
-              <img className="mr-3" src="images/icons/dowanload.png" alt="icon" /> Download Resume{" "}
+              <Image className="mr-3" src="images/icons/dowanload.png" alt="icon" /> Download Resume{" "}
             </button>
           </Link> */}
         </div>
