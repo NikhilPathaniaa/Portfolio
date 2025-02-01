@@ -6,7 +6,7 @@ const Service = () => {
       <h3 className="text-[35px] dark:text-white font-bold font-['Roboto_Slab'] pb-5"> What I do! </h3>
 
       <div className="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
-        <div className="flex gap-4 rounded-lg p-6 dark:border-2 bg-[#fcf4ff] dark:bg-transparent">
+        <div className="flex gap-4 rounded-lg p-6 dark:border-2 border-[#2b2b2b] bg-[#fcf4ff] dark:bg-transparent">
           <img className="w-10 h-10 object-contain block" src="/icons/wordpress.svg" alt="icon" />
           <div className="space-y-2">
             <h3 className="dark:text-white text-[22px] font-semibold  font-['Poppins']"> Wordpress</h3>
@@ -14,7 +14,7 @@ const Service = () => {
           </div>
         </div>
 
-        <div className="flex gap-4 rounded-lg p-6 dark:border-2 bg-[#fefaf0] dark:bg-transparent">
+        <div className="flex gap-4 rounded-lg p-6 dark:border-2 border-[#2b2b2b] bg-[#fefaf0] dark:bg-transparent">
           <img className="w-10 h-10 object-contain block" src="/icons/nextjs.svg" alt="icon" />
           <div className="space-y-2">
             <h3 className="dark:text-white text-[22px] font-semibold  font-['Poppins']"> Next JS</h3>
@@ -22,7 +22,7 @@ const Service = () => {
           </div>
         </div>
 
-        <div className="flex gap-4 rounded-lg p-6 dark:border-2 bg-[#f3faff] dark:bg-transparent">
+        <div className="flex gap-4 rounded-lg p-6 dark:border-2 border-[#2b2b2b] bg-[#f3faff] dark:bg-transparent">
           <img className="w-10 h-10 object-contain block" src="/icons/reactjs.svg" alt="icon" />
           <div className="space-y-2">
             <h3 className="dark:text-white text-[22px] font-semibold  font-['Poppins']"> React JS</h3>
@@ -30,7 +30,7 @@ const Service = () => {
           </div>
         </div>
 
-        <div className="flex gap-4 rounded-lg p-6 dark:border-2 bg-[#fff4f4] dark:bg-transparent">
+        <div className="flex gap-4 rounded-lg p-6 dark:border-2 border-[#2b2b2b] bg-[#fff4f4] dark:bg-transparent">
           <img className="w-10 h-10 object-contain block" src="/icons/ux.png" alt="icon" />
           <div className="space-y-2">
             <h3 className="dark:text-white text-[22px] font-semibold  font-['Poppins']"> UI / UX </h3>
