@@ -9,7 +9,7 @@ const Address = () => {
       </span>
       <div className="text-left ml-2.5">
         <p className="text-xs text-[#44566C] dark:text-[#A6A6A6]  font-['Poppins']"> Location </p>
-        <p className="dark:text-white   font-['Poppins']">Bangalore, India</p>
+        <p className="dark:text-white text-black  font-['Poppins']">Bangalore, India</p>
       </div>
     </div>
   );
