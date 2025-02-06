@@ -1,11 +1,9 @@
 import Address from "./profile/Address";
 import Designation from "./profile/Designation";
 import Email from "./profile/Email";
-import FaceBook from "./profile/FaceBook";
-import Github from "./profile/Github";
-import ProfileImage from "./profile/ProfileImage";
 import Instagram from "./profile/Instagram";
 import LinkedIn from "./profile/LinkedIn";
+import ProfileImage from "./profile/ProfileImage";
 import Youtube from "./profile/Youtube";
 
 const ProfileSideBar = () => {
