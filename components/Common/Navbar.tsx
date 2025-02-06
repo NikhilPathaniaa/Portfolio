@@ -7,8 +7,8 @@ import { GrMoney } from "react-icons/gr";
 const Navbar = () => {
   const pathname = usePathname();
   return (
-    <header className="lg:w-[29rem] h-[144px] sm:hidden lg:block p-[30px] ml-auto mb-10 rounded-[16px] bg-white dark:bg-[#111111]">
-      <nav className="sm:hidden lg:block">
+    <header className="lg:w-[29rem] h-[144px] hidden lg:block p-[30px] ml-auto mb-10 rounded-[16px] bg-white dark:bg-[#111111]">
+      <nav className="hidden lg:block">
         <ul className="flex  font-['Poppins']">
           <li>
             <Link

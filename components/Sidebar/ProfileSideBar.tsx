@@ -6,6 +6,7 @@ import Github from "./profile/Github";
 import ProfileImage from "./profile/ProfileImage";
 import Instagram from "./profile/Instagram";
 import LinkedIn from "./profile/LinkedIn";
+import Youtube from "./profile/Youtube";
 
 const ProfileSideBar = () => {
   return (
@@ -17,9 +18,10 @@ const ProfileSideBar = () => {
           <h2 className="mt-6 mb-1 text-[26px]  font-['Poppins'] font-semibold dark:text-white"> Nikhil Pathania </h2>
           <Designation />
           <div className="flex justify-center space-x-3">
-            <FaceBook />
+            {/* <FaceBook /> */}
+            <Youtube />
             <Instagram />
-            <Github />
+            {/* <Github /> */}
             <LinkedIn />
           </div>
           {/* personal infomation start */}
