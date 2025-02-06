@@ -6,6 +6,8 @@ import Footer from "@/components/Common/Footer";
 import ProfileSideBar from "@/components/Sidebar/ProfileSideBar";
 import DayNight from "@/components/DarkMode/DayNight";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
+
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
@@ -41,6 +43,7 @@ export default function RootLayout({
               {/* all pages content */}
               {children}
               <SpeedInsights />
+              <Analytics />
               {/* common footer */}
               <Footer />
             </div>
