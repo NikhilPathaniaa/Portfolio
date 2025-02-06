@@ -2,7 +2,7 @@ import React from "react";
 import { FaEnvelopeOpenText } from "react-icons/fa6";
 
 const Email = () => {
-  const email = "developernikhil1@gmail.com";
+  const email = "freelance.nikhil1@gmail.com";
   // const handleEmailClick = () => {
   //   window.location.href = `mailto:${email}`;
   // };
