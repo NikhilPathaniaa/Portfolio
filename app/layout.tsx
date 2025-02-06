@@ -5,7 +5,7 @@ import Navbar from "@/components/Common/Navbar";
 import Footer from "@/components/Common/Footer";
 import ProfileSideBar from "@/components/Sidebar/ProfileSideBar";
 import DayNight from "@/components/DarkMode/DayNight";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
@@ -40,6 +40,7 @@ export default function RootLayout({
             <div className="bg-white dark:bg-[#111111] w-[55vw]  shadow-md rounded-xl">
               {/* all pages content */}
               {children}
+              <SpeedInsights />
               {/* common footer */}
               <Footer />
             </div>
