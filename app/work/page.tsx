@@ -1,7 +1,9 @@
+"use client";
 import React from "react";
 import { portfolio } from "@/data/PortfolioData";
 import PortfolioList from "@/components/Portfolio/PortfolioList";
 import Header from "@/components/Common/Header";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 const WorkPage = () => {
   return (
     <section id="portfolio" className="bg-white lg:rounded-2xl dark:bg-[#111111]">
@@ -35,8 +37,25 @@ const WorkPage = () => {
                 </li>
               </ul>
             </div> */}
+            <DotLottieReact
+              src="https://lottie.host/809eff59-7bdc-4902-9888-5dc14ecbbc9d/4z0PuE0LrC.lottie" // Replace with your actual animation path
+              loop
+              autoplay
+              className="w-80 h-80 hidden md:block"
+            />
             {portfolio.map((values) => (
-              <PortfolioList key={values.id} id={values.id} title={values.title} image={values.image} video={values.video} languages={values.languages} content={values.content} client={values.client} preview={values.preview} />
+              <PortfolioList
+                key={values.id}
+                category={values.category}
+                id={values.id}
+                title={values.title}
+                image={values.image}
+                video={values.video}
+                languages={values.languages}
+                content={values.content}
+                client={values.client}
+                preview={values.preview}
+              />
             ))}
           </div>
         </div>

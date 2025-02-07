@@ -12,10 +12,11 @@ interface portfolioData {
   languages: string;
   content: string;
   image: string;
+  category: string;
   onClose: () => void;
 }
 
-const DataPopUp = ({ onClose, image, id, title, video, languages, content, client, preview }: portfolioData) => {
+const DataPopUp = ({ onClose, image, id, title, video, languages, content, client, preview, category }: portfolioData) => {
   // Prevent background scroll when modal is open
   useEffect(() => {
     document.body.classList.add("overflow-hidden");
@@ -28,7 +29,7 @@ const DataPopUp = ({ onClose, image, id, title, video, languages, content, clien
   return (
     <div key={id} className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/50">
       {/* Modal Container */}
-      <div className="relative w-full max-w-5xl rounded-lg bg-white dark:bg-[#323232] p-6 md:p-8 shadow-lg">
+      <div className="relative w-full max-w-5xl rounded-3xl bg-white dark:bg-[#323232] p-6 md:p-8 shadow-lg">
         {/* Close Button */}
         <button onClick={onClose} className="absolute top-4 right-4 text-lg text-gray-700 dark:text-white hover:text-red-500">
           ✖
@@ -37,10 +38,12 @@ const DataPopUp = ({ onClose, image, id, title, video, languages, content, clien
         {/* Modal Content */}
 
         <div className="overflow-y-auto max-h-[80vh]">
-          <header className="flex gap-4">
-            <Image width={500} height={500} src={image} alt="portfolio image" className="w-full z-0 cursor-pointer transition duration-200 ease-in-out transform rounded-lg h-auto" />
+          <header className="flex md:flex-row flex-col gap-4">
+            <h2 className="text-[#ef4060] block md:hidden dark:hover:text-[#FA5252] text-4xl text-center font-bold">{title}</h2>
+
+            <Image width={500} height={500} src={image} alt="portfolio image" className="w-full z-0  cursor-default transition duration-200 ease-in-out transform rounded-3xl h-auto" />
             <section className="w-full">
-              <h2 className="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">{title}</h2>
+              <h2 className="text-[#ef4060] hidden md:block dark:hover:text-[#FA5252] text-4xl text-center font-bold">{title}</h2>
 
               {/* Project Details */}
               <div className="grid grid-cols-1 my-6 gap-4">
@@ -48,11 +51,11 @@ const DataPopUp = ({ onClose, image, id, title, video, languages, content, clien
                   <p className="text-black dark:text-white text-[1rem] flex items-center mt-2 lg:mt-0 sm:text-lg">
                     <FaRegFileLines className="mr-2" />
                     Project :&nbsp;
-                    <span className="font-medium"> {title}</span>
+                    <span className="font-medium"> {category}</span>
                   </p>
                   <p className="text-black dark:text-white text-[1rem] flex items-center mt-2 lg:mt-0 sm:text-lg">
                     <FaCode className="mr-2" />
-                    Languages :&nbsp;
+                    Tools :&nbsp;
                     <span className="font-medium">{languages}</span>
                   </p>
 
@@ -65,7 +68,7 @@ const DataPopUp = ({ onClose, image, id, title, video, languages, content, clien
                     <FaArrowUpRightFromSquare className="mr-2" />
                     Preview :&nbsp;
                     <span className="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
-                      <a href={preview} target="_blank" rel="noopener noreferrer">
+                      <a href={"https://" + preview} target="_blank" rel="noopener noreferrer">
                         {preview}
                       </a>
                     </span>
@@ -74,19 +77,9 @@ const DataPopUp = ({ onClose, image, id, title, video, languages, content, clien
               </div>
             </section>
           </header>
-          {/* Video Section (Full Width Inside Modal) */}
-          {/* <div className="w-full">
-            <iframe
-              className="w-full aspect-video rounded-lg shadow-lg"
-              src={`https://www.youtube.com/embed/${video}`} // YouTube Thumbnail
-              title="YouTube Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen></iframe>
-          </div> */}
 
           {/* Content */}
-          <p className="dark:text-white text-black text-base sm:text-lg font-normal mt-4" dangerouslySetInnerHTML={{ __html: content }} />
+          {/* <p className="dark:text-white text-black text-base sm:text-lg font-normal mt-4" dangerouslySetInnerHTML={{ __html: content }} /> */}
 
           <hr className="my-6" />
 
@@ -103,7 +96,7 @@ const DataPopUp = ({ onClose, image, id, title, video, languages, content, clien
           <div className="p-6">
             {/* Project Overview */}
             <div className="space-y-4">
-              <h3 className="text-xl font-semibold text-[#ef4060]">Project Overview</h3>
+              <h3 className="text-xl font-semibold text-[#ef4060]">Overview</h3>
               <p className="text-gray-700 dark:text-gray-300">{content}</p>
             </div>
 
@@ -129,7 +122,7 @@ const DataPopUp = ({ onClose, image, id, title, video, languages, content, clien
 
             {/* Project Preview */}
             <div className="mt-6 space-y-4">
-              <h3 className="text-xl font-semibold text-[#ef4060]">Project Preview</h3>
+              <h3 className="text-xl font-semibold text-[#ef4060]">Preview</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <Image width={500} height={500} src={image} alt="Project Screenshot 1" className="w-full rounded-lg shadow-md" />
@@ -142,7 +135,7 @@ const DataPopUp = ({ onClose, image, id, title, video, languages, content, clien
 
             {/* Video Section */}
             <div className="mt-6">
-              <h3 className="text-xl font-semibold text-[#ef4060]">Project Walkthrough</h3>
+              <h3 className="text-xl font-semibold text-[#ef4060]">Video</h3>
               <div className="relative pt-[56.25%]">
                 <iframe
                   className="absolute top-0 left-0 w-full h-full rounded-lg"

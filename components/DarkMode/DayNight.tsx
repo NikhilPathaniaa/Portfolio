@@ -18,7 +18,7 @@ const DayNight: React.FC = () => {
   };
 
   return (
-    <div className="w-full mx-auto flex justify-between bg-[#f3f6f6] py-[1.25rem] dark:bg-black lg:bg-transparent px-0 md:px-[7.5rem] lg:pt-[50px]">
+    <div className="w-full mx-auto flex justify-between bg-[#f3f6f6] py-[1.25rem] dark:bg-black lg:bg-transparent lg:dark:bg-transparent px-0 md:px-[7.5rem] lg:pt-[50px]">
       <div className="w-full flex justify-between px-4">
         <div className="pt-2 lg:hidden">
           <Link href="/">
