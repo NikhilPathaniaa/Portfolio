@@ -20,7 +20,7 @@ const roboto_slab = Roboto_Slab({
 });
 
 export const metadata: Metadata = {
-  title: "🚀 Freelancer Nikhil | Expert Web Development, UI/UX, & Promo Videos",
+  title: "Freelancer Nikhil",
   description: "Looking for a freelancer to create stunning websites, UI/UX designs, and high-quality promo videos? I help businesses to grow Fast. Get in touch today!",
 };
 
