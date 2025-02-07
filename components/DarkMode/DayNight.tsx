@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
 import MobileNavbar from "../Common/MobileNavbar";
+import Image from "next/image";
 
 const DayNight: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
@@ -19,7 +20,7 @@ const DayNight: React.FC = () => {
     <div className="w-full mx-auto flex justify-between bg-[#f3f6f6] py-5 dark:bg-black lg:bg-transparent lg:px-0 lg:pt-[50px]">
       <div className="w-full flex justify-between px-4">
         <div>
-          <img className="h-[26px] lg:h-[32px]" src="/logo/logo.png" alt="logo" />
+          <Image width={100} height={26} className="" src="/logo/logo.png" alt="logo" />
         </div>
         {/* Dark Mode Toggle Button */}
         <div className="flex items-center">

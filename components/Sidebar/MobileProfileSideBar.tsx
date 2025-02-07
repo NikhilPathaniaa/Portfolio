@@ -1,11 +1,9 @@
-import React from "react";
-import Designation from "./profile/Designation";
-import ProfileImage from "./profile/ProfileImage";
-import Github from "./profile/Github";
-import LinkedIn from "./profile/LinkedIn";
-import Email from "./profile/Email";
 import Address from "./profile/Address";
+import Designation from "./profile/Designation";
+import Email from "./profile/Email";
 import Instagram from "./profile/Instagram";
+import LinkedIn from "./profile/LinkedIn";
+import ProfileImage from "./profile/ProfileImage";
 import Youtube from "./profile/Youtube";
 
 const MobileProfileSideBar = () => {
