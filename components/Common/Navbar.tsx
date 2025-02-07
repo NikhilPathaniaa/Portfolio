@@ -13,11 +13,11 @@ const Navbar = () => {
           <li>
             <Link
               href="/"
-              className={`${
+              className={
                 pathname === "/"
                   ? "mx-[0.625rem] flex h-20 w-20 cursor-pointer flex-col items-center justify-center rounded-[10px] bg-[#f3f6f6] text-[0.8125rem] font-medium text-[#44566C] transition-all duration-300 ease-in-out hover:bg-gradient-to-r from-[#fa5252] to-[#dd2476] hover:text-white dark:bg-[#212425] dark:text-[#a6a6a6] dark:hover:text-white lg:bg-gradient-to-r lg:from-[#fa5252] lg:to-[#dd2476] lg:text-white"
                   : "mx-[0.625rem] flex h-20 w-20 cursor-pointer flex-col items-center justify-center rounded-[10px] bg-[#f3f6f6] text-[0.8125rem] font-medium text-[#44566C] transition-all duration-300 ease-in-out hover:bg-gradient-to-r from-[#fa5252] to-[#dd2476] hover:text-white dark:bg-[#212425] dark:text-[#a6a6a6] dark:hover:text-white"
-              }`}>
+              }>
               <span className="text-xl mb-1">
                 <FaRegUser />
               </span>
@@ -27,11 +27,11 @@ const Navbar = () => {
           <li>
             <Link
               href="/work"
-              className={`${
+              className={
                 pathname === "/work"
                   ? "menu-active mx-[0.625rem] flex h-20 w-20 cursor-pointer flex-col items-center justify-center rounded-[10px] bg-[#f3f6f6] text-[0.8125rem] font-medium text-[#44566C] transition-all duration-300 ease-in-out hover:bg-gradient-to-r from-[#fa5252] to-[#dd2476] hover:text-white dark:bg-[#212425] dark:text-[#a6a6a6] dark:hover:text-white lg:bg-gradient-to-r lg:from-[#fa5252] lg:to-[#dd2476] lg:text-white"
                   : "menu-item mx-[0.625rem] flex h-20 w-20 cursor-pointer flex-col items-center justify-center rounded-[10px] bg-[#f3f6f6] text-[0.8125rem] font-medium text-[#44566C] transition-all duration-300 ease-in-out hover:bg-gradient-to-r from-[#fa5252] to-[#dd2476] hover:text-white dark:bg-[#212425] dark:text-[#a6a6a6] dark:hover:text-white"
-              }`}>
+              }>
               <span className="text-xl mb-1">
                 <FaBriefcase />
               </span>
@@ -41,11 +41,11 @@ const Navbar = () => {
           <li>
             <Link
               href="/pricing"
-              className={`${
+              className={
                 pathname === "/pricing"
                   ? "menu-active mx-[0.625rem] flex h-20 w-20 cursor-pointer flex-col items-center justify-center rounded-[10px] bg-[#f3f6f6] text-[0.8125rem] font-medium text-[#44566C] transition-all duration-300 ease-in-out hover:bg-gradient-to-r from-[#fa5252] to-[#dd2476] hover:text-white dark:bg-[#212425] dark:text-[#a6a6a6] dark:hover:text-white lg:bg-gradient-to-r lg:from-[#fa5252] lg:to-[#dd2476] lg:text-white"
                   : "menu-item mx-[0.625rem] flex h-20 w-20 cursor-pointer flex-col items-center justify-center rounded-[10px] bg-[#f3f6f6] text-[0.8125rem] font-medium text-[#44566C] transition-all duration-300 ease-in-out hover:bg-gradient-to-r from-[#fa5252] to-[#dd2476] hover:text-white dark:bg-[#212425] dark:text-[#a6a6a6] dark:hover:text-white"
-              }`}>
+              }>
               <span className="text-xl mb-1">
                 <GrMoney />
               </span>
@@ -69,11 +69,11 @@ const Navbar = () => {
           <li>
             <Link
               href="/contact"
-              className={`${
+              className={
                 pathname === "/contact"
                   ? "menu-active mx-[0.625rem] flex h-20 w-20 cursor-pointer flex-col items-center justify-center rounded-[10px] bg-[#f3f6f6] text-[0.8125rem] font-medium text-[#44566C] transition-all duration-300 ease-in-out hover:bg-gradient-to-r from-[#fa5252] to-[#dd2476] hover:text-white dark:bg-[#212425] dark:text-[#a6a6a6] dark:hover:text-white lg:bg-gradient-to-r lg:from-[#fa5252] lg:to-[#dd2476] lg:text-white"
                   : "menu-item mx-[0.625rem] flex h-20 w-20 cursor-pointer flex-col items-center justify-center rounded-[10px] bg-[#f3f6f6] text-[0.8125rem] font-medium text-[#44566C] transition-all duration-300 ease-in-out hover:bg-gradient-to-r from-[#fa5252] to-[#dd2476] hover:text-white dark:bg-[#212425] dark:text-[#a6a6a6] dark:hover:text-white"
-              }`}>
+              }>
               <span className="text-xl mb-1">
                 <FaAddressBook />
               </span>

@@ -31,15 +31,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`px-[9rem] bg-[url('/background/bg.jpg')] dark:bg-[url('/background/bgtwo.jpg')] min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full ${poppins.variable} ${roboto_slab.variable} antialiased`}>
-        <div className="flex mt-24 justify-between">
+      <body className={`bg-[url('/background/bg.jpg')] dark:bg-[url('/background/bgtwo.jpg')] min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full ${poppins.variable} ${roboto_slab.variable} antialiased`}>
+        <DayNight />
+        <div className="w-full mx-auto md:max-w-[992px] xl:max-w-[1280px] mt-24 justify-between grid grid-cols-12 md:gap-10">
           {/* Side bar*/}
           <ProfileSideBar />
           <div className="col-span-12 lg:col-span-8">
             {/* mini Navbar */}
             <Navbar />
-            <DayNight />
-            <div className="bg-white dark:bg-[#111111] w-[55vw]  shadow-md rounded-xl">
+            <div className="bg-white dark:bg-[#111111]  shadow-md rounded-2xl">
               {/* all pages content */}
               {children}
               <SpeedInsights />

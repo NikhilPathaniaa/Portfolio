@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
+import MobileNavbar from "../Common/MobileNavbar";
 
 const DayNight: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
@@ -15,8 +16,11 @@ const DayNight: React.FC = () => {
   };
 
   return (
-    <div className="">
+    <div className="w-full mx-auto flex justify-between bg-[#f3f6f6] py-5 dark:bg-black lg:bg-transparent lg:px-0 lg:pt-[50px]">
       <div className="w-full flex justify-between px-4">
+        <div>
+          <img className="h-[26px] lg:h-[32px]" src="/logo/logo.png" alt="logo" />
+        </div>
         {/* Dark Mode Toggle Button */}
         <div className="flex items-center">
           <button
@@ -26,6 +30,8 @@ const DayNight: React.FC = () => {
             onClick={toggleDarkMode}>
             {isDarkMode ? <FiSun className="text-xl" /> : <FiMoon className="text-xl" />}
           </button>
+
+          <MobileNavbar />
         </div>
       </div>
     </div>
