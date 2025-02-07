@@ -39,7 +39,7 @@ export function ContactForm() {
     <div className="bg-white lg:rounded-2xl dark:bg-[#111111] ">
       <ToastContainer /> {/* Toast Notification Container */}
       <div className="mb-12 md:mb-[30px] pl-4 md:pl-[60px] pt-12">
-        <Header title="Contact" />
+        <Header title="Contact" space={11} />
       </div>
       <div className="mx-4 md:mx-[60px] p-4 md:p-16 dark:border-[#212425] dark:border-2 bg-[rgb(248,251,251)] rounded-xl dark:bg-[#111111] mb-[30px] md:mb-[60px]">
         <h3 className="text-[1.5625rem]">

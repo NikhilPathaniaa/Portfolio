@@ -7,7 +7,7 @@ const WorkPage = () => {
     <section id="portfolio" className="bg-white lg:rounded-2xl dark:bg-[#111111]">
       <div className="container  mb-8 px-4 sm:px-5 md:px-10 lg:px-[60px]">
         <div className="py-12 ">
-          <Header title="Portfolio" />
+          <Header title="Portfolio" space={12} />
           <div className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-[30px] grid gap-x-10 gap-y-7 mb-6">
             {/* portfolio items one start */}
             {/* filter */}
