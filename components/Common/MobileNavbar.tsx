@@ -14,10 +14,10 @@ const MobileNavbar = () => {
     setMenuOpen(!menuOpen);
   };
   const pathname = usePathname();
-  const handleMenuItemClick = (pathname: any) => {
-    // setActiveLink(pathname);
-    setShouldCloseMenu(true); // Set shouldCloseMenu href true when a menu item is clicked
-  };
+  //   const handleMenuItemClick = (pathname: any) => {
+  //     // setActiveLink(pathname);
+  //     setShouldCloseMenu(true); // Set shouldCloseMenu href true when a menu item is clicked
+  //   };
 
   useEffect(() => {
     if (shouldCloseMenu) {
@@ -38,7 +38,8 @@ const MobileNavbar = () => {
                   ? "flex cursor-pointer items-center pt-2.5 pb-2.5 pl-4 font-['Poppins'] text-[0.8125rem] font-medium text-red-500 transition-colors duration-300 ease-in-out hover:text-red-500 dark:text-red-500 dark:hover:text-red-500 md:px-4 xl:px-5"
                   : "flex cursor-pointer items-center pt-2.5 pb-2.5 pl-4 font-['Poppins'] text-[0.8125rem] font-medium text-[#44566C] transition-colors duration-300 ease-in-out hover:text-red-500 dark:text-white dark:hover:text-red-500 md:px-4 xl:px-5"
               }
-              onClick={handleMenuItemClick}>
+              //   onClick={handleMenuItemClick}>
+            >
               <span className="mr-2 text-xl">
                 <FaRegUser />
               </span>
@@ -53,7 +54,8 @@ const MobileNavbar = () => {
                   ? "flex cursor-pointer items-center pt-2.5 pb-2.5 pl-4 font-['Poppins'] text-[0.8125rem] font-medium text-red-500 transition-colors duration-300 ease-in-out hover:text-red-500 dark:text-red-500 dark:hover:text-red-500 md:px-4 xl:px-5"
                   : "flex cursor-pointer items-center pt-2.5 pb-2.5 pl-4 font-['Poppins'] text-[0.8125rem] font-medium text-[#44566C] transition-colors duration-300 ease-in-out hover:text-red-500 dark:text-white dark:hover:text-red-500 md:px-4 xl:px-5"
               }
-              onClick={handleMenuItemClick}>
+              //   onClick={handleMenuItemClick}>
+            >
               <span className="mr-2 text-xl">
                 <FaBriefcase />
               </span>
@@ -68,7 +70,8 @@ const MobileNavbar = () => {
                   ? "flex cursor-pointer items-center pt-2.5 pb-2.5 pl-4 font-['Poppins'] text-[0.8125rem] font-medium text-red-500 transition-colors duration-300 ease-in-out hover:text-red-500 dark:text-red-500 dark:hover:text-red-500 md:px-4 xl:px-5"
                   : "flex cursor-pointer items-center pt-2.5 pb-2.5 pl-4 font-['Poppins'] text-[0.8125rem] font-medium text-[#44566C] transition-colors duration-300 ease-in-out hover:text-red-500 dark:text-white dark:hover:text-red-500 md:px-4 xl:px-5"
               }
-              onClick={handleMenuItemClick}>
+              //   onClick={handleMenuItemClick}>
+            >
               <span className="mr-2 text-xl">
                 <GrMoney />
               </span>
@@ -83,7 +86,8 @@ const MobileNavbar = () => {
                   ? "flex cursor-pointer items-center pt-2.5 pb-2.5 pl-4 font-['Poppins'] text-[0.8125rem] font-medium text-red-500 transition-colors duration-300 ease-in-out hover:text-red-500 dark:text-red-500 dark:hover:text-red-500 md:px-4 xl:px-5"
                   : "flex cursor-pointer items-center pt-2.5 pb-2.5 pl-4 font-['Poppins'] text-[0.8125rem] font-medium text-[#44566C] transition-colors duration-300 ease-in-out hover:text-red-500 dark:text-white dark:hover:text-red-500 md:px-4 xl:px-5"
               }
-              onClick={handleMenuItemClick}>
+              //   onClick={handleMenuItemClick}>
+            >
               <span className="mr-2 text-xl">
                 <FaAddressBook />
               </span>
