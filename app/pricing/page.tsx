@@ -32,7 +32,7 @@ function classNames(...classes: string[]) {
 export default function Example() {
   return (
     <div className="relative isolate bg-white dark:bg-[#111111] pt-12 md:py-12 px-2 sm:px-5 md:px-10 lg:px-14">
-      <Header title="Pricing" />
+      <Header title="Pricing" space={10} />
       <div aria-hidden="true" className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl">
         <div
           style={{

@@ -2,12 +2,17 @@ import React from "react";
 
 interface HeaderProps {
   title: string;
+  space: number;
 }
-const Header = ({ title }: HeaderProps) => {
+const Header = ({ title, space }: HeaderProps) => {
   return (
-    <span
-      className={`relative inline-block text-[2.5rem] font-bold font-['Roboto_Slab'] text-gray-900 dark:text-white md:after:absolute after:top-[55%] after:left-[13rem] after:h-[0.125rem] after:w-48 md:after:w-[12rem] after:-translate-y-1/2 after:rounded-md after:bg-gradient-to-r after:from-[#fa5252] after:to-[#dd2476]`}>
+    <span className="relative inline-block text-[2.5rem] font-bold font-['Roboto_Slab'] text-gray-900 dark:text-white">
       {title}
+      {/* Separate Span for Underline */}
+      <span
+        className="md:block hidden absolute top-[55%] h-[0.125rem] w-48 md:w-[12rem] -translate-y-1/2 rounded-md bg-gradient-to-r from-[#fa5252] to-[#dd2476]"
+        style={{ left: `${space}rem` }} // Apply left spacing dynamically
+      />
     </span>
   );
 };

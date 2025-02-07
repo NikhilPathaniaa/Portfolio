@@ -9,7 +9,7 @@ export default function Home() {
     <div>
       <div className="pt-12 md:py-12 px-2 sm:px-5 md:px-10 lg:px-14">
         {/* about page title */}
-        <Header title="About Me" />
+        <Header title="About Me" space={13} />
         <MobileProfileSideBar />
         <AboutMeText />
       </div>
