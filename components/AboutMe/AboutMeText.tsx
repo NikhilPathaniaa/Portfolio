@@ -3,7 +3,7 @@ const AboutMeText = () => {
     <div className="lg:grid grid-cols-12 md:gap-10 pt-4 md:pt-[30px] items-center sm:hidden">
       <div className="col-span-12 space-y-2.5">
         <div className="lg:mr-16">
-          <div className="text-[#44566c] dark:text-white font-['Poppins'] dark:text-color-910 leading-7">
+          <div className="text-[#44566c] text-justify dark:text-white font-['Poppins'] dark:text-color-910 leading-7">
             <h3 className="text-xl dark:text-white font-bold font-['Poppins'] ">The Developer Who Turns Ideas into Reality </h3>
             <br />
             <p>You have a vision—a website that stands out, engages users, and drives results. But finding the right developer who understands your business, your audience, and your goals? That&apos;s the challenge.</p>
@@ -11,8 +11,8 @@ const AboutMeText = () => {
             <p>That&apos;s where I come in. </p>
             <br />
             <p>
-              I&apos;m Nikhil PAthania, a web developer who specializes in crafting high-performance, user-friendly, and visually stunning websites. Whether you need a sleek portfolio, a dynamic business site, or an optimized e-commerce platform, I
-              make sure your online presence isn&apos;t just another website—it&apos;s your competitive advantage.{" "}
+              I&apos;m Nikhil Pathania, a Software Developer Engineer who specializes in crafting high-performance, user-friendly, and visually stunning websites. Whether you need a sleek portfolio, a dynamic business site, or an optimized e-commerce
+              platform, I make sure your online presence isn&apos;t just another website—it&apos;s your competitive advantage.{" "}
             </p>
             <h4>Why Work With Me?</h4>
             <ul>
