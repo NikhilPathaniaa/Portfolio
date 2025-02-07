@@ -11,6 +11,7 @@ interface portfolioData {
   video: string;
   languages: string;
   content: string;
+  category: string;
 }
 const PortfolioList = (props: portfolioData) => {
   const [showModel, setShowModel] = useState(false);
@@ -21,7 +22,7 @@ const PortfolioList = (props: portfolioData) => {
           <div onClick={() => setShowModel(true)} className="overflow-hidden rounded-lg">
             <Image width={500} height={500} className="w-full z-0 cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto" src={props.image} alt="portfolio image" />
           </div>
-          <span className="pt-5 text-[14px] font-normal  font-['Poppins'] text-gray-600 block dark:text-[#A6A6A6]">Web Developer</span>
+          <span className="pt-5 text-[14px] font-normal  font-['Poppins'] text-gray-600 block dark:text-[#A6A6A6]">{props.category}</span>
           <button onClick={() => setShowModel(true)} className="font-medium font-['Poppins'] cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] text-black dark:text-white mt-2">
             {props.title}
           </button>
@@ -32,7 +33,20 @@ const PortfolioList = (props: portfolioData) => {
             Live Preview
           </button>
         </div> */}
-        {showModel && <DataPopUp title={props.title} image={props.image} id={props.id} video={props.video} content={props.content} preview={props.preview} client={props.client} languages={props.languages} onClose={() => setShowModel(false)} />}
+        {showModel && (
+          <DataPopUp
+            title={props.title}
+            category={props.category}
+            image={props.image}
+            id={props.id}
+            video={props.video}
+            content={props.content}
+            preview={props.preview}
+            client={props.client}
+            languages={props.languages}
+            onClose={() => setShowModel(false)}
+          />
+        )}
       </div>
     </>
   );

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa6";
 import MobileNavbar from "../Common/MobileNavbar";
 import Image from "next/image";
+import Link from "next/link";
 
 const DayNight: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
@@ -17,9 +18,14 @@ const DayNight: React.FC = () => {
   };
 
   return (
-    <div className="w-full mx-auto flex justify-between bg-[#f3f6f6] py-[1.25rem] dark:bg-black lg:bg-transparent px-0 md:px-[7.5rem] lg:pt-[50px]">
+    <div className="w-full mx-auto flex justify-between bg-[#f3f6f6] py-[1.25rem] dark:bg-black lg:bg-transparent lg:dark:bg-transparent px-0 md:px-[7.5rem] lg:pt-[50px]">
       <div className="w-full flex justify-between px-4">
-        <div className="pt-2">
+        <div className="pt-2 lg:hidden">
+          <Link href="/">
+            <Image width={100} height={26} src="/logo/logo.png" alt="logo" />
+          </Link>
+        </div>
+        <div className="pt-2 hidden lg:block cursor-default">
           <Image width={100} height={26} src="/logo/logo.png" alt="logo" />
         </div>
         {/* Dark Mode Toggle Button */}
