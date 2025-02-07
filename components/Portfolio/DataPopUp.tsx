@@ -1,5 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect } from "react";
+import { FaArrowUpRightFromSquare, FaCode, FaRegFileLines, FaRegUser } from "react-icons/fa6";
 
 interface portfolioData {
   id: number;
@@ -24,7 +26,7 @@ const DataPopUp = ({ onClose, image, id, title, video, languages, content, clien
   }, []);
 
   return (
-    <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/50">
+    <div key={id} className="fixed inset-0 z-[99999] flex items-center justify-center bg-black/50">
       {/* Modal Container */}
       <div className="relative w-full max-w-5xl rounded-lg bg-white dark:bg-[#323232] p-6 md:p-8 shadow-lg">
         {/* Close Button */}
@@ -33,44 +35,47 @@ const DataPopUp = ({ onClose, image, id, title, video, languages, content, clien
         </button>
 
         {/* Modal Content */}
+
         <div className="overflow-y-auto max-h-[80vh]">
-          <h2 className="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">Web Developer Project {id}</h2>
+          <header className="flex gap-4">
+            <Image width={500} height={500} src={image} alt="portfolio image" className="w-full z-0 cursor-pointer transition duration-200 ease-in-out transform rounded-lg h-auto" />
+            <section className="w-full">
+              <h2 className="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">{title}</h2>
 
-          {/* Project Details */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 my-6 gap-4">
-            <div className="space-y-2">
-              <p className="dark:text-white flex items-center text-lg">
-                <i className="fa-regular fa-file-lines hidden sm:block mr-4 text-xl"></i>
-                Project :&nbsp;
-                <span className="font-medium"> {title}</span>
-              </p>
-              <p className="dark:text-white flex items-center text-lg">
-                <i className="fa-solid fa-code hidden sm:block mr-2 text-lg"></i>
-                Languages :&nbsp;
-                <span className="font-medium">{languages}</span>
-              </p>
-            </div>
+              {/* Project Details */}
+              <div className="grid grid-cols-1 my-6 gap-4">
+                <div className="space-y-2">
+                  <p className="text-black dark:text-white text-[1rem] flex items-center mt-2 lg:mt-0 sm:text-lg">
+                    <FaRegFileLines className="mr-2" />
+                    Project :&nbsp;
+                    <span className="font-medium"> {title}</span>
+                  </p>
+                  <p className="text-black dark:text-white text-[1rem] flex items-center mt-2 lg:mt-0 sm:text-lg">
+                    <FaCode className="mr-2" />
+                    Languages :&nbsp;
+                    <span className="font-medium">{languages}</span>
+                  </p>
 
-            <div className="space-y-2">
-              <p className="dark:text-white flex items-center mt-2 lg:mt-0 text-lg">
-                <i className="fa-regular fa-user hidden sm:block mr-2 text-lg"></i>
-                Client :&nbsp;
-                <span className="font-medium">{client}</span>
-              </p>
-              <p className="dark:text-white flex items-center text-lg">
-                <i className="fa-solid fa-arrow-up-right-from-square hidden sm:block mr-2 text-lg"></i>
-                Preview :&nbsp;
-                <span className="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
-                  <a href={preview} target="_blank" rel="noopener noreferrer">
-                    {preview}
-                  </a>
-                </span>
-              </p>
-            </div>
-          </div>
-
+                  <p className="text-black dark:text-white text-[1rem] flex items-center mt-2 lg:mt-0 sm:text-lg">
+                    <FaRegUser className="mr-2" />
+                    Client :&nbsp;
+                    <span className="font-medium">{client}</span>
+                  </p>
+                  <p className="text-black dark:text-white text-[1rem] flex items-center mt-2 lg:mt-0 sm:text-lg">
+                    <FaArrowUpRightFromSquare className="mr-2" />
+                    Preview :&nbsp;
+                    <span className="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]">
+                      <a href={preview} target="_blank" rel="noopener noreferrer">
+                        {preview}
+                      </a>
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </section>
+          </header>
           {/* Video Section (Full Width Inside Modal) */}
-          <div className="w-full">
+          {/* <div className="w-full">
             <iframe
               className="w-full aspect-video rounded-lg shadow-lg"
               src={`https://www.youtube.com/embed/${video}`} // YouTube Thumbnail
@@ -78,10 +83,10 @@ const DataPopUp = ({ onClose, image, id, title, video, languages, content, clien
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen></iframe>
-          </div>
+          </div> */}
 
           {/* Content */}
-          <p className="dark:text-white text-base sm:text-lg font-normal mt-4" dangerouslySetInnerHTML={{ __html: content }} />
+          <p className="dark:text-white text-black text-base sm:text-lg font-normal mt-4" dangerouslySetInnerHTML={{ __html: content }} />
 
           <hr className="my-6" />
 
@@ -174,9 +179,9 @@ const DataPopUp = ({ onClose, image, id, title, video, languages, content, clien
 
             {/* Contact CTA */}
             <div className="mt-6 text-center">
-              <a href="contact-link" className="inline-block px-6 py-2 rounded-md bg-[#ef4060] text-white hover:bg-[#FF6B81] transition-colors">
+              <Link href="/contact" className="inline-block px-6 py-2 rounded-md bg-[#ef4060] text-white hover:bg-[#FF6B81] transition-colors">
                 Contact Me for Similar Work
-              </a>
+              </Link>
             </div>
           </div>
         </div>
