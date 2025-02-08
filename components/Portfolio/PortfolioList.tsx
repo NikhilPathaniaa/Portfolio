@@ -12,6 +12,11 @@ interface portfolioData {
   languages: string;
   content: string;
   category: string;
+  designation: string;
+  feedback: string;
+  solution: string;
+  result: string;
+  challenge: string;
 }
 const PortfolioList = (props: portfolioData) => {
   const [showModel, setShowModel] = useState(false);
@@ -35,6 +40,8 @@ const PortfolioList = (props: portfolioData) => {
         </div> */}
         {showModel && (
           <DataPopUp
+            designation={props.designation}
+            feedback={props.feedback}
             title={props.title}
             category={props.category}
             image={props.image}
@@ -44,6 +51,9 @@ const PortfolioList = (props: portfolioData) => {
             preview={props.preview}
             client={props.client}
             languages={props.languages}
+            solution={props.solution}
+            result={props.result}
+            challenge={props.challenge}
             onClose={() => setShowModel(false)}
           />
         )}

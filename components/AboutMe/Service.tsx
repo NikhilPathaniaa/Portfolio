@@ -12,7 +12,7 @@ const Service = () => {
           <Image width={500} height={500} className="w-10 h-10 object-contain block" src="/icons/wordpress.svg" alt="icon" />
           <div className="space-y-2">
             <h3 className="dark:text-white text-black text-[22px] font-semibold  font-['Poppins']"> Wordpress</h3>
-            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6] text-black font-['Poppins']"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
+            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6] text-black font-['Poppins']"> Custom, scalable, and SEO-friendly WordPress websites tailored to your needs.</p>
           </div>
         </div>
 
@@ -20,7 +20,7 @@ const Service = () => {
           <Image width={500} height={500} className="w-10 h-10 object-contain block" src="/icons/nextjs.svg" alt="icon" />
           <div className="space-y-2">
             <h3 className="dark:text-white text-black text-[22px] font-semibold  font-['Poppins']"> Next JS</h3>
-            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6] text-black font-['Poppins']"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
+            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6] text-black font-['Poppins']"> High-performance, server-side rendered web apps for speed and scalability.</p>
           </div>
         </div>
 
@@ -28,7 +28,7 @@ const Service = () => {
           <Image width={500} height={500} className="w-10 h-10 object-contain block" src="/icons/reactjs.svg" alt="icon" />
           <div className="space-y-2">
             <h3 className="dark:text-white text-black text-[22px] font-semibold  font-['Poppins']"> React JS</h3>
-            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6] text-black font-['Poppins']"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
+            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6] text-black font-['Poppins']">Dynamic, responsive, and interactive front-end solutions for modern web apps.</p>
           </div>
         </div>
 
@@ -36,7 +36,7 @@ const Service = () => {
           <Image width={500} height={500} className="w-10 h-10 object-contain block" src="/icons/ux.png" alt="icon" />
           <div className="space-y-2">
             <h3 className="dark:text-white text-black text-[22px] font-semibold  font-['Poppins']"> UI / UX </h3>
-            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6] text-black font-['Poppins']"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat. </p>
+            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6] text-black font-['Poppins']"> Intuitive and engaging user experiences that enhance usability and conversions.</p>
           </div>
         </div>
       </div>

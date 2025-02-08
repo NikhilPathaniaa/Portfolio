@@ -46,8 +46,13 @@ const WorkPage = () => {
                 video={values.video}
                 languages={values.languages}
                 content={values.content}
+                solution={values.solution}
+                result={values.result}
+                challenge={values.challenge}
                 client={values.client}
                 preview={values.preview}
+                designation={values.designation}
+                feedback={values.feedback}
               />
             ))}
           </div>
