@@ -2,7 +2,7 @@ const AboutMeText = () => {
   return (
     <div className="lg:grid grid-cols-12 md:gap-10 pt-4 md:pt-[30px] items-center sm:hidden">
       <div className="col-span-12 space-y-2.5">
-        <div className="lg:mr-16">
+        <div className="">
           <div className="text-[#44566c] text-justify dark:text-white font-['Poppins'] dark:text-color-910 leading-7">
             <h3 className="text-xl dark:text-white font-bold font-['Poppins'] ">The Developer Who Turns Ideas into Reality </h3>
             <br />

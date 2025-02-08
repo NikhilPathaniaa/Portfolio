@@ -39,7 +39,7 @@ export default function RootLayout({
           <div className="col-span-12 lg:col-span-8">
             {/* mini Navbar */}
             <Navbar />
-            <div className="bg-white dark:bg-[#111111]  shadow-md lg:rounded-2xl">
+            <div className="bg-white dark:bg-[#111111]  shadow-md lg:rounded-3xl">
               {/* all pages content */}
               {children}
               <SpeedInsights />

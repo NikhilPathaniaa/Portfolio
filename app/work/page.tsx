@@ -1,12 +1,10 @@
-"use client";
 import React from "react";
 import { portfolio } from "@/data/PortfolioData";
 import PortfolioList from "@/components/Portfolio/PortfolioList";
 import Header from "@/components/Common/Header";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 const WorkPage = () => {
   return (
-    <section id="portfolio" className="bg-white lg:rounded-2xl dark:bg-[#111111]">
+    <section id="portfolio" className="bg-white lg:rounded-3xl dark:bg-[#111111]">
       <div className="container  mb-8 px-4 sm:px-5 md:px-10 lg:px-[60px]">
         <div className="py-12 ">
           <Header title="Portfolio" space={12} />
@@ -37,12 +35,7 @@ const WorkPage = () => {
                 </li>
               </ul>
             </div> */}
-            <DotLottieReact
-              src="https://lottie.host/809eff59-7bdc-4902-9888-5dc14ecbbc9d/4z0PuE0LrC.lottie" // Replace with your actual animation path
-              loop
-              autoplay
-              className="w-80 h-80 hidden md:block"
-            />
+
             {portfolio.map((values) => (
               <PortfolioList
                 key={values.id}
