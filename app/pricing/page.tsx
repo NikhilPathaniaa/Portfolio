@@ -1,8 +1,29 @@
-"use client";
 import Header from "@/components/Common/Header";
 import Link from "next/link";
 import { MdCheckCircleOutline } from "react-icons/md";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+// import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+// import dynamic from "next/dynamic";
+
+// const DotLottieReact = dynamic(() => import("@lottiefiles/dotlottie-react").then((module) => module.DotLottieReact), {
+//   ssr: false,
+//   loading: () => (
+//     <div className="relative w-80 h-80 flex items-center justify-center overflow-hidden">
+//       <svg viewBox="0 0 200 200" className="w-full h-full animate-[rotate_10s_linear_infinite]">
+//         <defs>
+//           <radialGradient id="grad" cx="50%" cy="50%" r="50%">
+//             <stop offset="0%" stopColor="#ff00ff" />
+//             <stop offset="100%" stopColor="#00ffff" />
+//           </radialGradient>
+//         </defs>
+//         <path
+//           fill="url(#grad)"
+//           d="M53.4,-68.6C67.9,-56.6,78.1,-37.4,81,-18.1C83.9,1.2,79.6,20.6,69.3,34.9C59.1,49.2,42.9,58.4,26.8,66.2C10.8,74.1,-5.1,80.5,-22.6,78.5C-40,76.5,-58.9,66,-68.1,50.9C-77.3,35.7,-76.8,15,-70.6,-3.8C-64.4,-22.6,-52.6,-39.4,-38.1,-51.6C-23.7,-63.9,-6.8,-71.7,11.6,-75.6C29.9,-79.5,49.8,-79.6,53.4,-68.6Z"
+//           transform="translate(100 100) scale(1)"
+//         />
+//       </svg>
+//     </div>
+//   ),
+// });
 const tiers = [
   // By wordpress
   {
@@ -32,7 +53,7 @@ function classNames(...classes: string[]) {
 
 export default function Example() {
   return (
-    <div className="relative isolate bg-white dark:bg-[#111111] pt-12 md:py-12 px-2 sm:px-5 md:px-10 lg:px-14">
+    <div className=" bg-white dark:bg-[#111111] lg:rounded-3xl pt-12 md:py-12 px-2 sm:px-5 md:px-10 lg:px-14">
       <Header title="Pricing" space={10} />
       <div aria-hidden="true" className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl">
         <div
@@ -43,15 +64,15 @@ export default function Example() {
         />
       </div>
       <div className="flex flex-col md:flex-row items-center justify-center">
-        <p className="md:w-1/2 mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-600 dark:text-gray-300 sm:text-xl/8">
+        <p className="mx-auto mt-6 max-w-2xl text-center text-lg font-medium text-pretty text-gray-600 dark:text-gray-300 sm:text-xl/8">
           Choose an affordable plan that&apos;s packed with the best features for engaging your audience, creating customer loyalty, and driving sales.
         </p>
-        <DotLottieReact
+        {/* <DotLottieReact
           src="https://lottie.host/af055a8b-9ede-4563-9478-4cb795d345c3/2GebhRjEwn.lottie" // Replace with your actual animation path
           loop
           autoplay
           className="w-80 h-80 "
-        />
+        /> */}
       </div>
       <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-4xl lg:grid-cols-2">
         {tiers.map((tier, tierIdx) => (

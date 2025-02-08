@@ -3,7 +3,7 @@ import { FormEvent } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // Import Toastify styles
 import Header from "../Common/Header";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+// import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export function ContactForm() {
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -37,7 +37,7 @@ export function ContactForm() {
   }
 
   return (
-    <div className="bg-white lg:rounded-2xl dark:bg-[#111111] ">
+    <div className="bg-white lg:rounded-3xl dark:bg-[#111111] ">
       <ToastContainer /> {/* Toast Notification Container */}
       <div className="mb-12 md:mb-[30px] pl-4 md:pl-[60px] pt-12">
         <Header title="Contact" space={11} />
@@ -49,12 +49,12 @@ export function ContactForm() {
             <br />
             <span className="font-semibold font-poppins text-black dark:text-white">design work or partnerships.</span>
           </h3>
-          <DotLottieReact
+          {/* <DotLottieReact
             src="https://lottie.host/5f45e21b-2cff-4a6e-9c11-161a26c9978c/JO2OMOW93M.lottie" // Replace with your actual animation path
             loop
             autoplay
             className="w-24 h-24"
-          />
+          /> */}
         </div>
         <form onSubmit={handleSubmit}>
           {/* for name */}
