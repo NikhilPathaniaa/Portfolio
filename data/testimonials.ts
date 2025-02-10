@@ -1,20 +1,15 @@
 export const testimonials = [
   {
-    image: "https://picsum.photos/200/300",
-    name: "John Doe",
-    title: "CEO, ABC Corporation",
-    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.",
+    id: 1,
+    name: "Jane D.",
+    designation: "Operations Manager, Leading Manufacturing Firm",
+    testimonial:
+      "Nikhil Pathania has enormously helped Khabar Filhal to go digital by creating a website which has made it very easy for us to engage with the audience and seamlessly broadcast news which we were struggling to do earlier. We now not only have a strong online and social media presence but are also getting increased views and a loyal audience base.",
   },
   {
-    image: "https://picsum.photos/200/301",
-    name: "Jane Doe",
-    title: "CTO, DEF Corporation",
-    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.",
-  },
-  {
-    image: "https://picsum.photos/200/302",
-    name: "Bob Smith",
-    title: "Founder, GHI Corporation",
-    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.",
+    id: 2,
+    name: "Rahul K.",
+    designation: "CEO, Tech Innovators Pvt. Ltd.",
+    testimonial: "The compliance coaching and AI tools provided by TrustMark Global have transformed how we approach risk management.",
   },
 ];

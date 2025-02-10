@@ -103,7 +103,7 @@ const DataPopUp = (props: portfolioData) => {
             <div className="space-y-4">
               <h3 className="text-xl font-semibold text-[#ef4060]">Overview</h3>
               <p
-                className="text-justify text-gray-700 dark:text-gray-300 font-['Poppins']  mr-9"
+                className="text-justify text-gray-700 dark:text-gray-300 font-['Poppins']"
                 dangerouslySetInnerHTML={{
                   __html: props.content.replace(/\n/g, "<br>"),
                 }}
@@ -161,7 +161,7 @@ const DataPopUp = (props: portfolioData) => {
             <div className="mt-6 space-y-4 ">
               <h3 className="text-xl font-semibold text-[#ef4060]">Challenges Faced</h3>
               <p
-                className="text-justify text-gray-700 dark:text-gray-300 font-['Poppins']  mr-9"
+                className="text-justify text-gray-700 dark:text-gray-300 font-['Poppins']"
                 dangerouslySetInnerHTML={{
                   __html: props.challenge
                     .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>") // Wraps text between ** ** in <b> tags
@@ -174,7 +174,7 @@ const DataPopUp = (props: portfolioData) => {
             <div className="mt-6 space-y-4 border-t pt-6">
               <h3 className="text-xl font-semibold text-[#ef4060]">Solution</h3>
               <p
-                className="text-justify text-gray-700 dark:text-gray-300 font-['Poppins']  mr-9"
+                className="text-justify text-gray-700 dark:text-gray-300 font-['Poppins']"
                 dangerouslySetInnerHTML={{
                   __html: props.solution
                     .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>") // Wraps text between ** ** in <b> tags
@@ -187,7 +187,7 @@ const DataPopUp = (props: portfolioData) => {
             <div className="mt-6 space-y-4 border-t pt-6">
               <h3 className="text-xl font-semibold text-[#ef4060]">Results & Impact</h3>
               <p
-                className="text-justify text-gray-700 dark:text-gray-300 font-['Poppins']  mr-9"
+                className="text-justify text-gray-700 dark:text-gray-300 font-['Poppins']"
                 dangerouslySetInnerHTML={{
                   __html: props.result
                     .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>") // Wraps text between ** ** in <b> tags
