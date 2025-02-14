@@ -1,3 +1,5 @@
+import type { BlogPost } from "@/data/BlogsData";
+
 export function WebsiteJsonLd() {
   return (
     <script
@@ -36,7 +38,7 @@ export function PersonJsonLd() {
   );
 }
 
-export function BlogPostJsonLd({ post }: { post: any }) {
+export function BlogPostJsonLd({ post }: { post: BlogPost }) {
   return (
     <script
       type="application/ld+json"
