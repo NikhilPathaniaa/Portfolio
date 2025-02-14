@@ -25,10 +25,10 @@ const Service = () => {
         </div>
 
         <div className="flex gap-4 rounded-lg p-6 dark:border-2 border-[#2b2b2b] bg-[#f3faff] dark:bg-transparent">
-          <Image width={500} height={500} className="w-10 h-10 object-contain block" src="/icons/reactjs.svg" alt="icon" />
+          <Image width={500} height={500} className="w-10 h-10 object-contain block" src="/icons/afterEffects.svg" alt="icon" />
           <div className="space-y-2">
-            <h3 className="dark:text-white text-black text-[22px] font-semibold  font-['Poppins']"> React JS</h3>
-            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6] text-black font-['Poppins']">Dynamic, responsive, and interactive front-end solutions for modern web apps.</p>
+            <h3 className="dark:text-white text-black text-[22px] font-semibold  font-['Poppins']">Promo Video</h3>
+            <p className="leading-8 text-gray-lite dark:text-[#A6A6A6] text-black font-['Poppins']">Engaging motion graphics and promotional videos created with After Effects.</p>
           </div>
         </div>
 
