@@ -1,12 +1,10 @@
+import { Suspense } from "react";
 import { ContactForm } from "@/components/Contact/ContactForm";
-import React from "react";
 
-const page = () => {
+export default function Contact() {
   return (
-    <div>
+    <Suspense fallback={<div>Loading...</div>}>
       <ContactForm />
-    </div>
+    </Suspense>
   );
-};
-
-export default page;
+}
