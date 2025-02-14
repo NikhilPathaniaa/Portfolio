@@ -1,6 +1,7 @@
 import BlogContent from "@/components/Blogs/BlogContent";
 import { blogsData } from "@/data/BlogsData";
 import { notFound } from "next/navigation";
+import { BlogPostJsonLd } from "@/components/JsonLd";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -15,5 +16,10 @@ export default async function BlogPost({ params }: PageProps) {
     notFound();
   }
 
-  return <BlogContent post={post} slug={resolvedParams.slug} />;
+  return (
+    <>
+      <BlogPostJsonLd post={post} />
+      <BlogContent post={post} slug={resolvedParams.slug} />
+    </>
+  );
 }

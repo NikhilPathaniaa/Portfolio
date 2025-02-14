@@ -2,6 +2,7 @@ import React from "react";
 import BlogsList from "@/components/Blogs/BlogsList";
 import Header from "@/components/Common/Header";
 import { blogsData } from "@/data/BlogsData";
+import { Metadata } from "next";
 
 const BlogsPage = () => {
   return (
@@ -21,3 +22,12 @@ const BlogsPage = () => {
 };
 
 export default BlogsPage;
+
+export const metadata: Metadata = {
+  title: "Blog Posts | Full Stack Development Insights",
+  description: "Read about web development, performance optimization, and modern development practices.",
+  openGraph: {
+    title: "Blog Posts | Full Stack Development Insights",
+    description: "Read about web development, performance optimization, and modern development practices.",
+  },
+};

@@ -7,6 +7,7 @@ import ProfileSideBar from "@/components/Sidebar/ProfileSideBar";
 import DayNight from "@/components/DarkMode/DayNight";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import { siteConfig } from "./metadata";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -20,8 +21,35 @@ const roboto_slab = Roboto_Slab({
 });
 
 export const metadata: Metadata = {
-  title: "Freelancer Nikhil",
-  description: "Looking for a freelancer to create stunning websites, UI/UX designs, and high-quality promo videos? I help businesses to grow Fast. Get in touch today!",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.title}`,
+  },
+  description: siteConfig.description,
+  openGraph: {
+    ...siteConfig.openGraph,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    creator: siteConfig.twitter,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "google62576671e8bf5252",
+  },
 };
 
 export default function RootLayout({
