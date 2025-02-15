@@ -21,18 +21,18 @@ export const siteConfig = {
 };
 
 export const metadata = {
-  title: "Your Portfolio Title - Your Name",
-  description: "Welcome to my portfolio! I am a software developer specializing in full-stack development, custom software solutions, and API development.",
-  keywords: "portfolio, software developer, full-stack development, custom software, API development",
-  author: "Your Name",
+  title: "Nikhil Pathania - Full Stack Developer",
+  description: "Welcome to my portfolio! I am a software developer specializing in full-stack development, custom software solutions, and UI/UX design with great Promo videos.",
+  keywords: "portfolio, software developer, full-stack development, custom software, API development, UI/UX design, Promo videos",
+  author: "Nikhil Pathania",
   openGraph: {
-    title: "Your Portfolio Title - Your Name",
+    title: "Nikhil Pathania - Full Stack Developer",
     description: "Welcome to my portfolio! I am a software developer specializing in full-stack development, custom software solutions, and API development.",
-    url: "https://your-portfolio-url.com",
-    siteName: "Your Portfolio",
+    url: "https://nikhilx.vercel.app",
+    siteName: "Nikhil Pathania",
     images: [
       {
-        url: "https://your-portfolio-url.com/assets/banner.jpg",
+        url: "https://nikhilx.vercel.app/assets/banner.jpg",
         width: 800,
         height: 600,
         alt: "Portfolio Banner",
@@ -42,8 +42,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Your Portfolio Title - Your Name",
-    description: "Welcome to my portfolio! I am a software developer specializing in full-stack development, custom software solutions, and API development.",
-    image: "https://your-portfolio-url.com/assets/banner.jpg",
+    title: "Nikhil Pathania - Full Stack Developer",
+    description: "Welcome to my portfolio! I am a software developer specializing in full-stack development, custom software solutions, UI/UX design, and Promo videos.",
+    image: "https://nikhilx.vercel.app/assets/banner.jpg",
   },
 };
