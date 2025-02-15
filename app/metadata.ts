@@ -27,7 +27,7 @@ export const metadata = {
   author: "Nikhil Pathania",
   openGraph: {
     title: "Nikhil Pathania - Full Stack Developer",
-    description: "Welcome to my portfolio! I am a software developer specializing in full-stack development, custom software solutions, and API development.",
+    description: "Welcome to my portfolio! I am a software developer specializing in full-stack development, custom software solutions, and UI/UX design with great Promo videos.",
     url: "https://nikhilx.vercel.app",
     siteName: "Nikhil Pathania",
     images: [
