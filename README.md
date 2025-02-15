@@ -101,7 +101,6 @@ I'm a passionate software developer dedicated to crafting elegant solutions to c
     <img src="https://img.shields.io/badge/Schedule_Consultation-4A154B?style=for-the-badge&logo=calendar&logoColor=white" alt="Schedule a Consultation" />
   </a>
 </p>
-
 ## 🌐 Open Source Portfolio
 
 This portfolio website is an open-source project! You can view the source code, contribute, or use it as a template for your own portfolio.
