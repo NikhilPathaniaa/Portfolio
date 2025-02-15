@@ -19,3 +19,31 @@ export const siteConfig = {
     ],
   },
 };
+
+export const metadata = {
+  title: "Your Portfolio Title - Your Name",
+  description: "Welcome to my portfolio! I am a software developer specializing in full-stack development, custom software solutions, and API development.",
+  keywords: "portfolio, software developer, full-stack development, custom software, API development",
+  author: "Your Name",
+  openGraph: {
+    title: "Your Portfolio Title - Your Name",
+    description: "Welcome to my portfolio! I am a software developer specializing in full-stack development, custom software solutions, and API development.",
+    url: "https://your-portfolio-url.com",
+    siteName: "Your Portfolio",
+    images: [
+      {
+        url: "https://your-portfolio-url.com/assets/banner.jpg",
+        width: 800,
+        height: 600,
+        alt: "Portfolio Banner",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Your Portfolio Title - Your Name",
+    description: "Welcome to my portfolio! I am a software developer specializing in full-stack development, custom software solutions, and API development.",
+    image: "https://your-portfolio-url.com/assets/banner.jpg",
+  },
+};
