@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap-image/1.1">
+    <url>
+        <loc>https://nikhilx.vercel.app/</loc>
+        <lastmod>2023-10-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://nikhilx.vercel.app/projects</loc>
+        <lastmod>2023-10-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://nikhilx.vercel.app/blog</loc>
+        <lastmod>2023-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <!-- Add dynamic blog URLs -->
+    <url>
+        <loc>https://nikhilx.vercel.app/blog/why-small-businesses-need-fast-website</loc>
+        <lastmod>2023-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://nikhilx.vercel.app/blog/post-2</loc>
+        <lastmod>2023-10-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <!-- Add more blog posts dynamically -->
+    <!-- Add more URLs as needed -->
+</urlset> 
