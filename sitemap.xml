@@ -18,7 +18,6 @@
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
-    <!-- Add dynamic blog URLs -->
     <url>
         <loc>https://nikhilx.vercel.app/blog/why-small-businesses-need-fast-website</loc>
         <lastmod>2023-10-01</lastmod>
@@ -31,6 +30,4 @@
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
     </url>
-    <!-- Add more blog posts dynamically -->
-    <!-- Add more URLs as needed -->
 </urlset> 

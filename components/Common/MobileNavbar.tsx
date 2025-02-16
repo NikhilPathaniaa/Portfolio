@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
-import { FaAddressBook, FaBars, FaBriefcase, FaRegUser, FaXmark } from "react-icons/fa6";
+import { FaAddressBook, FaBars, FaBlogger, FaBriefcase, FaRegUser, FaXmark } from "react-icons/fa6";
 import { GrMoney } from "react-icons/gr";
 
 const MobileNavbar = () => {
@@ -29,6 +29,7 @@ const MobileNavbar = () => {
               { href: "/", label: "About", icon: <FaRegUser /> },
               { href: "/work", label: "Work", icon: <FaBriefcase /> },
               { href: "/pricing", label: "Pricing", icon: <GrMoney /> },
+              { href: "/blogs", label: "Blogs", icon: <FaBlogger /> },
               { href: "/contact", label: "Contact", icon: <FaAddressBook /> },
             ].map(({ href, label, icon }) => (
               <li key={href}>
