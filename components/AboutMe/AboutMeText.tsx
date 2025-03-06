@@ -4,15 +4,15 @@ const AboutMeText = () => {
       <div className="col-span-12 space-y-2.5">
         <div className="">
           <div className="text-[#44566c] text-justify dark:text-white font-['Poppins'] dark:text-color-910 leading-7">
-            <h3 className="text-xl dark:text-white font-bold font-['Poppins'] ">The Developer Who Turns Ideas into Reality </h3>
+            <h3 className="text-xl dark:text-white font-bold font-['Poppins'] ">The Freelancer Who Turns Ideas into Reality </h3>
             <br />
             <p>You have a vision—a website that stands out, engages users, and drives results. But finding the right developer who understands your business, your audience, and your goals? That&apos;s the challenge.</p>
             <br />
             <p>That&apos;s where I come in. </p>
             <br />
             <p>
-              I&apos;m <span className="text-[#FA5252]">Nikhil Pathania,</span> a Software Developer Engineer who specializes in crafting high-performance, user-friendly, and visually stunning websites. Whether you need a sleek portfolio, a dynamic
-              business site, or an optimized e-commerce platform, I make sure your online presence isn&apos;t just another website—it&apos;s your competitive advantage.{" "}
+              I&apos;m <span className="text-[#FA5252]">Nikhil Pathania,</span> a Freelancer who specializes in crafting high-performance, user-friendly, and visually stunning websites. Whether you need a sleek portfolio, a dynamic business site, or
+              an optimized e-commerce platform, I make sure your online presence isn&apos;t just another website—it&apos;s your competitive advantage.
             </p>
 
             <br />
