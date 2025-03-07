@@ -16,7 +16,8 @@ const AboutMeText = () => {
             <br />
             <ul>
               <li>
-                ✅ <b className="font-semibold">Business-First Approach –</b> Every project I take on is designed to <b className="font-semibold">drive results</b>, whether it's boosting sales, increasing engagement, or improving brand credibility.
+                ✅ <b className="font-semibold">Business-First Approach –</b> Every project I take on is designed to <b className="font-semibold">drive results</b>, whether it&apos;s boosting sales, increasing engagement, or improving brand
+                credibility.
               </li>
               <br />
               <li>
@@ -60,7 +61,7 @@ const AboutMeText = () => {
             </ul>
             <br />
             <p>
-              Your digital presence should be a <b className="font-semibold">powerful business asset</b>—not just an online placeholder. Let&apos;s create something that doesn&apos;t just look great but{" "}
+              Your digital presence should be a <b className="font-semibold">powerful business asset</b>—not just an online placeholder. Let&apos;s create something that doesn&apos;t just look great but
               <b className="font-semibold">drives real business growth</b>.
             </p>
           </div>
