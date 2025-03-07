@@ -4,15 +4,11 @@ const AboutMeText = () => {
       <div className="col-span-12 space-y-2.5">
         <div className="">
           <div className="text-[#44566c] text-justify dark:text-white font-['Poppins'] dark:text-color-910 leading-7">
-            <h3 className="text-xl dark:text-white font-bold font-['Poppins'] ">The Freelancer Who Turns Ideas into Reality </h3>
-            <br />
-            <p>You have a vision—a website that stands out, engages users, and drives results. But finding the right developer who understands your business, your audience, and your goals? That&apos;s the challenge.</p>
-            <br />
-            <p>That&apos;s where I come in. </p>
+            <h3 className="text-xl dark:text-white font-bold font-['Poppins'] ">I Build Digital Experiences That Drive Business Growth</h3>
             <br />
             <p>
-              I&apos;m <span className="text-[#FA5252]">Nikhil Pathania,</span> a Freelancer who specializes in crafting high-performance, user-friendly, and visually stunning websites. Whether you need a sleek portfolio, a dynamic business site, or
-              an optimized e-commerce platform, I make sure your online presence isn&apos;t just another website—it&apos;s your competitive advantage.
+              Your online presence isn&apos;t just about having a website—it&apos;s about engaging your audience, converting visitors into customers, and making your brand unforgettable. Whether it&apos;s a high-performing website, a compelling promo
+              video, or a sleek UI/UX design, I bring your vision to life with a business-driven approach.
             </p>
 
             <br />
@@ -20,16 +16,24 @@ const AboutMeText = () => {
             <br />
             <ul>
               <li>
-                ✅ <b>Custom Solutions, Not Just Code –</b> Your business is unique, and your website should reflect that. No cookie-cutter templates—just tailored solutions that align with your goals.{" "}
+                ✅ <b className="font-semibold">Business-First Approach –</b> Every project I take on is designed to <b className="font-semibold">drive results</b>, whether it's boosting sales, increasing engagement, or improving brand credibility.
               </li>
+              <br />
               <li>
-                ✅ <b>User Experience That Converts –</b> A website isn&apos;t just about looking good. I focus on speed, responsiveness, and intuitive design, ensuring visitors stay, explore, and take action.{" "}
+                ✅ <b className="font-semibold">Multi-Skill Advantage –</b> I combine <b className="font-semibold">development, design, and video expertise</b> to create a seamless, high-impact digital presence. No need to hire multiple
+                professionals—I do it all.
               </li>
+              <br />
               <li>
-                ✅ <b>SEO & Performance Optimized –</b> Your site won&apos;t just be built—it&apos;ll be built to rank. Faster load times, clean code, and SEO best practices mean better visibility and reach.{" "}
+                ✅ <b className="font-semibold">Custom, High-Performance Solutions –</b> No cookie-cutter templates. Every website, video, and design is <b className="font-semibold">crafted for your unique business needs</b>.
               </li>
+              <br />
               <li>
-                ✅ <b>End-to-End Support –</b> From design to development to launch (and even post-launch updates), I ensure a smooth process and long-term success.
+                ✅ <b className="font-semibold">User Experience That Converts –</b> A website isn&apos;t just about looking good. I focus on speed, responsiveness, and intuitive design, ensuring visitors stay, explore, and take action.
+              </li>
+              <br />
+              <li>
+                ✅ <b className="font-semibold">A Complete Digital Package –</b> Whether you need a website, UI/UX design, or a powerful promo video, I ensure a <b className="font-semibold">cohesive brand experience</b> across all platforms.
               </li>
             </ul>
             <br />
@@ -37,20 +41,27 @@ const AboutMeText = () => {
             <br />
             <ul>
               <li>
-                ❌ Struggling with a slow, outdated website? → <br /> ✅ I create fast, modern, and mobile-friendly sites.{" "}
+                ❌ Struggling with a weak online presence? → <br />✅ I create websites and visuals that build brand authority and attract customers.
               </li>
               <br />
               <li>
-                ❌ Losing customers due to poor design? → <br /> ✅ I craft engaging, user-focused experiences.{" "}
+                ❌ Low engagement on your website or social media? → <br />✅ I design UI/UX and videos that captivate audiences and increase conversions.
               </li>
               <br />
               <li>
-                ❌ Confused about where to start? → <br /> ✅ I guide you through every step, hassle-free.{" "}
+                ❌ Struggling with a slow, outdated website? → <br /> ✅ I create fast, modern, and mobile-friendly sites.
               </li>
+              <br />
+              <li>
+                ❌ Losing customers due to poor design? → <br /> ✅ I craft engaging, user-focused experiences.
+              </li>
+              <br />
+              ❌ Don&apos;t know where to start? → <br />✅ I provide expert guidance, handling everything from strategy to execution.
             </ul>
             <br />
             <p>
-              A great website isn&apos;t an expense—it&apos;s an investment that brings in leads, customers, and revenue. <b>Let&apos;s build something incredible together</b>.
+              Your digital presence should be a <b className="font-semibold">powerful business asset</b>—not just an online placeholder. Let&apos;s create something that doesn&apos;t just look great but{" "}
+              <b className="font-semibold">drives real business growth</b>.
             </p>
           </div>
         </div>
