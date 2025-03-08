@@ -61,6 +61,7 @@ const AboutMeText = () => {
             </ul>
             <br />
             <p>
+              {/* work */}
               Your digital presence should be a <b className="font-semibold">powerful business asset</b>—not just an online placeholder. Let&apos;s create something that doesn&apos;t just look great but
               <b className="font-semibold">drives real business growth</b>.
             </p>
