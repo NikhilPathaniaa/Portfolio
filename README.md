@@ -105,9 +105,6 @@ I'm a passionate software developer dedicated to crafting elegant solutions to c
 
 This portfolio website is an open-source project! You can view the source code, contribute, or use it as a template for your own portfolio.
 
-### 📂 Repository
-
-- **GitHub Repository**: [Your GitHub Repository Link](https://github.com/yourusername/your-repo-name)
 
 ### 🛠️ How to Contribute
 
