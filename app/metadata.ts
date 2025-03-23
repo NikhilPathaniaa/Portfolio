@@ -1,5 +1,5 @@
 export const siteConfig = {
-  title: "Nikhil Pathania - Freelance Web Developer, UI/UX Designer & Video Creator",
+  title: "Nikhil Pathania - Freelancer for your Business",
   description: "Looking for a freelancer? I specialize in website development (WordPress & coding), UI/UX design, and high-quality promo & explainer videos to grow your business.",
   url: "https://nikhilx.vercel.app",
   author: "Nikhil Pathania",
@@ -8,28 +8,28 @@ export const siteConfig = {
     type: "website",
     locale: "en_US",
     url: "https://nikhilx.vercel.app",
-    siteName: "Nikhil Pathania - Freelance Web Developer, UI/UX Designer & Video Creator",
+    siteName: "Nikhil Pathania - Freelancer for your Business",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Nikhil Pathania - Freelance Web Developer, UI/UX Designer & Video Creator",
+        alt: "Nikhil Pathania - Freelancer for your Business",
       },
     ],
   },
 };
 
 export const metadata = {
-  title: "Nikhil Pathania - Freelance Web Developer, UI/UX Designer & Video Creator",
-  description: "Need a freelancer for your business? I provide website development (WordPress & coding), UI/UX design, and promo & explainer videos to boost your brand and sales.",
+  title: "Nikhil Pathania - Freelancer for your Business",
+  description: "Need a freelancer for your business? I provide website development , SEO , UI/UX design, and promo & explainer videos to boost your brand and sales.",
   keywords: "freelance web developer, UI/UX designer, website development, WordPress freelancer, video creator, promo videos, explainer videos, business branding videos, web design expert",
   author: "Nikhil Pathania",
   openGraph: {
-    title: "Nikhil Pathania - Freelance Web Developer, UI/UX Designer & Video Creator",
-    description: "Need a freelancer for your business? I provide website development (WordPress & coding), UI/UX design, and promo & explainer videos to boost your brand and sales.",
+    title: "Nikhil Pathania - Freelancer for your Business",
+    description: "Need a freelancer for your business? I provide website development , SEO , UI/UX design, and promo & explainer videos to boost your brand and sales.",
     url: "https://nikhilx.vercel.app",
-    siteName: "Nikhil Pathania - Freelance Web Developer, UI/UX Designer & Video Creator",
+    siteName: "Nikhil Pathania - Freelancer for your Business",
     images: [
       {
         url: "https://nikhilx.vercel.app/about/portfolio.webp",
@@ -42,8 +42,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nikhil Pathania - Freelance Web Developer, UI/UX Designer & Video Creator",
-    description: "Need a freelancer for your business? I provide website development (WordPress & coding), UI/UX design, and promo & explainer videos to boost your brand and sales.",
+    title: "Nikhil Pathania - Freelancer for your Business",
+    description: "Need a freelancer for your business? I provide website development , SEO , UI/UX design, and promo & explainer videos to boost your brand and sales.",
     image: "https://nikhilx.vercel.app/about/portfolio.webp",
   },
 };
