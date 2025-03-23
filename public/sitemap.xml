@@ -38,7 +38,13 @@
   </url>
   <url>
     <loc>https://nikhilx.vercel.app/blogs/website-costing-you-customers</loc>
-    <lastmod>2025-03-07</lastmod>
+    <lastmod>2025-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nikhilx.vercel.app/blogs/is-it-time-for-website-redesign</loc>
+    <lastmod>2025-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
