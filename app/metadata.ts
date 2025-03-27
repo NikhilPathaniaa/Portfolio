@@ -1,6 +1,6 @@
 export const siteConfig = {
   title: "Nikhil Pathania - Freelancer for your Business",
-  description: "Looking for a freelancer? I specialize in website development (WordPress & coding), UI/UX design, and high-quality promo & explainer videos to grow your business.",
+  description: "Need a freelancer for your business? I provide website development , SEO , UI/UX design, and promo & explainer videos to boost your brand and sales.",
   url: "https://nikhilx.vercel.app",
   author: "Nikhil Pathania",
   twitter: "@nikhilx",

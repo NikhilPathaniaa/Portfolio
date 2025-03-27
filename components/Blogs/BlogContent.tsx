@@ -43,7 +43,7 @@ export default function BlogContent({ post, slug }: BlogContentProps) {
                   <Image src={post.author.image} alt={post.author.name} fill className="object-cover" />
                 </div>
                 <div className="hero-author-info">
-                  <h3 className="font-medium text-white/90">{post.author.name}</h3>
+                  <p className="font-medium text-white/90">{post.author.name}</p>
                   <p className="text-sm text-gray-200/80">{post.author.role}</p>
                 </div>
               </div>
@@ -100,7 +100,7 @@ export default function BlogContent({ post, slug }: BlogContentProps) {
                 <Image src={post.author.image} alt={post.author.name} fill className="object-cover" />
               </div>
               <div className="hero-author-info">
-                <h3 className="font-medium text-white/90">{post.author.name}</h3>
+                <p className="font-medium text-white/90">{post.author.name}</p>
                 <p className="text-sm text-gray-200/80">{post.author.role}</p>
               </div>
             </div>

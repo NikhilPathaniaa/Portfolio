@@ -61,22 +61,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head>
-        <title>{"Nikhil Pathania - Freelance Web Developer, UI/UX Designer & Video Creator"}</title>
-        <meta name="description" content={layoutMetadata.description || "Looking for a freelancer? I specialize in website development (WordPress & coding), UI/UX design, and high-quality promo & explainer videos to grow your business."} />
+        <title>{"Nikhil Pathania - freelancer for your business"}</title>
+        <meta name="description" content={layoutMetadata.description || "Need a freelancer for your business? I provide website development , SEO , UI/UX design, and promo & explainer videos to boost your brand and sales."} />
         <meta name="keywords" content={metadata.keywords || "Full Stack Developer, Web Development, Custom Software, UI/UX Design, Promo Videos, Nikhil Pathania"} />
         <meta name="author" content={metadata.author || "Nikhil Pathania"} />
         {/* Open Graph Tags */}
-        <meta property="og:title" content={metadata.openGraph.title || "Nikhil Pathania - Freelance Web Developer, UI/UX Designer & Video Creator"} />
-        <meta
-          property="og:description"
-          content={metadata.openGraph.description || "Looking for a freelancer? I specialize in website development (WordPress & coding), UI/UX design, and high-quality promo & explainer videos to grow your business."}
-        />
+        <meta property="og:title" content={metadata.openGraph.title || "Nikhil Pathania - freelancer for your business"} />
+        <meta property="og:description" content={metadata.openGraph.description || "Need a freelancer for your business? I provide website development , SEO , UI/UX design, and promo & explainer videos to boost your brand and sales."} />
         <meta property="og:url" content={metadata.openGraph.url || "https://nikhilx.vercel.app"} />
         <meta property="og:image" content={metadata.openGraph.images[0]?.url || "https://nikhilx.vercel.app/about/portfolio.webp"} />
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content={metadata.twitter.card || "summary_large_image"} />
-        <meta name="twitter:title" content={metadata.twitter.title || "Nikhil Pathania - Freelance Web Developer, UI/UX Designer & Video Creator"} />
-        <meta name="twitter:description" content={metadata.twitter.description || "Looking for a freelancer? I specialize in website development (WordPress & coding), UI/UX design, and high-quality promo & explainer videos to grow your business."} />
+        <meta name="twitter:title" content={metadata.twitter.title || "Nikhil Pathania - freelancer for your business"} />
+        <meta name="twitter:description" content={metadata.twitter.description || "Need a freelancer for your business? I provide website development , SEO , UI/UX design, and promo & explainer videos to boost your brand and sales."} />
         <meta name="twitter:image" content={metadata.twitter.image || "https://nikhilx.vercel.app/about/portfolio.webp"} />
       </head>
       <body className={`bg-[url('/background/bg.jpg')] dark:bg-[url('/background/bgtwo.jpg')] min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full ${poppins.variable} ${roboto_slab.variable} antialiased`}>
