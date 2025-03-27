@@ -39,6 +39,7 @@ export function PersonJsonLd() {
 }
 
 export function BlogPostJsonLd({ post }: { post: BlogPost }) {
+  console.log(post.title);
   return (
     <script
       type="application/ld+json"

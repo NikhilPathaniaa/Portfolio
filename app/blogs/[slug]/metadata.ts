@@ -3,7 +3,7 @@ import { blogsData } from "@/data/BlogsData";
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata | null> {
   const post = blogsData.find((post) => post.slug === params.slug);
-
+  console.log(post);
   if (!post) {
     return null;
   }
