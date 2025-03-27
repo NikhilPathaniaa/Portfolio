@@ -5,7 +5,7 @@ import React from "react";
 const Service = () => {
   return (
     <div className="pb-12 px-2 sm:px-5 md:px-10 lg:px-14">
-      <h3 className="text-[35px] text-black dark:text-white font-bold font-['Roboto_Slab'] pb-5"> What I do! </h3>
+      <h2 className="text-[35px] text-black dark:text-white font-bold font-['Roboto_Slab'] pb-5"> What I do! </h2>
 
       <div className="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
         <div className="flex gap-4 rounded-lg p-6 dark:border-2 border-[#2b2b2b] bg-[#fcf4ff] dark:bg-transparent">
