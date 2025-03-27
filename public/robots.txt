@@ -1,20 +1,9 @@
-# Allow all crawlers
+# Allow all bots
 User-agent: *
-Allow: /
-
-# Sitemap location
-Sitemap: https://nikhilx.vercel.app/sitemap.xml
-
-# Disallow crawling of error pages
 Disallow: /404
 Disallow: /500
+Crawl-delay: 10
 
-# Allow crawling of all content
-Allow: /
-Allow: /blogs/
-Allow: /work/
-Allow: /pricing/
-Allow: /contact/
+# Sitemap
+Sitemap: Sitemap: https://nikhilx.vercel.app/api/sitemap
 
-# Crawl-delay for all bots
-Crawl-delay: 10 

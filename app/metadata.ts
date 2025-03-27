@@ -1,9 +1,22 @@
 export const siteConfig = {
   title: "Nikhil Pathania - Freelancer for your Business",
   description: "Need a freelancer for your business? I provide website development , SEO , UI/UX design, and promo & explainer videos to boost your brand and sales.",
+  keywords: "freelance web developer, UI/UX designer, website development, WordPress freelancer, video creator, promo videos, explainer videos, business branding videos, web design expert",
   url: "https://nikhilx.vercel.app",
   author: "Nikhil Pathania",
   twitter: "@nikhilx",
+
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+    },
+  },
+
   openGraph: {
     type: "website",
     locale: "en_US",
