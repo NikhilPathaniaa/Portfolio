@@ -4,11 +4,11 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 type PageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>; // Updated params to be a Promise
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params; // Await params
+  const { slug } = await params; // Added await back
   const post = blogsData.find((post) => post.slug === slug);
   if (!post) return { title: "Blog not found" };
 
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function BlogPage({ params }: PageProps) {
-  const { slug } = await params; // Await params
+  const { slug } = await params; // Added await back
   const post = blogsData.find((post) => post.slug === slug);
   if (!post) return notFound();
 
