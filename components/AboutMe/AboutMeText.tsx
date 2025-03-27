@@ -3,8 +3,8 @@ const AboutMeText = () => {
     <div className="lg:grid grid-cols-12 cursor-default md:gap-10 pt-4 md:pt-[30px] items-center sm:hidden">
       <div className="col-span-12 space-y-2.5">
         <div className="">
-          <div className="text-[#44566c] text-justify dark:text-white font-['Poppins'] dark:text-color-910 leading-7">
-            <h3 className="text-xl dark:text-white font-bold font-['Poppins'] ">I Build Digital Experiences That Drive Business Growth</h3>
+          <div className="text-[#212b36] text-justify dark:text-white font-['Poppins'] dark:text-color-910 leading-7">
+            <h1 className="text-xl dark:text-white font-bold font-['Poppins'] ">I Build Digital Experiences That Drive Business Growth</h1>
             <br />
             <p>
               Your online presence isn&apos;t just about having a website—it&apos;s about engaging your audience, converting visitors into customers, and making your brand unforgettable. Whether it&apos;s a high-performing website, a compelling promo
@@ -12,7 +12,7 @@ const AboutMeText = () => {
             </p>
 
             <br />
-            <h4 className="text-xl dark:text-white font-bold font-['Poppins'] ">Why Work With Me?</h4>
+            <h2 className="text-xl dark:text-white font-bold font-['Poppins'] ">Why Work With Me?</h2>
             <br />
             <ul>
               <li>
@@ -38,7 +38,7 @@ const AboutMeText = () => {
               </li>
             </ul>
             <br />
-            <h4 className="text-xl dark:text-white font-bold font-['Poppins'] ">Your Problem, My Solution</h4>
+            <p className="text-xl dark:text-white font-bold font-['Poppins'] ">Your Problem, My Solution</p>
             <br />
             <ul>
               <li>
