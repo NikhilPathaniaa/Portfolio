@@ -9,9 +9,10 @@ export const siteConfig = {
     locale: "en_US",
     url: "https://nikhilx.vercel.app",
     siteName: "Nikhil Pathania - Freelancer for your Business",
+    description: "Need a freelancer for your business? I provide website development , SEO , UI/UX design, and promo & explainer videos to boost your brand and sales.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "https://nikhilx.vercel.app/about/portfolio.webp",
         width: 1200,
         height: 630,
         alt: "Nikhil Pathania - Freelancer for your Business",

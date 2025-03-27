@@ -1,25 +1,46 @@
-import BlogContent from "@/components/Blogs/BlogContent";
 import { blogsData } from "@/data/BlogsData";
+import BlogContent from "@/components/Blogs/BlogContent";
 import { notFound } from "next/navigation";
-import { BlogPostJsonLd } from "@/components/JsonLd";
+import type { Metadata } from "next";
 
-interface PageProps {
-  params: Promise<{ slug: string }>;
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
+type PageProps = {
+  params: { slug: string };
+};
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const post = blogsData.find((post) => post.slug === params.slug);
+  if (!post) return { title: "Blog not found" };
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url: `https://nikhilx.vercel.app/blog/${post.slug}`,
+      type: "article",
+      images: [
+        {
+          url: post.image,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [post.image],
+      creator: "@nikhilx",
+    },
+  };
 }
 
-export default async function BlogPost({ params }: PageProps) {
-  const resolvedParams = await params;
-  const post = blogsData.find((post) => post.slug === resolvedParams.slug);
+export default function BlogPage({ params }: PageProps) {
+  const post = blogsData.find((post) => post.slug === params.slug);
+  if (!post) return notFound();
 
-  if (!post) {
-    notFound();
-  }
-
-  return (
-    <>
-      <BlogPostJsonLd post={post} />
-      <BlogContent post={post} slug={resolvedParams.slug} />
-    </>
-  );
+  return <BlogContent post={post} slug={params.slug} />;
 }
