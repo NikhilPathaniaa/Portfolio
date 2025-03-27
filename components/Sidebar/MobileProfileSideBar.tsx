@@ -16,7 +16,7 @@ const MobileProfileSideBar = () => {
         <ProfileImage />
 
         <div className="pt-[100px] pb-8">
-          <h2 className="mt-6 mb-1 text-[26px]  font-['Poppins'] font-semibold text-black dark:text-white"> Nikhil Pathania </h2>
+          <p className="mt-6 mb-1 text-[26px]  font-['Poppins'] font-semibold text-black dark:text-white"> Nikhil Pathania </p>
           <Designation />
 
           <div className="flex justify-center space-x-3">
