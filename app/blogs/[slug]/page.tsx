@@ -8,7 +8,8 @@ type PageProps = {
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const post = blogsData.find((post) => post.slug === params.slug);
+  const { slug } = await params; // Await params
+  const post = blogsData.find((post) => post.slug === slug);
   if (!post) return { title: "Blog not found" };
 
   return {
@@ -38,9 +39,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default function BlogPage({ params }: PageProps) {
-  const post = blogsData.find((post) => post.slug === params.slug);
+export default async function BlogPage({ params }: PageProps) {
+  const { slug } = await params; // Await params
+  const post = blogsData.find((post) => post.slug === slug);
   if (!post) return notFound();
 
-  return <BlogContent post={post} slug={params.slug} />;
+  return <BlogContent post={post} slug={slug} />;
 }
