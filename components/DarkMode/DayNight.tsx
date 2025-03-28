@@ -31,6 +31,7 @@ const DayNight: React.FC = () => {
         {/* Dark Mode Toggle Button */}
         <div className="flex items-center">
           <button
+            aria-label="Theme Change"
             id="theme-toggle"
             type="button"
             className="flex items-center justify-center w-10 h-10 cursor-pointer rounded-full bg-white text-black transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-pink-600 hover:text-white dark:bg-gray-700  dark:text-white dark:hover:bg-pink-600 dark:hover:text-white md:w-12 md:h-12"

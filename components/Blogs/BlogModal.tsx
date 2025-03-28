@@ -41,7 +41,7 @@ const BlogModal = ({ blog, isOpen, onClose }: BlogModalProps) => {
         <div className="min-h-screen px-4 text-center">
           <div className="inline-block w-full max-w-4xl my-8 overflow-hidden text-left align-middle bg-white dark:bg-[#111111] shadow-xl rounded-2xl modal-content">
             {/* Close button */}
-            <button onClick={onClose} className="absolute top-4 right-4 z-10 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+            <button aria-label="Close menu" onClick={onClose} className="absolute top-4 right-4 z-10 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
