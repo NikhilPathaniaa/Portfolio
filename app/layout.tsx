@@ -57,20 +57,64 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "Marketing websites for SaaS startups",
       "Freelance development for high-growth brands",
     ],
-    alumniOf: {
-      "@type": "CollegeOrUniversity",
-      name: "PES University",
-    },
     address: {
       "@type": "PostalAddress",
       addressCountry: "IN",
     },
+    publisher: {
+      "@type": "Person",
+      name: "Nikhil Pathania",
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://nikhilx.vercel.app/search?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  // 🥖 Breadcrumb Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://nikhilx.vercel.app",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Portfolio",
+        item: "https://nikhilx.vercel.app/work",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Blogs",
+        item: "https://nikhilx.vercel.app/blogs",
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: "Pricing",
+        item: "https://nikhilx.vercel.app/pricing",
+      },
+      {
+        "@type": "ListItem",
+        position: 5,
+        name: "Contact & Work With Me",
+        item: "https://nikhilx.vercel.app/contact",
+      },
+    ],
   };
 
   return (
     <html lang="en" className={`${poppins.variable} ${roboto_slab.variable}`}>
       <head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       </head>
       <body className={`bg-[url('/background/bg.jpg')] dark:bg-[url('/background/bgtwo.jpg')] min-h-screen bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full ${poppins.variable} ${roboto_slab.variable} antialiased`}>
         <DayNight />
