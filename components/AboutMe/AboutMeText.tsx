@@ -38,18 +38,18 @@ const AboutMeText = () => {
             <br />
             <ul>
               <li className="mb-2">
-                ❌ Struggling with a weak online presence? → <p>✅ I create websites and visuals that build brand authority and attract customers.</p>
+                <span>❌ Struggling with a weak online presence?</span> → <span>✅ I create websites and visuals that build brand authority and attract customers.</span>
               </li>
               <li className="mb-2">
-                ❌ Low engagement on your website or social media? → <p>✅ I design UI/UX and videos that captivate audiences and increase conversions.</p>
+                <span>❌ Low engagement on your website or social media?</span> → <span>✅ I design UI/UX and videos that captivate audiences and increase conversions.</span>
               </li>
               <li className="mb-2">
-                ❌ Struggling with a slow, outdated website? → <p>✅ I create fast, modern, and mobile-friendly sites.</p>
+                <span> ❌ Struggling with a slow, outdated website?</span> → <span>✅ I create fast, modern, and mobile-friendly sites.</span>
               </li>
               <li className="mb-2">
-                ❌ Losing customers due to poor design? → <p>✅ I craft engaging, user-focused experiences.</p>
+                <span> ❌ Losing customers due to poor design?</span> → <span>✅ I craft engaging, user-focused experiences.</span>
               </li>
-              ❌ Don&apos;t know where to start? → <p>✅ I provide expert guidance, handling everything from strategy to execution.</p>
+              <span>❌ Don&apos;t know where to start?</span> → <span>✅ I provide expert guidance, handling everything from strategy to execution.</span>
             </ul>
             <p>
               {/* work */}
