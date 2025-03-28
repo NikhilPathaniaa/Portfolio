@@ -15,25 +15,21 @@ const AboutMeText = () => {
             <h2 className="text-xl dark:text-white font-bold font-['Poppins'] ">Why Work With Me?</h2>
             <br />
             <ul>
-              <li>
+              <li className="mb-2">
                 ✅ <b className="font-semibold">Business-First Approach –</b> Every project I take on is designed to <b className="font-semibold">drive results</b>, whether it&apos;s boosting sales, increasing engagement, or improving brand
                 credibility.
               </li>
-              <br />
-              <li>
+              <li className="mb-2">
                 ✅ <b className="font-semibold">Multi-Skill Advantage –</b> I combine <b className="font-semibold">development, design, and video expertise</b> to create a seamless, high-impact digital presence. No need to hire multiple
                 professionals—I do it all.
               </li>
-              <br />
-              <li>
+              <li className="mb-2">
                 ✅ <b className="font-semibold">Custom, High-Performance Solutions –</b> No cookie-cutter templates. Every website, video, and design is <b className="font-semibold">crafted for your unique business needs</b>.
               </li>
-              <br />
-              <li>
+              <li className="mb-2">
                 ✅ <b className="font-semibold">User Experience That Converts –</b> A website isn&apos;t just about looking good. I focus on speed, responsiveness, and intuitive design, ensuring visitors stay, explore, and take action.
               </li>
-              <br />
-              <li>
+              <li className="mb-2">
                 ✅ <b className="font-semibold">A Complete Digital Package –</b> Whether you need a website, UI/UX design, or a powerful promo video, I ensure a <b className="font-semibold">cohesive brand experience</b> across all platforms.
               </li>
             </ul>
@@ -41,25 +37,20 @@ const AboutMeText = () => {
             <p className="text-xl dark:text-white font-bold font-['Poppins'] ">Your Problem, My Solution</p>
             <br />
             <ul>
-              <li>
+              <li className="mb-2">
                 ❌ Struggling with a weak online presence? → <br />✅ I create websites and visuals that build brand authority and attract customers.
               </li>
-              <br />
-              <li>
+              <li className="mb-2">
                 ❌ Low engagement on your website or social media? → <br />✅ I design UI/UX and videos that captivate audiences and increase conversions.
               </li>
-              <br />
-              <li>
+              <li className="mb-2">
                 ❌ Struggling with a slow, outdated website? → <br /> ✅ I create fast, modern, and mobile-friendly sites.
               </li>
-              <br />
-              <li>
+              <li className="mb-2">
                 ❌ Losing customers due to poor design? → <br /> ✅ I craft engaging, user-focused experiences.
               </li>
-              <br />
               ❌ Don&apos;t know where to start? → <br />✅ I provide expert guidance, handling everything from strategy to execution.
             </ul>
-            <br />
             <p>
               {/* work */}
               Your digital presence should be a <b className="font-semibold">powerful business asset</b>—not just an online placeholder. Let&apos;s create something that doesn&apos;t just look great but

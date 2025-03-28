@@ -39,7 +39,7 @@ const TestimonialCarousel = () => {
       showThumbs={false}
       autoPlay={false}
       interval={3000}
-      infiniteLoop={true}
+      infiniteLoop={false}
       className=" w-full"
       onChange={(e: number) => setCount(e)}
       showStatus={false}
@@ -48,6 +48,7 @@ const TestimonialCarousel = () => {
       emulateTouch={true} // Enable dragging
       preventMovementUntilSwipeScrollTolerance={true}
       swipeScrollTolerance={50}
+      showIndicators={false} // Hide dots (pagination indicators)
       renderArrowPrev={(onClickHandler, hasPrev, label) =>
         hasPrev && (
           <button type="button" onClick={onClickHandler} className=" absolute left-0 transform -translate-y-1/2  w-10 z-10  border-gray-500 h-[40px] p-2 rounded-full" aria-label={label}>
