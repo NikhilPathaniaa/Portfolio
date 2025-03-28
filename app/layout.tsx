@@ -38,8 +38,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     name: "Nikhil Pathania",
     url: "https://nikhilx.vercel.app",
     image: "https://nikhilx.vercel.app/profile.jpg", // Update with your actual image
-    jobTitle: "Freelance Web Developer & Digital Consultant",
-    description: "I help businesses build high-converting, fast, and stunning web platforms that drive growth, improve user experience, and boost revenue.",
+    jobTitle: "Nikhil Pathania – Business Growth Expert",
+    description: "High-converting websites, UI/UX, and explainer videos that grow businesses. Need a strategy to increase revenue? Let's talk.",
     sameAs: ["https://www.linkedin.com/in/nikhil-pathania"],
     worksFor: {
       "@type": "Organization",
