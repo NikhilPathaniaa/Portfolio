@@ -36,7 +36,7 @@ const DataPopUp = (props: portfolioData) => {
       {/* Modal Container */}
       <div className="relative w-full max-w-5xl rounded-3xl bg-white dark:bg-[#323232] p-6 md:p-8 shadow-lg">
         {/* Close Button */}
-        <button onClick={props.onClose} className="absolute top-4 right-4 text-lg text-gray-700 dark:text-white hover:text-red-500">
+        <button aria-label="close the popup X button" onClick={props.onClose} className="absolute top-4 right-4 text-lg text-gray-700 dark:text-white hover:text-red-500">
           ✖
         </button>
 

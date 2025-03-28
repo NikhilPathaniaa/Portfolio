@@ -340,6 +340,7 @@ export function ContactForm() {
 
           <button
             type="submit"
+            aria-label="submit"
             className="px-6 py-2 rounded-lg border-[2px] mt-3 border-color-910 font-semibold cursor-pointer hover:bg-gradient-to-r from-[#FA5252] to-[#DD2476] hover:text-white transition-colors duration-300 ease-in-out hover:border-transparent text-black dark:text-white">
             Submit Form
           </button>
