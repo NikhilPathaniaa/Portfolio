@@ -97,81 +97,6 @@ export const blogsData: BlogPost[] = [
   },
   {
     id: 2,
-    title: "Is Your Website Costing You Customers? 6 Mistakes You Must Fix",
-    excerpt: "Your website should bring in customers, not drive them away. Discover the top mistakes businesses make and how to fix them for better conversions.",
-    category: "Web Design & Optimization",
-    date: "March 20, 2024",
-    readTime: "6 min read",
-    image: "/blog_images/second/hero.webp",
-    slug: "website-costing-you-customers",
-    author: {
-      name: "Nikhil Pathania",
-      image: "/about/profile.webp",
-      role: "Full Stack Developer & UI/UX Designer",
-    },
-    content: `
-        <div class="prose-content">
-          <p class="lead">Your website is often the first interaction potential customers have with your business. But if it's not designed well, loads slowly, or is confusing to navigate, it could be driving visitors away—costing you sales and leads. Here are the six most common website mistakes businesses make and how to fix them.</p>
-  
-          <h2>1. Slow Loading Speed</h2>
-          <p>Did you know that <strong>40% of visitors leave a website that takes more than 3 seconds to load?</strong> A slow website means lost revenue. You can fix this by optimizing images, enabling caching, and using a Content Delivery Network (CDN).</p>
-          
-          <div class="my-8">
-            <img src="/blog_images/second/img1.webp" alt="Slow website impact" class="rounded-lg shadow-lg" />
-          </div>
-  
-          <h2>2. Poor Mobile Experience</h2>
-          <p>More than <strong>60% of users browse the internet on mobile devices</strong>. If your website isn't mobile-friendly, you're losing customers. Use responsive design to ensure your site looks great on all screen sizes.</p>
-  
-          <h2>3. Confusing Navigation</h2>
-          <p>Can visitors easily find what they're looking for? If not, they’ll leave. Keep your navigation simple, intuitive, and well-structured.</p>
-  
-          <h2>4. Outdated Design</h2>
-          <p>Your website reflects your brand. If it looks outdated, visitors may assume your business is outdated too. Modernize your design with clean layouts, readable fonts, and engaging visuals.</p>
-          
-          <div class="my-8">
-            <img src="/blog_images/second/img2.webp" alt="Modern vs outdated website design" class="rounded-lg shadow-lg" />
-          </div>
-  
-          <h2>5. Lack of Clear Call-to-Actions (CTAs)</h2>
-          <p>Does your website guide users to take action? Whether it’s making a purchase, signing up for a service, or contacting you, strong CTAs are crucial for conversions.</p>
-  
-          <h2>6. Poor SEO Practices</h2>
-          <p>If your website isn’t optimized for search engines, potential customers won’t find you. Use proper meta tags, structured content, and fast-loading pages to improve your ranking.</p>
-  
-          <h2>How to Fix These Issues (Without Stress)</h2>
-          <ul class="checklist">
-            <li>✅ Improve your site speed with performance optimizations</li>
-            <li>✅ Use a responsive design for a seamless mobile experience</li>
-            <li>✅ Simplify navigation for better user flow</li>
-            <li>✅ Update your design to a modern, professional look</li>
-            <li>✅ Add clear CTAs to drive user actions</li>
-            <li>✅ Optimize SEO for better search visibility</li>
-          </ul>
-  
-          <h2>Final Thoughts</h2>
-          <p>A well-optimized website is an investment that pays off in higher conversions, better customer trust, and increased revenue. If you need help improving your website’s performance and design, let’s work together to create a site that drives results.</p>
-  
-          <div class="cta-box bg-[#F3F6F6] dark:bg-[#1D1D1D] p-6 rounded-xl mt-8">
-            <p class="font-bold mb-2">Need a website that converts visitors into customers?</p>
-            <p>Contact me today for a free consultation!</p>
-          </div>
-        </div>
-      `,
-    tags: ["Web Design", "SEO", "User Experience", "Website Optimization", "Business Growth"],
-    relatedLinks: [
-      {
-        title: "Top 10 Web Design Trends for 2024",
-        url: "/blogs/web-design-trends-2024",
-      },
-      {
-        title: "How to Improve Website Speed in 5 Easy Steps",
-        url: "/blogs/improve-website-speed",
-      },
-    ],
-  },
-  {
-    id: 3,
     title: "Is It Time for a Website Redesign? 7 Signs Your Business Needs a Refresh",
     excerpt: "A slow, outdated, or confusing website could be driving customers away. Here are 7 warning signs that it’s time for a redesign—and how a fresh website can boost your business.",
     category: "Web Design",
@@ -253,6 +178,159 @@ export const blogsData: BlogPost[] = [
       {
         title: "How to Improve Website Speed in 5 Easy Steps",
         url: "/blogs/improve-website-speed",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Is Your Website Costing You Customers? 6 Mistakes You Must Fix",
+    excerpt: "Your website should bring in customers, not drive them away. Discover the top mistakes businesses make and how to fix them for better conversions.",
+    category: "Web Design & Optimization",
+    date: "March 20, 2024",
+    readTime: "6 min read",
+    image: "/blog_images/second/hero.webp",
+    slug: "website-costing-you-customers",
+    author: {
+      name: "Nikhil Pathania",
+      image: "/about/profile.webp",
+      role: "Full Stack Developer & UI/UX Designer",
+    },
+    content: `
+        <div class="prose-content">
+          <p class="lead">Your website is often the first interaction potential customers have with your business. But if it's not designed well, loads slowly, or is confusing to navigate, it could be driving visitors away—costing you sales and leads. Here are the six most common website mistakes businesses make and how to fix them.</p>
+  
+          <h2>1. Slow Loading Speed</h2>
+          <p>Did you know that <strong>40% of visitors leave a website that takes more than 3 seconds to load?</strong> A slow website means lost revenue. You can fix this by optimizing images, enabling caching, and using a Content Delivery Network (CDN).</p>
+          
+          <div class="my-8">
+            <img src="/blog_images/second/img1.webp" alt="Slow website impact" class="rounded-lg shadow-lg" />
+          </div>
+  
+          <h2>2. Poor Mobile Experience</h2>
+          <p>More than <strong>60% of users browse the internet on mobile devices</strong>. If your website isn't mobile-friendly, you're losing customers. Use responsive design to ensure your site looks great on all screen sizes.</p>
+  
+          <h2>3. Confusing Navigation</h2>
+          <p>Can visitors easily find what they're looking for? If not, they’ll leave. Keep your navigation simple, intuitive, and well-structured.</p>
+  
+          <h2>4. Outdated Design</h2>
+          <p>Your website reflects your brand. If it looks outdated, visitors may assume your business is outdated too. Modernize your design with clean layouts, readable fonts, and engaging visuals.</p>
+          
+          <div class="my-8">
+            <img src="/blog_images/second/img2.webp" alt="Modern vs outdated website design" class="rounded-lg shadow-lg" />
+          </div>
+  
+          <h2>5. Lack of Clear Call-to-Actions (CTAs)</h2>
+          <p>Does your website guide users to take action? Whether it’s making a purchase, signing up for a service, or contacting you, strong CTAs are crucial for conversions.</p>
+  
+          <h2>6. Poor SEO Practices</h2>
+          <p>If your website isn’t optimized for search engines, potential customers won’t find you. Use proper meta tags, structured content, and fast-loading pages to improve your ranking.</p>
+  
+          <h2>How to Fix These Issues (Without Stress)</h2>
+          <ul class="checklist">
+            <li>✅ Improve your site speed with performance optimizations</li>
+            <li>✅ Use a responsive design for a seamless mobile experience</li>
+            <li>✅ Simplify navigation for better user flow</li>
+            <li>✅ Update your design to a modern, professional look</li>
+            <li>✅ Add clear CTAs to drive user actions</li>
+            <li>✅ Optimize SEO for better search visibility</li>
+          </ul>
+  
+          <h2>Final Thoughts</h2>
+          <p>A well-optimized website is an investment that pays off in higher conversions, better customer trust, and increased revenue. If you need help improving your website’s performance and design, let’s work together to create a site that drives results.</p>
+  
+          <div class="cta-box bg-[#F3F6F6] dark:bg-[#1D1D1D] p-6 rounded-xl mt-8">
+            <p class="font-bold mb-2">Need a website that converts visitors into customers?</p>
+            <p>Contact me today for a free consultation!</p>
+          </div>
+        </div>
+      `,
+    tags: ["Web Design", "SEO", "User Experience", "Website Optimization", "Business Growth"],
+    relatedLinks: [
+      {
+        title: "Top 10 Web Design Trends for 2024",
+        url: "/blogs/web-design-trends-2024",
+      },
+      {
+        title: "How to Improve Website Speed in 5 Easy Steps",
+        url: "/blogs/improve-website-speed",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "How Explainer & Promo Videos Can Skyrocket Your Business Growth",
+    excerpt: "Video content isn’t just a trend—it’s a powerful marketing tool. Discover how explainer and promo videos can increase conversions, build brand trust, and boost sales.",
+    category: "Video Marketing",
+    date: "April 2, 2025",
+    readTime: "6 min read",
+    image: "/blog_images/forth/hero.png",
+    slug: "explainer-promo-videos-growth",
+    author: {
+      name: "Nikhil Pathania",
+      image: "/about/profile.webp",
+      role: "Video Editor & Digital Marketer",
+    },
+    content: `
+    
+    Why Video Content Is Essential for Business Growth
+    In today’s fast-paced digital world, businesses that leverage video marketing see higher engagement, better conversion rates, and stronger brand loyalty. Whether you’re launching a product, explaining a service, or boosting brand awareness, explainer and promo videos are game-changers.
+    
+          <h2>1. Explainer Videos Simplify Complex Ideas</h2>
+          <p>Not everyone has the time to read lengthy product descriptions or service pages. An explainer video breaks down complicated concepts into an engaging, easy-to-understand format, keeping your audience hooked.</p>
+          <p><strong>🎬 Solution:</strong> A well-crafted explainer video highlights your product’s key features, addresses pain points, and makes your offer irresistible.</p>
+          
+          <h2>2. Promo Videos Boost Sales & Conversions</h2>
+          <p>Studies show that adding a video to your landing page can increase conversions by up to 80%. A high-quality promo video creates excitement, showcases your brand’s personality, and drives action.</p>
+          <p><strong>🚀 Solution:</strong> A dynamic promo video with strong visuals and a compelling call-to-action (CTA) can turn viewers into customers.</p>
+          
+          <div class="my-8">
+            <img src="/blog_images/forth/img1.png" alt="Engaging explainer video example" class="rounded-lg shadow-lg" />
+          </div>
+    
+          <h2>3. Videos Build Trust & Credibility</h2>
+          <p>People buy from brands they trust. A professionally edited video with a clear message and high production value makes your business look more credible and trustworthy.</p>
+          <p><strong>🔑 Solution:</strong> Customer testimonial videos, behind-the-scenes clips, and product demos can reinforce trust and authenticity.</p>
+    
+          <h2>4. SEO Benefits: Rank Higher on Google</h2>
+          <p>Google loves video content! Websites with videos are 53 times more likely to rank on the first page of search results. This means more visibility, traffic, and potential customers.</p>
+          <p><strong>📈 Solution:</strong> Optimize your videos with relevant keywords, engaging thumbnails, and proper metadata to boost your rankings.</p>
+    
+          <div class="my-8">
+            <img src="/blog_images/forth/img2.png" alt="Promo video increasing conversions" class="rounded-lg shadow-lg" />
+          </div>
+    
+          <h2>5. Social Media Engagement: More Shares, More Exposure</h2>
+          <p>Social media platforms prioritize video content because it drives higher engagement. A well-edited promo video can go viral, bringing massive exposure to your brand.</p>
+          <p><strong>📣 Solution:</strong> Eye-catching short-form videos for Instagram, Facebook, TikTok, and LinkedIn can maximize your reach and engagement.</p>
+    
+          <h2>Start Growing Your Business with Professional Videos!</h2>
+          <p>Explainer and promo videos are not just marketing tools—they are essential growth drivers. A high-quality, professionally edited video can:</p>
+          <ul class="checklist">
+            <li>✅ Capture attention & engage viewers</li>
+            <li>✅ Increase conversions & sales</li>
+            <li>✅ Build trust & brand credibility</li>
+            <li>✅ Improve SEO & online visibility</li>
+            <li>✅ Boost social media reach & shares</li>
+          </ul>
+    
+          <h2>Need a Video That Converts? Let’s Create One!</h2>
+          <p>Don’t let your brand get lost in the noise. If you need a high-quality explainer or promo video that drives results, let’s work together.</p>
+    
+          <div class="cta-box bg-[#F3F6F6] dark:bg-[#1D1D1D] p-6 rounded-xl mt-8">
+            <p class="font-bold mb-2">Want a video that boosts engagement & sales?</p>
+            <p>Contact me today for a free consultation!</p>
+          </div>
+        </div>
+      `,
+    tags: ["Video Marketing", "Explainer Videos", "Promo Videos", "Business Growth", "SEO"],
+    relatedLinks: [
+      {
+        title: "How to Create Engaging Video Content for Social Media",
+        url: "/blogs/video-content-social-media",
+      },
+      {
+        title: "The Power of Storytelling in Video Marketing",
+        url: "/blogs/storytelling-video-marketing",
       },
     ],
   },
