@@ -5,5 +5,5 @@ Disallow: /500
 Crawl-delay: 10
 
 # Sitemap
-Sitemap: Sitemap: https://nikhilx.vercel.app/api/sitemap
+Sitemap: Sitemap: https://nikhilx.vercel.app/sitemap
 
