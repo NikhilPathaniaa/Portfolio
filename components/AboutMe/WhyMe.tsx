@@ -1,48 +1,79 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
+
+const items = [
+  {
+    icon: "🚀",
+    title: "Business-Driven Results",
+    desc: "Designs that convert — boosting sales, trust, and engagement through strategy-led creativity.",
+  },
+  {
+    icon: "🧠",
+    title: "Smart, Custom Solutions",
+    desc: "No templates. Everything is purpose-built to reflect your unique business identity.",
+  },
+  {
+    icon: "💡",
+    title: "Developer + Designer + Video Pro",
+    desc: "Your one-stop Ultimate digital powerhouse — no need to juggle multiple freelancers.",
+  },
+  {
+    icon: "⚡",
+    title: "Time Performance Meets Aesthetics",
+    desc: "Fast, responsive, conversion-optimized — built to impress and perform.",
+  },
+  {
+    icon: "📦",
+    title: "Full Digital Package",
+    desc: "From websites to UI/UX to motion videos — cohesive branding under one roof.",
+  },
+  {
+    icon: "🎯",
+    title: "Strategic Guidance",
+    desc: "More than design — I align every digital decision with your growth goals.",
+  },
+];
+
+const container = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
 
 const WhyMe = () => {
   return (
-    <div className="bg-[#f3faff] dark:bg-transparent relative">
-      <div className="container px-4 py-8 mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-8">Why Choose Me?</h2>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-lg font-semibold text-red-500 mb-4">Versatile Solutions</h3>
-            <p className="text-gray-700">Whether you prefer custom coding or the convenience of platforms like WordPress, I&apos;ve got you covered.</p>
-          </div>
+    <section>
+      <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">
+        Why Choose <span className="text-blue-600">Me</span>
+      </h2>
 
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-lg font-semibold text-red-500 mb-4">Responsive Design</h3>
-            <p className="text-gray-700">I prioritize responsive web design to ensure your app looks and works flawlessly across all devices.</p>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-lg font-semibold text-red-500 mb-4">Tailored Approach</h3>
-            <p className="text-gray-700">Your project is unique, and I&apos;m here to ensure it stands out with responsive designs and robust backend systems.</p>
-          </div>
-        </div>
-      </div>
-      <div className="container px-4 py-8 mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-8">Tech Savvy</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6 transition-transform hover:-translate-y-1">
-            <h3 className="text-lg font-semibold text-red-500 mb-4">Versatility</h3>
-            <p className="text-gray-700">Whether it&apos;s ReactJS for stunning frontends or Spring Boot for robust backend solutions, I&apos;ve got the tools for every job.</p>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-6 transition-transform hover:-translate-y-1">
-            <h3 className="text-lg font-semibold text-red-500 mb-4">Design Savvy</h3>
-            <p className="text-gray-700">I craft sleek interfaces with Tailwind CSS and bring ideas to life with Figma to ensure pixel-perfect precision.</p>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-6 transition-transform hover:-translate-y-1">
-            <h3 className="text-lg font-semibold text-red-500 mb-4">Data Dynamo</h3>
-            <p className="text-gray-700">From databases to APIs, I&apos;ve got you covered, ensuring seamless integration and functionality.</p>
-          </div>
-          <div className="bg-white rounded-lg shadow-md p-6 transition-transform hover:-translate-y-1">
-            <h3 className="text-lg font-semibold text-red-500 mb-4">Let&apos;s Talk Tech</h3>
-            <p className="text-gray-700">Fluent in geek speak, I&apos;m here to understand your vision and bring it to life with precision and passion.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+      <motion.div variants={container} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {items.map((it, i) => (
+          <motion.div key={i} variants={item} whileHover={{ scale: 1.03 }} className="group bg-white rounded-2xl shadow-md p-6 transition duration-300 hover:shadow-xl border border-gray-200 hover:border-blue-400 cursor-pointer">
+            <div className="flex gap-4 items-start">
+              <div className="text-4xl transition-transform duration-300 group-hover:scale-125">{it.icon}</div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-1 group-hover:text-blue-600 transition-colors duration-300">{it.title}</h3>
+                <p className="text-sm text-gray-600">{it.desc}</p>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+    </section>
   );
 };
 
