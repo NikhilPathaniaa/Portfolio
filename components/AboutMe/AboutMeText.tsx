@@ -1,3 +1,5 @@
+import WhyMe from "./WhyMe";
+
 const AboutMeText = () => {
   return (
     <div className="lg:grid grid-cols-12 cursor-default md:gap-10 pt-4 md:pt-[30px] items-center sm:hidden">
@@ -12,9 +14,10 @@ const AboutMeText = () => {
             </p>
 
             <br />
-            <h2 className="text-xl dark:text-white font-bold font-['Poppins'] ">Why Work With Me?</h2>
-            <br />
-            <ul>
+            {/* <h2 className="text-xl dark:text-white font-bold font-['Poppins'] ">✅ Why Work With Me?</h2>
+            <br /> */}
+            <WhyMe />
+            {/* <ul>
               <li className="mb-2">
                 ✅ <b className="font-semibold">Business-First Approach –</b> Every project I take on is designed to <b className="font-semibold">drive results</b>, whether it&apos;s boosting sales, increasing engagement, or improving brand
                 credibility.
@@ -32,7 +35,7 @@ const AboutMeText = () => {
               <li className="mb-2">
                 ✅ <b className="font-semibold">A Complete Digital Package –</b> Whether you need a website, UI/UX design, or a powerful promo video, I ensure a <b className="font-semibold">cohesive brand experience</b> across all platforms.
               </li>
-            </ul>
+            </ul> */}
             <br />
             <p className="text-xl dark:text-white font-bold font-['Poppins'] ">Your Problem, My Solution</p>
             <br />
