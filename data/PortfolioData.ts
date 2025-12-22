@@ -179,3 +179,61 @@ export const portfolioData = [
       "The platform simplified our entire business workflow. We finally have a single system to manage sales, inventory, and customer inquiries.",
   },
 ];
+
+export const portfolio = [
+  {
+    id: 1,
+    slug: "piedap-saas-platform",
+    title: "PIEDAP – SaaS Platform",
+    category: "SaaS Product Engineering",
+    client: "Pion Global Pvt. Ltd.",
+    preview: "",
+    image: "/Portfolio/piedap/piedap-saas.webp",
+    video: "",
+    languages: "React, Next.js, Micro-frontends, IAM, RBAC",
+    content:
+      "A unified enterprise SaaS platform integrating project management, assessments, compliance, and CMS under a single ecosystem.",
+  },
+
+  {
+    id: 2,
+    slug: "piedap-product-website",
+    title: "PIEDAP – Product Website",
+    category: "SaaS Marketing Website",
+    client: "Pion Global Pvt. Ltd.",
+    preview: "piedap.io",
+    image: "/Portfolio/piedap/piedap-website.webp",
+    video: "",
+    languages: "Next.js, SSR, SEO, CMS",
+    content:
+      "A high-performance SaaS product website built for SEO, scalability, and lead generation.",
+  },
+
+  {
+    id: 4,
+    slug: "pion-global-website",
+    title: "Pion Global – Corporate Website",
+    category: "Corporate Website & SEO",
+    client: "Pion Global Pvt. Ltd.",
+    preview: "pionglobal.com",
+    image: "/Portfolio/pionglobal/pionglobal.webp",
+    video: "",
+    languages: "Next.js, SEO, CMS, UI/UX",
+    content:
+      "A modern corporate website redesigned to strengthen branding, performance, and search visibility.",
+  },
+
+  {
+    id: 5,
+    slug: "the-muziris-ecommerce-platform",
+    title: "The Muziris – E-commerce Platform",
+    category: "E-commerce Platform",
+    client: "The Muziris",
+    preview: "themuziris.in",
+    image: "/Portfolio/muziris/muziris.webp",
+    video: "",
+    languages: "E-commerce, Razorpay, CMS, AWS",
+    content:
+      "A full-scale e-commerce and business management platform with payments, inventory, and admin dashboards.",
+  },
+];
