@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaAddressBook, FaBlogger, FaBriefcase, FaRegUser } from "react-icons/fa6";
-import { GrMoney } from "react-icons/gr";
 
 const Navbar = () => {
   const pathname = usePathname();

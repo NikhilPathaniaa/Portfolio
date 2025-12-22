@@ -1,10 +1,9 @@
 import AboutMeText from "@/components/AboutMe/AboutMeText";
 import ContactMe from "@/components/AboutMe/ContactMe";
 import Service from "@/components/AboutMe/Service";
-import Testimonials from "@/components/Testimonial/Testuimonial";
 import Header from "@/components/Common/Header";
-import MobileProfileSideBar from "@/components/Sidebar/MobileProfileSideBar";
 import WorkHighlights from "@/components/Home/WorkHighlights";
+import MobileProfileSideBar from "@/components/Sidebar/MobileProfileSideBar";
 
 export default function Home() {
   return (

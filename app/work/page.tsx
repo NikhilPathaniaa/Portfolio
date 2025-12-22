@@ -1,7 +1,6 @@
-import React from "react";
-import { portfolio, portfolioData } from "@/data/PortfolioData";
-import PortfolioList from "@/components/Portfolio/PortfolioList";
 import Header from "@/components/Common/Header";
+import PortfolioList from "@/components/Portfolio/PortfolioList";
+import { portfolioData } from "@/data/PortfolioData";
 const WorkPage = () => {
   return (
     <section id="portfolio" className="bg-white lg:rounded-3xl dark:bg-[#111111]">
