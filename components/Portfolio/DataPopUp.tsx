@@ -1,16 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect } from "react";
 import {
   FaArrowUpRightFromSquare,
   FaBullseye,
-  FaCode,
-  FaGlobe,
   FaPuzzlePiece,
-  FaQuoteLeft,
   FaRegFileLines,
-  FaRegUser,
-  FaStar,
+  FaStar
 } from "react-icons/fa6";
 
 interface PortfolioData {
@@ -199,35 +194,35 @@ const Tag = ({ children, tone = "light" }: { children: React.ReactNode; tone?: "
   return <span className={`rounded-full px-3 py-1 text-xs font-semibold ${styles}`}>{children}</span>;
 };
 
-const MetaItem = ({
-  icon,
-  label,
-  value,
-  isLink,
-}: {
-  icon: React.ReactNode;
-  label: string;
-  value: string;
-  isLink?: boolean;
-}) => {
-  const content = isLink ? (
-    <a href={value} target="_blank" rel="noreferrer" className="text-[#ef4060] hover:text-[#ff6b81]">
-      {value}
-    </a>
-  ) : (
-    value
-  );
+// const MetaItem = ({
+//   icon,
+//   label,
+//   value,
+//   isLink,
+// }: {
+//   icon: React.ReactNode;
+//   label: string;
+//   value: string;
+//   isLink?: boolean;
+// }) => {
+//   const content = isLink ? (
+//     <a href={value} target="_blank" rel="noreferrer" className="text-[#ef4060] hover:text-[#ff6b81]">
+//       {value}
+//     </a>
+//   ) : (
+//     value
+//   );
 
-  return (
-    <div className="flex items-start gap-3 rounded-2xl border border-neutral-100 bg-white/60 px-3 py-3 text-sm font-medium text-neutral-800 shadow-sm backdrop-blur dark:border-neutral-700 dark:bg-[#1f1f1f] dark:text-neutral-100">
-      <span className="mt-0.5 text-[#ef4060]">{icon}</span>
-      <div>
-        <p className="text-xs uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">{label}</p>
-        <p className="mt-1 leading-relaxed">{content}</p>
-      </div>
-    </div>
-  );
-};
+//   return (
+//     <div className="flex items-start gap-3 rounded-2xl border border-neutral-100 bg-white/60 px-3 py-3 text-sm font-medium text-neutral-800 shadow-sm backdrop-blur dark:border-neutral-700 dark:bg-[#1f1f1f] dark:text-neutral-100">
+//       <span className="mt-0.5 text-[#ef4060]">{icon}</span>
+//       <div>
+//         <p className="text-xs uppercase tracking-[0.15em] text-neutral-500 dark:text-neutral-400">{label}</p>
+//         <p className="mt-1 leading-relaxed">{content}</p>
+//       </div>
+//     </div>
+//   );
+// };
 
 const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
   <div className="space-y-3">
