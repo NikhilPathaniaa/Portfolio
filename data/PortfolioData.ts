@@ -49,6 +49,18 @@ export const portfolioData = [
     `,
     feedback:
       "Nikhil played a critical role in shaping the platform architecture and user experience. His ability to think at a product and system level made PIEDAP scalable and future-ready.",
+    images: [
+      "/Portfolio/piedap/screenshots/dashboard-view.webp",
+      "/Portfolio/piedap/screenshots/analytics.webp",
+      "/Portfolio/piedap/screenshots/user-management.webp",
+      "/Portfolio/piedap/screenshots/settings.webp"
+    ],
+    imageCaptions: [
+      "Dashboard view with key metrics and quick actions",
+      "Analytics dashboard showing performance metrics",
+      "User management interface with role-based access control",
+      "Platform settings and configuration panel"
+    ],
   },
 
   /* ======================================================
@@ -91,6 +103,16 @@ export const portfolioData = [
     `,
     feedback:
       "The new website helped us clearly position our product in the market. It’s fast, scalable, and easy to maintain.",
+    images: [
+      "/Portfolio/piedap/website/homepage.webp",
+      "/Portfolio/piedap/website/features.webp",
+      "/Portfolio/piedap/website/pricing.webp"
+    ],
+    imageCaptions: [
+      "Modern and clean homepage design",
+      "Product features showcase section",
+      "Pricing plans and comparison"
+    ],
   },
 
   /* ======================================================
@@ -131,7 +153,19 @@ export const portfolioData = [
     and overall user engagement, supporting both sales and hiring initiatives.
     `,
     feedback:
-      "The revamped website significantly improved our brand presence and made it easier for customers and candidates to understand our offerings.",
+      "The new corporate website effectively communicates our brand story and has improved our online presence.",
+    images: [
+      "/Portfolio/pion/website/homepage.webp",
+      "/Portfolio/pion/website/about.webp",
+      "/Portfolio/pion/website/services.webp",
+      "/Portfolio/pion/website/contact.webp"
+    ],
+    imageCaptions: [
+      "Corporate homepage with hero section",
+      "About page showcasing company values and team",
+      "Services overview with detailed descriptions",
+      "Contact page with inquiry form and location"
+    ],
   },
 
   /* ======================================================
@@ -177,6 +211,18 @@ export const portfolioData = [
     `,
     feedback:
       "The platform simplified our entire business workflow. We finally have a single system to manage sales, inventory, and customer inquiries.",
+    images: [
+      "/Portfolio/muziris/muziris.webp",
+      "/Portfolio/muziris/muziris.webp",
+      "/Portfolio/muziris/muziris.webp",
+      "/Portfolio/muziris/muziris.webp"
+    ],
+    imageCaptions: [
+      "Corporate homepage with hero section",
+      "About page showcasing company values and team",
+      "Services overview with detailed descriptions",
+      "Contact page with inquiry form and location"
+    ],
   },
 ];
 

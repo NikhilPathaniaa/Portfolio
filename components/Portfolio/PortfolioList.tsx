@@ -16,6 +16,8 @@ interface portfolioData {
   category: string;
   designation: string;
   feedback: string;
+  images?: string[];
+  imageCaptions?: string[];
   solution: string;
   result: string;
   challenge: string;
@@ -122,6 +124,8 @@ const PortfolioList = (props: portfolioData) => {
             title={props.title}
             category={props.category}
             image={props.image}
+            images={props.images}
+            imageCaptions={props.imageCaptions}
             id={props.id}
             video={props.video}
             content={props.content}
