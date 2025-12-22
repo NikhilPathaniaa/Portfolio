@@ -1,98 +1,292 @@
+export const portfolioData = [
+  /* ======================================================
+     1. PIEDAP – SaaS PLATFORM (CORE PRODUCT ENGINEERING)
+  ====================================================== */
+  {
+    id: 1,
+    slug: "piedap-saas-platform",
+    title: "PIEDAP – Unified SaaS Platform",
+    category: "SaaS Product Engineering",
+    client: "Pion Global Pvt. Ltd.",
+    designation: "Enterprise SaaS Platform",
+    preview: "",
+    image: "/Portfolio/piedap/piedap-saas.webp",
+    video: "",
+    languages:
+      "Product Architecture, Frontend Engineering, Micro-frontends, IAM/RBAC, Dashboards",
+    content: `
+    <b>PIEDAP</b> is a unified, enterprise-grade SaaS ecosystem designed to bring multiple
+    business-critical products under a single platform. The system integrates
+    project management, assessments, compliance workflows, and platform CMS
+    into one scalable and secure solution.
+
+    The platform is built for multi-tenant organizations, enabling different
+    teams and roles to collaborate efficiently while maintaining strict
+    access control and data isolation.
+    `,
+    challenge: `
+    The major challenge was building a <b>single SaaS engine</b> that could support
+    multiple independent products without permission conflicts, UX inconsistency,
+    or scalability limitations.
+
+    Each product had different workflows, user roles, and dashboards,
+    yet needed to function seamlessly within one ecosystem.
+    `,
+    solution: `
+    I architected the frontend using a <b>micro-frontend approach</b>, allowing each
+    product module to scale independently while sharing a common core.
+
+    Implemented <b>IAM and RBAC</b> to manage multiple organizations, roles, and permissions.
+    Designed shared design systems and product-specific dashboards to ensure
+    consistency without sacrificing flexibility.
+    `,
+    result: `
+    PIEDAP evolved into a <b>scalable enterprise SaaS platform</b> that supports
+    multiple products under a unified experience.
+
+    The platform improved operational transparency, reduced manual overhead,
+    and enabled faster onboarding of new products and clients.
+    `,
+    feedback:
+      "Nikhil played a critical role in shaping the platform architecture and user experience. His ability to think at a product and system level made PIEDAP scalable and future-ready.",
+  },
+
+  /* ======================================================
+     2. PIEDAP – PRODUCT / MARKETING WEBSITE
+  ====================================================== */
+  {
+    id: 2,
+    slug: "piedap-product-website",
+    title: "PIEDAP – Product Website",
+    category: "SaaS Marketing Website",
+    client: "Pion Global Pvt. Ltd.",
+    designation: "SaaS Product Marketing",
+    preview: "www.piedap.io",
+    image: "/Portfolio/piedap/piedap-website.webp",
+    video: "",
+    languages:
+      "Next.js, SSR, SEO, CMS Integration, Performance Optimization",
+    content: `
+    The PIEDAP product website was built to clearly communicate the platform’s
+    value proposition while supporting SEO, content scalability, and lead generation.
+
+    The goal was to create a fast, modern, and conversion-ready website
+    that could evolve alongside the SaaS product.
+    `,
+    challenge: `
+    The challenge was to translate a complex SaaS ecosystem into a
+    <b>simple, compelling narrative</b> for potential customers,
+    while ensuring high performance and search visibility.
+    `,
+    solution: `
+    I designed and developed the website using <b>Next.js with server-side rendering</b>.
+    A CMS-driven approach was implemented to allow marketing teams to update
+    content without engineering dependency.
+
+    SEO best practices and performance optimizations were applied throughout.
+    `,
+    result: `
+    The website delivered faster load times, improved search engine visibility,
+    and a professional product presence that supports sales and marketing efforts.
+    `,
+    feedback:
+      "The new website helped us clearly position our product in the market. It’s fast, scalable, and easy to maintain.",
+  },
+
+  /* ======================================================
+     3. PION GLOBAL – CORPORATE WEBSITE
+  ====================================================== */
+  {
+    id: 3,
+    slug: "pion-global-corporate-website",
+    title: "Pion Global – Corporate Website",
+    category: "Corporate Website & SEO",
+    client: "Pion Global Pvt. Ltd.",
+    designation: "Product Company",
+    preview: "www.pionglobal.com",
+    image: "/Portfolio/pionglobal/pionglobal.webp",
+    video: "",
+    languages:
+      "Next.js, SEO, CMS, SSR, UI/UX Design",
+    content: `
+    Pion Global’s corporate website was redesigned to reflect the company’s
+    product maturity, innovation, and credibility.
+
+    The website serves as a central hub for branding, recruitment,
+    and product discovery.
+    `,
+    challenge: `
+    The existing website lacked clarity, performance, and SEO structure,
+    making it difficult to communicate the company’s offerings effectively.
+    `,
+    solution: `
+    I led a complete UI/UX redesign and rebuilt the website using
+    <b>Next.js with SSR</b> for performance and SEO.
+
+    Implemented a CMS-based content structure and optimized page speed,
+    accessibility, and search engine visibility.
+    `,
+    result: `
+    The new website improved brand perception, search rankings,
+    and overall user engagement, supporting both sales and hiring initiatives.
+    `,
+    feedback:
+      "The revamped website significantly improved our brand presence and made it easier for customers and candidates to understand our offerings.",
+  },
+
+  /* ======================================================
+     4. THE MUZIRIS – ECOMMERCE & BUSINESS PLATFORM
+  ====================================================== */
+  {
+    id: 4,
+    slug: "the-muziris-ecommerce-platform",
+    title: "The Muziris – E-commerce Platform",
+    category: "E-commerce & Business Platform",
+    client: "The Muziris",
+    designation: "Founder-led Business",
+    preview: "www.themuziris.in",
+    image: "/Portfolio/muziris/muziris.webp",
+    video: "",
+    languages:
+      "E-commerce Development, CMS, Razorpay, AWS Deployment",
+    content: `
+    The Muziris required a complete digital platform to manage online sales,
+    inventory, payments, and business operations.
+
+    The goal was to create a scalable e-commerce solution that reduced
+    manual work and provided full operational visibility.
+    `,
+    challenge: `
+    The client needed an end-to-end solution covering product management,
+    payments, inventory tracking, and customer communication,
+    without relying on multiple disconnected tools.
+    `,
+    solution: `
+    I led the project end-to-end, from requirement gathering and system design
+    to development, deployment, and client communication.
+
+    Implemented cart, checkout, Razorpay payments, inventory management,
+    admin dashboards, and CMS-driven operations.
+    `,
+    result: `
+    The platform enabled smooth online sales, improved inventory control,
+    and reduced operational overhead.
+
+    The client gained a transparent, easy-to-manage system and
+    continued as a long-term retained customer.
+    `,
+    feedback:
+      "The platform simplified our entire business workflow. We finally have a single system to manage sales, inventory, and customer inquiries.",
+  },
+
+  /* ======================================================
+     5. KHABAR FILHAL – DIGITAL NEWS PLATFORM
+  ====================================================== */
+  {
+    id: 5,
+    slug: "khabar-filhal-news-platform",
+    title: "Khabar Filhal – Digital News Platform",
+    category: "Website Development & SEO",
+    client: "Sandeep Singh",
+    designation: "Founder & Editor",
+    preview: "www.khabarfilhaal.com",
+    image: "/Portfolio/khabarfilhal/KhabarFilhalMockup.webp",
+    video: "FtDvw04AXCQ",
+    languages:
+      "WordPress, SEO, RSS Integration, Multilingual Support",
+    content: `
+    Khabar Filhal is a multilingual digital news platform designed
+    to modernize journalism and improve audience reach.
+
+    The platform supports structured content publishing,
+    video integration, and mobile-first consumption.
+    `,
+    challenge: `
+    The client struggled with limited digital reach and
+    lacked a scalable platform to publish and distribute news content effectively.
+    `,
+    solution: `
+    I developed a custom WordPress-based news platform with
+    multilingual support, RSS feeds, YouTube integration,
+    and a user-friendly CMS for editorial control.
+    `,
+    result: `
+    The platform helped Khabar Filhal establish a strong digital presence,
+    increase audience engagement, and improve search visibility.
+    `,
+    feedback:
+      "Nikhil helped us transition smoothly into digital journalism. Our reach and engagement improved significantly after the launch.",
+  },
+];
+
 export const portfolio = [
   {
     id: 1,
-    category: "website development",
-    preview: "khabarfilhaal.com",
-    title: "Khabar filhal",
+    slug: "khabar-filhal-news-platform",
+    title: "Khabar Filhal",
+    category: "Website Development",
     client: "Sandeep Singh",
-    designation: "Founder, Editor (khabar filhal)",
-    feedback:
-      "Nikhil Pathania has enormously helped Khabar Filhal to go digital by creating a website which has made it very easy for us to engage with the audience and seamlessly broadcast news which we were struggling to do earlier. We now not only have a strong online and social media presence but are also getting increased views and a loyal audience base.",
+    preview: "khabarfilhaal.com",
     image: "/Portfolio/khabarfilhal/KhabarFilhalMockup.webp",
     video: "FtDvw04AXCQ",
-    languages: "Wordpress",
-    content: `<b>Khabarfilhal - A Dynamic Multilingual News Platform</b>
-
-    Khabarfilhal is a feature-rich news website developed using WordPress, designed to deliver a seamless and engaging news consumption experience. The platform caters to a diverse audience by offering:
-    <br>
-    ✅ <b>Multiple News Categories –</b> Organized sections for easy navigation across various news topics.
-
-    ✅ <b>Multilingual Support –</b> Users can switch between different languages for a personalized reading experience.
-
-    ✅ <b>RSS News Feeds –</b> Aggregating news from various trusted sources alongside original content.
-
-    ✅ <b>Mobile Responsive & User-Friendly –</b> Ensuring accessibility across devices with a clean and intuitive UI/UX.
-
-    ✅ <b>YouTube Integration –</b> Showcasing video news and reports directly from YouTube.
-
-    ✅ <b>Studio Talk (TED Talks) Page –</b> Featuring insightful discussions and expert opinions.
-
-    With its modern design, smooth functionality, and immersive user experience, Khabarfilhal stands as a reliable digital news source, blending curated feeds with original journalism. 🚀`,
-
-    challenge: `
-    Sandeep Singh, the visionary behind Khabar Filhal, faced a critical challenge. His news agency, known for delivering high-quality journalism, lacked a strong digital presence. In today’s fast-paced world, where news is consumed online first, he needed a website that <b>could match the credibility, speed, and impact of his reporting.</b>
-
-    With an overcrowded digital landscape and the increasing demand for real-time updates, Khabar Filhal required a <b>modern, user-friendly, and scalable</b> platform to stay ahead. Sandeep knew that without a powerful online presence, his agency would struggle to reach its full potential. That’s when he knocked on our door.`,
-
-    solution: `
-    When Sandeep Singh approached me, I knew this wasn’t just about building a website—it was about creating a <b>powerful digital ecosystem</b> that could elevate Khabar Filhal in the competitive news industry. I started by deeply understanding Sandeep’s vision and the unique strengths of his news agency. My approach included:
-    
-    ✅ <b>Custom Website Development –</b> I designed and developed a tailored website that was not only visually appealing but also highly user-friendly, ensuring readers could seamlessly navigate through the latest news stories.
-
-    ✅ <b>Content Management System (CMS) –</b> To give Khabar Filhal full control over their content, I integrated a robust CMS, allowing the team to efficiently publish, update, and organize news articles with ease.
-    
-    ✅ <b>Search Engine Optimization (SEO) –</b> I implemented a comprehensive SEO strategy to boost search rankings, drive organic traffic, and expand their audience reach.
-
-    ✅ <b>Mobile Optimization –</b> With a mobile-first approach, I ensured the website was fully responsive, delivering an exceptional user experience across all devices.
-
-    ✅ <b>Branding & Visual Identity –</b> I revamped Khabar Filhal’s branding to create a modern and distinctive visual identity that resonates with their audience.
-
-    ✅ <b>Social Media Integration –</b> To maximize engagement, I seamlessly integrated social media platforms, enabling readers to share articles effortlessly and stay connected with Khabar Filhal.
-
-    By combining <b>cutting-edge design, functionality, and strategic optimizations,</b> I helped Khabar Filhal establish a <b>strong digital presence</b>—one that matches the quality of journalism they produce.
-    `,
-
-    result: `	
-    Khabar Filhal transformed from struggling to establish an online presence to becoming a <b>respected and trusted news platform</b>. The impact of my work was undeniable:
-
-    ✅ <b>Traffic Surge –</b> The website saw a <b>massive boost in traffic,</b> attracting a growing number of daily visitors who spent more time engaging with the content.</b>
-
-    ✅ <b>Elevated Rankings –</b> Khabar Filhal’s articles started ranking higher on <b>search engines</b>, significantly increasing their readership and visibility.</b>
-
-    ✅ <b>Enhanced User Experience –</b> With a <b>clean, user-friendly, and responsive</b> design, visitors stayed longer, interacted more, and bounce rates dropped.</b>
-
-    ✅ <b>Stronger Brand Presence –</b> A <b>revitalized brand identity</b> helped Khabar Filhal gain recognition and trust, solidifying its position as a credible news source.</b>
-
-    ✅ <b>Social Engagement –</b> Seamless <b>social media integration</b> led to greater audience interaction, with readers actively sharing articles and engaging in discussions.
-
-    Sandeep’s vision is now a <b>thriving digital reality</b>, proving that <b>strategic and custom-tailored digital solutions</b> can create a lasting impact.
-
-    If you’re ready to establish a <b>strong digital presence</b> and bring your vision to life, let’s connect. <b>Your success story starts here! 🚀</b>`,
+    languages: "WordPress, SEO, Multilingual CMS",
+    content:
+      "A multilingual digital news platform built to improve online visibility, audience engagement, and scalable content publishing.",
   },
-];
-export const portfolioData = [
-  {
-    id: 1,
-    slug: "project-name", // Unique slug for the project
-    title: "Awesome Project",
-    client: "Client Name",
-    video: "dQw4w9WgXcQ", // YouTube Video ID
-    languages: "Next.js, Tailwind CSS, TypeScript",
-    content: "This is a description of the project...",
-    image: "/images/project.jpg",
-    category: "Web Development",
-    preview: "example.com",
-  },
+
   {
     id: 2,
-    slug: "another-project",
-    title: "Another Cool Project",
-    client: "Another Client",
+    slug: "piedap-saas-platform",
+    title: "PIEDAP – SaaS Platform",
+    category: "SaaS Product Engineering",
+    client: "Pion Global Pvt. Ltd.",
+    preview: "",
+    image: "/Portfolio/piedap/piedap-saas.webp",
     video: "",
-    languages: "React, Node.js",
-    content: "This is another project description...",
-    image: "/images/another-project.jpg",
-    category: "Mobile App",
-    preview: "another-example.com",
+    languages: "React, Next.js, Micro-frontends, IAM, RBAC",
+    content:
+      "A unified enterprise SaaS platform integrating project management, assessments, compliance, and CMS under a single ecosystem.",
+  },
+
+  {
+    id: 3,
+    slug: "piedap-product-website",
+    title: "PIEDAP – Product Website",
+    category: "SaaS Marketing Website",
+    client: "Pion Global Pvt. Ltd.",
+    preview: "piedap.io",
+    image: "/Portfolio/piedap/piedap-website.webp",
+    video: "",
+    languages: "Next.js, SSR, SEO, CMS",
+    content:
+      "A high-performance SaaS product website built for SEO, scalability, and lead generation.",
+  },
+
+  {
+    id: 4,
+    slug: "pion-global-website",
+    title: "Pion Global – Corporate Website",
+    category: "Corporate Website & SEO",
+    client: "Pion Global Pvt. Ltd.",
+    preview: "pionglobal.com",
+    image: "/Portfolio/pionglobal/pionglobal.webp",
+    video: "",
+    languages: "Next.js, SEO, CMS, UI/UX",
+    content:
+      "A modern corporate website redesigned to strengthen branding, performance, and search visibility.",
+  },
+
+  {
+    id: 5,
+    slug: "the-muziris-ecommerce-platform",
+    title: "The Muziris – E-commerce Platform",
+    category: "E-commerce Platform",
+    client: "The Muziris",
+    preview: "themuziris.in",
+    image: "/Portfolio/muziris/muziris.webp",
+    video: "",
+    languages: "E-commerce, Razorpay, CMS, AWS",
+    content:
+      "A full-scale e-commerce and business management platform with payments, inventory, and admin dashboards.",
   },
 ];

@@ -5,13 +5,13 @@ import { motion } from "framer-motion";
 const items = [
   {
     icon: "🚀",
-    title: "Business-Driven Results",
-    desc: "Designs that convert — boosting sales, trust, and engagement through strategy-led creativity.",
+    title: "Outcome-Focused Work",
+    desc: "I think beyond visuals — prioritizing clarity, usability, and performance that support real business goals.",
   },
   {
     icon: "🧠",
-    title: "Smart, Custom Solutions",
-    desc: "No templates. Everything is purpose-built to reflect your unique business identity.",
+    title: "Thoughtful, Custom Builds",
+    desc: "Each project is approached from scratch with context, constraints, and users in mind — no blind templates.",
   },
   {
     icon: "💡",
@@ -25,13 +25,13 @@ const items = [
   },
   {
     icon: "📦",
-    title: "Full Digital Package",
-    desc: "From websites to UI/UX to motion videos — cohesive branding under one roof.",
+    title: "End-to-End Perspective",
+    desc: "Understanding how design, code, motion, and content work together — even when collaborating with teams.",
   },
   {
     icon: "🎯",
-    title: "Strategic Guidance",
-    desc: "More than design — I align every digital decision with your growth goals.",
+    title: "Practical Decision-Making",
+    desc: "I help break down unclear requirements into concrete, buildable steps through discussion and iteration.",
   },
 ];
 
@@ -57,14 +57,14 @@ const WhyMe = () => {
   return (
     <section>
       <h2 className="text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">
-        Why Choose <span className="text-blue-600">Me</span>
+        What I <span className="text-blue-600">Bring</span>
       </h2>
 
       <motion.div variants={container} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {items.map((it, i) => (
-          <motion.div key={i} variants={item} whileHover={{ scale: 1.03 }} className="group bg-white rounded-2xl shadow-md p-6 transition duration-300 hover:shadow-xl border border-gray-200 hover:border-blue-400 cursor-pointer">
+          <motion.div key={i} variants={item} whileHover={{ scale: 1.015, boxShadow: "0 10px 30px rgba(0,0,0,0.08)", }} className="group bg-white rounded-2xl shadow-md p-6 transition duration-300 hover:shadow-xl border border-gray-200 hover:border-blue-400 cursor-pointer">
             <div className="flex gap-4 items-start">
-              <div className="text-4xl transition-transform duration-300 group-hover:scale-125">{it.icon}</div>
+              <h2 className="text-3xl transition-transform duration-300 group-hover:scale-125">{it.icon}</h2>
               <div>
                 <h3 className="text-lg font-semibold text-gray-800 mb-1 group-hover:text-blue-600 transition-colors duration-300">{it.title}</h3>
                 <p className="text-sm text-gray-600">{it.desc}</p>

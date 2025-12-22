@@ -6,11 +6,16 @@ const AboutMeText = () => {
       <div className="col-span-12 space-y-2.5">
         <div className="">
           <div className="text-[#212b36] text-justify dark:text-white font-['Poppins'] dark:text-color-910 leading-7">
-            <h1 className="text-xl dark:text-white font-bold font-['Poppins'] ">I Build Digital Experiences That Drive Business Growth</h1>
+            <h1 className="text-xl dark:text-white font-semibold font-['Poppins'] ">I build thoughtful web experiences focused on performance, usability, and long-term maintainability.</h1>
             <br />
             <p>
-              Your online presence isn&apos;t just about having a website—it&apos;s about engaging your audience, converting visitors into customers, and making your brand unforgettable. Whether it&apos;s a high-performing website, a compelling promo
-              video, or a sleek UI/UX design, I bring your vision to life with a business-driven approach.
+             I’m a front-end focused developer with a strong design sense, working primarily with modern web technologies like React, Next.js, and design systems. I enjoy turning complex ideas into clean, reliable interfaces that feel intuitive to use and easy to maintain.
+            </p>
+            <p className="mt-5">
+              Over time, I’ve worked on a mix of personal projects, internal company platforms, and client-facing websites, contributing across UI implementation, performance improvements, SEO foundations, and design consistency. I care deeply about how real users experience products—not just how they look in mockups.
+              </p>
+            <p className="mt-5">
+              I prefer clarity over trends, structure over shortcuts, and decisions backed by reasoning rather than guesswork.
             </p>
 
             <br />
@@ -37,27 +42,23 @@ const AboutMeText = () => {
               </li>
             </ul> */}
             <br />
-            <p className="text-xl dark:text-white font-bold font-['Poppins'] ">Your Problem, My Solution</p>
+            <p className="text-xl dark:text-white font-bold font-['Poppins'] ">Common challenges I’ve worked on</p>
             <br />
-            <ul>
-              <li className="mb-2">
-                <span>❌ Struggling with a weak online presence?</span> → <span>✅ I create websites and visuals that build brand authority and attract customers.</span>
-              </li>
-              <li className="mb-2">
-                <span>❌ Low engagement on your website or social media?</span> → <span>✅ I design UI/UX and videos that captivate audiences and increase conversions.</span>
-              </li>
-              <li className="mb-2">
-                <span> ❌ Struggling with a slow, outdated website?</span> → <span>✅ I create fast, modern, and mobile-friendly sites.</span>
-              </li>
-              <li className="mb-2">
-                <span> ❌ Losing customers due to poor design?</span> → <span>✅ I craft engaging, user-focused experiences.</span>
-              </li>
-              <span>❌ Don&apos;t know where to start?</span> → <span>✅ I provide expert guidance, handling everything from strategy to execution.</span>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>Improving clarity and credibility for weak or outdated online presences.</li>
+              <li>Improving structure and clarity for outdated or inconsistent websites.</li>
+              <li>Building responsive layouts that work well across devices.</li>
+              <li>Designing interfaces that increase engagement and feel intuitive to use.</li>
+              <li>Rebuilding slow or poorly structured websites with performance in mind.</li>
+              <li>Improving page speed, accessibility, and SEO basics.</li>
+              <li>Helping teams align design decisions with actual user and business needs.</li>
+              <li>Providing direction when requirements or goals are unclear.</li>
             </ul>
+
             <p>
-              {/* work */}
-              Your digital presence should be a <b className="font-semibold">powerful business asset</b>—not just an online placeholder. Let&apos;s create something that doesn&apos;t just look great but
-              <b className="font-semibold">drives real business growth</b>.
+              Your digital presence should be a <b className="font-semibold">reliable business asset</b>—
+              not just an online placeholder. I focus on building systems that look good,
+              work well, and <b className="font-semibold">support meaningful outcomes over time</b>.
             </p>
           </div>
         </div>

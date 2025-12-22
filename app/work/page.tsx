@@ -1,5 +1,5 @@
 import React from "react";
-import { portfolio } from "@/data/PortfolioData";
+import { portfolio, portfolioData } from "@/data/PortfolioData";
 import PortfolioList from "@/components/Portfolio/PortfolioList";
 import Header from "@/components/Common/Header";
 const WorkPage = () => {
@@ -36,7 +36,7 @@ const WorkPage = () => {
               </ul>
             </div> */}
 
-            {portfolio.map((values) => (
+            {portfolioData.map((values) => (
               <PortfolioList
                 key={values.id}
                 category={values.category}
