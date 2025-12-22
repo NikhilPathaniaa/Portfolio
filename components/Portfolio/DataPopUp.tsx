@@ -5,8 +5,9 @@ import {
   FaBullseye,
   FaPuzzlePiece,
   FaRegFileLines,
-  FaStar
+  FaStar,
 } from "react-icons/fa6";
+import ImageGallery from "./ImageGallery";
 
 interface PortfolioData {
   id: number;
@@ -21,6 +22,8 @@ interface PortfolioData {
   solution: string;
   result: string;
   challenge: string;
+  images?: string[];
+  imageCaptions?: string[];
   designation: string;
   feedback: string;
   onClose: () => void;
@@ -38,7 +41,11 @@ const DataPopUp = (props: PortfolioData) => {
       : props.preview
       ? `https://${props.preview}`
       : "";
-
+  console.log('DataPopUp props:', {
+    hasImages: !!props.images,
+    images: props.images,
+    captions: props.imageCaptions
+  });
   return (
     <div className="fixed inset-0 z-[99999] flex items-end md:items-center justify-center bg-black/70 px-2 sm:px-4">
       <div className="relative w-full max-w-7xl overflow-hidden rounded-t-[28px] md:rounded-3xl bg-white shadow-2xl dark:bg-[#151515]">
@@ -131,6 +138,14 @@ const DataPopUp = (props: PortfolioData) => {
               <Section title="Key Highlights">
                 <div className="space-y-6">
                   <HighlightLine icon={<FaBullseye />} title="Challenge" text={props.challenge} />
+                  
+                  {props.images && props.images.length > 0 && (
+                    <ImageGallery 
+                      images={props.images || []} 
+                      captions={props.imageCaptions || []} 
+                    />
+                  )}
+                  
                   <HighlightLine icon={<FaPuzzlePiece />} title="Solution" text={props.solution} />
                   <HighlightLine icon={<FaStar />} title="Impact" text={props.result} />
                 </div>

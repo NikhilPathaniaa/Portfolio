@@ -42,6 +42,8 @@ const WorkPage = () => {
                 id={values.id}
                 title={values.title}
                 image={values.image}
+                images={values.images}
+                imageCaptions={values.imageCaptions}
                 video={values.video}
                 languages={values.languages}
                 content={values.content}
