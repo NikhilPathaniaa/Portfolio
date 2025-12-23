@@ -2,53 +2,53 @@ export const portfolioData = [
   /* ======================================================
      1. PIEDAP – SaaS PLATFORM (CORE PRODUCT ENGINEERING)
   ====================================================== */
-  {
-    id: 1,
-    slug: "piedap-saas-platform",
-    title: "PIEDAP – Unified SaaS Platform",
-    category: "SaaS Product Engineering",
-    client: "Pion Global Pvt. Ltd.",
-    designation: "Enterprise SaaS Platform",
-    preview: "",
-    image: "/Portfolio/piedap/piedap-saas.webp",
-    video: "",
-    languages:
-      "Product Architecture, Frontend Engineering, Micro-frontends, IAM/RBAC, Dashboards",
-    content: `
-    <b>PIEDAP</b> is a unified, enterprise-grade SaaS ecosystem designed to bring multiple
-    business-critical products under a single platform. The system integrates
-    project management, assessments, compliance workflows, and platform CMS
-    into one scalable and secure solution.
+  // {
+  //   id: 1,
+  //   slug: "piedap-saas-platform",
+  //   title: "PIEDAP – Unified SaaS Platform",
+  //   category: "SaaS Product Engineering",
+  //   client: "Pion Global Pvt. Ltd.",
+  //   designation: "Enterprise SaaS Platform",
+  //   preview: "",
+  //   image: "/Portfolio/piedap/piedap-saas.webp",
+  //   video: "",
+  //   languages:
+  //     "Product Architecture, Frontend Engineering, Micro-frontends, IAM/RBAC, Dashboards",
+  //   content: `
+  //   <b>PIEDAP</b> is a unified, enterprise-grade SaaS ecosystem designed to bring multiple
+  //   business-critical products under a single platform. The system integrates
+  //   project management, assessments, compliance workflows, and platform CMS
+  //   into one scalable and secure solution.
 
-    The platform is built for multi-tenant organizations, enabling different
-    teams and roles to collaborate efficiently while maintaining strict
-    access control and data isolation.
-    `,
-    challenge: `
-    The major challenge was building a <b>single SaaS engine</b> that could support
-    multiple independent products without permission conflicts, UX inconsistency,
-    or scalability limitations.
+  //   The platform is built for multi-tenant organizations, enabling different
+  //   teams and roles to collaborate efficiently while maintaining strict
+  //   access control and data isolation.
+  //   `,
+  //   challenge: `
+  //   The major challenge was building a <b>single SaaS engine</b> that could support
+  //   multiple independent products without permission conflicts, UX inconsistency,
+  //   or scalability limitations.
 
-    Each product had different workflows, user roles, and dashboards,
-    yet needed to function seamlessly within one ecosystem.
-    `,
-    solution: `
-    I architected the frontend using a <b>micro-frontend approach</b>, allowing each
-    product module to scale independently while sharing a common core.
+  //   Each product had different workflows, user roles, and dashboards,
+  //   yet needed to function seamlessly within one ecosystem.
+  //   `,
+  //   solution: `
+  //   I architected the frontend using a <b>micro-frontend approach</b>, allowing each
+  //   product module to scale independently while sharing a common core.
 
-    Implemented <b>IAM and RBAC</b> to manage multiple organizations, roles, and permissions.
-    Designed shared design systems and product-specific dashboards to ensure
-    consistency without sacrificing flexibility.
-    `,
-    result: `
-    PIEDAP evolved into a <b>scalable enterprise SaaS platform</b> that supports
-    multiple products under a unified experience.
+  //   Implemented <b>IAM and RBAC</b> to manage multiple organizations, roles, and permissions.
+  //   Designed shared design systems and product-specific dashboards to ensure
+  //   consistency without sacrificing flexibility.
+  //   `,
+  //   result: `
+  //   PIEDAP evolved into a <b>scalable enterprise SaaS platform</b> that supports
+  //   multiple products under a unified experience.
 
-    The platform improved operational transparency, reduced manual overhead,
-    and enabled faster onboarding of new products and clients.
-    `,
-    feedback:
-      "Nikhil played a critical role in shaping the platform architecture and user experience. His ability to think at a product and system level made PIEDAP scalable and future-ready.",
+  //   The platform improved operational transparency, reduced manual overhead,
+  //   and enabled faster onboarding of new products and clients.
+  //   `,
+  //   feedback:
+  //     "Nikhil played a critical role in shaping the platform architecture and user experience. His ability to think at a product and system level made PIEDAP scalable and future-ready.",
     // images: [
     //   "/Portfolio/piedap/screenshots/dashboard-view.webp",
     //   "/Portfolio/piedap/screenshots/analytics.webp",
@@ -61,7 +61,7 @@ export const portfolioData = [
     //   "User management interface with role-based access control",
     //   "Platform settings and configuration panel"
     // ],
-  },
+  // },
 
   /* ======================================================
      2. PIEDAP – PRODUCT / MARKETING WEBSITE
@@ -171,73 +171,112 @@ export const portfolioData = [
   /* ======================================================
      4. THE MUZIRIS – ECOMMERCE & BUSINESS PLATFORM
   ====================================================== */
-  {
-    id: 4,
-    slug: "the-muziris-ecommerce-platform",
-    title: "The Muziris – E-commerce Platform",
-    category: "E-commerce & Business Platform",
-    client: "The Muziris",
-    designation: "Founder-led Business",
-    preview: "www.themuziris.in",
-    image: "/Portfolio/muziris/muziris.webp",
-    video: "",
-    languages:
-      "E-commerce Development, CMS, Razorpay, AWS Deployment",
-    content: `
-    The Muziris required a complete digital platform to manage online sales,
-    inventory, payments, and business operations.
+{
+  id: 4,
+  slug: "the-muziris-ecommerce-platform",
+  title: "The Muziris – Multi-Business Digital Platform",
+  category: "E-commerce & Business Platform",
+  client: "The Muziris (Malabar Trading Company)",
+  designation: "Founder-led Multi-Business Brand",
+  preview: "www.themuziris.in",
+  image: "/Portfolio/muziris/muziris.webp",
+  video: "",
+  languages:
+    "E-commerce Development, CMS, Razorpay, NimbusPost, AWS, Google Sheets Integration",
+  content: `
+  The Muziris (Malabar Trading Company) operates three distinct business models
+  under a single brand: online retail, café operations, and a B2B vending
+  machine rental business.
 
-    The goal was to create a scalable e-commerce solution that reduced
-    manual work and provided full operational visibility.
-    `,
-    challenge: `
-    The client needed an end-to-end solution covering product management,
-    payments, inventory tracking, and customer communication,
-    without relying on multiple disconnected tools.
-    `,
-    solution: `
-    I led the project end-to-end, from requirement gathering and system design
-    to development, deployment, and client communication.
+  The objective was to design and build a unified digital platform that could
+  support all three businesses while maintaining clear user journeys,
+  operational transparency, and long-term scalability.
+  `,
+  challenge: `
+  The primary challenge was consolidating three fundamentally different business workflows into one website without 
+  creating complexity for users or internal staff.
 
-    Implemented cart, checkout, Razorpay payments, inventory management,
-    admin dashboards, and CMS-driven operations.
-    `,
-    result: `
-    The platform enabled smooth online sales, improved inventory control,
-    and reduced operational overhead.
+  Each business required a different approach:
+  - B2C e-commerce with secure payments and inventory control
+  - Café branding with dynamic content and social integration
+  - B2B lead generation with trust, tracking, and follow-ups
 
-    The client gained a transparent, easy-to-manage system and
-    continued as a long-term retained customer.
-    `,
-    feedback:
-      "The platform simplified our entire business workflow. We finally have a single system to manage sales, inventory, and customer inquiries.",
-    images: [
-      "/Portfolio/muziris/img1.webp",
-      "/Portfolio/muziris/img2.webp"
-    ],
-    imageCaptions: [
-      "Corporate homepage with hero section",
-      "About page showcasing company values and team",
-      "Services overview with detailed descriptions",
-      "Contact page with inquiry form and location"
-    ],
-  },
+  Additionally, the platform needed strong security, spam protection, and internal visibility 
+  without relying on multiple disconnected tools.
+  `,
+  solution: `
+  I approached this as a multi-business platform using a modular, version-based delivery strategy.
+
+  <b>Online Retail (E-commerce)</b>
+  - Secure user authentication and customer accounts
+  - Cart and checkout with Razorpay payments
+  - Shipping integration using NimbusPost
+  - Customer profiles with saved addresses, favorites, and order history
+  - Inventory and stock management with out-of-stock handling
+  - Multi-user admin access and global inventory control
+
+  <b>B2B Vending Machine Rental</b>
+  - Dedicated section with product videos and use cases
+  - Custom inquiry forms for rental leads
+  - Lead data stored in CMS and synced to Google Sheets
+  - Internal status tracking for follow-ups and conversions
+  - CMS-driven B2B testimonials to build trust and credibility
+
+  <b>Café & Multi-Outlet Presence</b>
+  - Menu management, image gallery, and location details
+  - Designed to support multiple café outlets
+  - Instagram integration planned and delivered in V2
+  - CMS-driven content updates without developer dependency
+
+  <b>Unified Contact & Security Layer</b>
+  - Single dynamic contact system handling all business inquiries
+  - Smart routing based on inquiry type
+  - Google reCAPTCHA, form validation, and honeypot fields
+  - Input sanitization to protect against spam and bots
+
+  The platform was launched early as a stable V1, with advanced features rolled out incrementally through V2 and future versions.
+  `,
+  result: `
+  The Muziris platform became a single digital backbone for all three businesses.
+
+  The system enabled:
+  - Smooth online sales and secure payments
+  - Better inventory and order visibility
+  - Simplified lead tracking and staff follow-ups
+  - Reduced manual operations
+  - Improved trust for both B2C and B2B customers
+
+  The platform is scalable, secure, and built to evolve without disrupting live operations. 
+  The client continues as a long-term retained partner.
+  `,
+  feedback:
+    "The platform brought all our businesses together into one clear system. Sales, leads, and operations are now easy to manage, and everything feels structured and scalable.",
+  images: [
+    "/Portfolio/muziris/img1.webp",
+    "/Portfolio/muziris/img2.webp"
+  ],
+  imageCaptions: [
+    "Unified multi-business homepage experience",
+    "Secure e-commerce flow with payments and inventory management"
+  ],
+},
+
 ];
 
 export const portfolio = [
-  {
-    id: 1,
-    slug: "piedap-saas-platform",
-    title: "PIEDAP – SaaS Platform",
-    category: "SaaS Product Engineering",
-    client: "Pion Global Pvt. Ltd.",
-    preview: "",
-    image: "/Portfolio/piedap/piedap-saas.webp",
-    video: "",
-    languages: "React, Next.js, Micro-frontends, IAM, RBAC",
-    content:
-      "A unified enterprise SaaS platform integrating project management, assessments, compliance, and CMS under a single ecosystem.",
-  },
+  // {
+  //   id: 1,
+  //   slug: "piedap-saas-platform",
+  //   title: "PIEDAP – SaaS Platform",
+  //   category: "SaaS Product Engineering",
+  //   client: "Pion Global Pvt. Ltd.",
+  //   preview: "",
+  //   image: "/Portfolio/piedap/piedap-saas.webp",
+  //   video: "",
+  //   languages: "React, Next.js, Micro-frontends, IAM, RBAC",
+  //   content:
+  //     "A unified enterprise SaaS platform integrating project management, assessments, compliance, and CMS under a single ecosystem.",
+  // },
 
   {
     id: 2,
@@ -266,18 +305,18 @@ export const portfolio = [
     content:
       "A modern corporate website redesigned to strengthen branding, performance, and search visibility.",
   },
+{
+  id: 5,
+  slug: "the-muziris-ecommerce-platform",
+  title: "The Muziris – Multi-Business Platform",
+  category: "E-commerce & Business Platform",
+  client: "The Muziris",
+  preview: "themuziris.in",
+  image: "/Portfolio/muziris/muziris.webp",
+  video: "",
+  languages: "E-commerce, CMS, Razorpay, NimbusPost, AWS",
+  content:
+    "A unified digital platform supporting online retail, café operations, and a B2B vending machine rental business with secure payments, inventory management, lead tracking, and CMS-driven operations.",
+},
 
-  {
-    id: 5,
-    slug: "the-muziris-ecommerce-platform",
-    title: "The Muziris – E-commerce Platform",
-    category: "E-commerce Platform",
-    client: "The Muziris",
-    preview: "themuziris.in",
-    image: "/Portfolio/muziris/muziris.webp",
-    video: "",
-    languages: "E-commerce, Razorpay, CMS, AWS",
-    content:
-      "A full-scale e-commerce and business management platform with payments, inventory, and admin dashboards.",
-  },
 ];
