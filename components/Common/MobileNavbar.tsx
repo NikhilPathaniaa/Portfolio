@@ -3,7 +3,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { FaAddressBook, FaBars, FaBlogger, FaBriefcase, FaRegUser, FaXmark } from "react-icons/fa6";
-import { GrMoney } from "react-icons/gr";
 
 const MobileNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -119,54 +119,90 @@ export const portfolioData = [
      3. PION GLOBAL – CORPORATE WEBSITE
   ====================================================== */
   {
-    id: 3,
-    slug: "pion-global-corporate-website",
-    title: "Pion Global – Corporate Website",
-    category: "Corporate Website & SEO",
-    client: "Pion Global Pvt. Ltd.",
-    designation: "Product Company",
-    preview: "www.pionglobal.com",
-    image: "/Portfolio/pionglobal/pionglobal.webp",
-    video: "",
-    languages:
-      "Next.js, SEO, CMS, SSR, UI/UX Design",
-    content: `
-    Pion Global’s corporate website was redesigned to reflect the company’s
-    product maturity, innovation, and credibility.
+  id: 3,
+  slug: "pion-global-corporate-website",
+  title: "Pion Global – AI-Powered IT & Services Website",
+  category: "Corporate Website, SEO & CMS Platform",
+  client: "Pion Global Pvt. Ltd.",
+  designation: "AI-Driven Product & Services Company",
+  preview: "www.pionglobal.com",
+  image: "/Portfolio/pionglobal/pionglobal.webp",
+  video: "",
+  languages:
+    "Next.js, SSR, SEO, CMS, UI/UX Design, NodeMailer, AWS",
+  content: `
+  Pion Global is an AI-powered IT and services company with a strong
+  product-driven approach. The website was built as a central digital
+  platform to communicate credibility, showcase products and services,
+  attract talent, and support long-term content and SEO growth.
 
-    The website serves as a central hub for branding, recruitment,
-    and product discovery.
-    `,
-    challenge: `
-    The existing website lacked clarity, performance, and SEO structure,
-    making it difficult to communicate the company’s offerings effectively.
-    `,
-    solution: `
-    I led a complete UI/UX redesign and rebuilt the website using
-    <b>Next.js with SSR</b> for performance and SEO.
+  The objective was to create a fast, scalable, and future-ready corporate
+  website that could evolve alongside the company.
+  `,
+  challenge: `
+  The previous setup lacked clarity, performance optimization, and a structured SEO foundation. Content updates, 
+  hiring workflows, and marketing assets were difficult to manage, limiting growth and visibility.
 
-    Implemented a CMS-based content structure and optimized page speed,
-    accessibility, and search engine visibility.
-    `,
-    result: `
-    The new website improved brand perception, search rankings,
-    and overall user engagement, supporting both sales and hiring initiatives.
-    `,
-    feedback:
-      "The new corporate website effectively communicates our brand story and has improved our online presence.",
-    // images: [
-    //   "/Portfolio/pion/website/homepage.webp",
-    //   "/Portfolio/pion/website/about.webp",
-    //   "/Portfolio/pion/website/services.webp",
-    //   "/Portfolio/pion/website/contact.webp"
-    // ],
-    // imageCaptions: [
-    //   "Corporate homepage with hero section",
-    //   "About page showcasing company values and team",
-    //   "Services overview with detailed descriptions",
-    //   "Contact page with inquiry form and location"
-    // ],
-  },
+  The challenge was to design and build a modern corporate platform that:
+  - Clearly positions Pion Global as an AI-driven product company
+  - Scales content without developer dependency
+  - Ranks well on search engines
+  - Supports hiring and inbound inquiries securely
+  `,
+  solution: `
+  I built the entire website from scratch using a calm, versioned delivery approach.
+
+  <b>V1 – Foundation & Launch</b>
+  - UI/UX designed first to establish brand clarity and hierarchy
+  - Core pages launched early for visibility and credibility
+  - Built with <b>Next.js and SSR</b> for performance and SEO
+  - Fully responsive across all screen sizes (mobile to large displays)
+
+  <b>V2 – SEO & Content Scale</b>
+  - Complete SEO implementation (technical + on-page)
+  - Google indexing and sitemap optimization
+  - CMS introduced for managing:
+    - Blogs
+    - Services
+    - Case studies
+    - Brochures
+    - Marketing content
+
+  <b>Careers & Job Management</b>
+  - CMS-driven job listings
+  - Applicant data management system
+  - Structured handling of job applications without manual overhead
+
+  <b>Forms & Security</b>
+  - Contact forms integrated using <b>NodeMailer</b>
+  - Google reCAPTCHA and form validation
+  - Input sanitization and spam protection for secure communication
+  `,
+  result: `
+  The new Pion Global website became a scalable digital backbone for branding, hiring, and inbound growth.
+
+  The platform delivered:
+  - Improved search engine rankings
+  - Faster load times and better performance
+  - Simplified content and job management
+  - Stronger brand credibility as an AI-powered company
+
+  The website continues to evolve smoothly without disrupting live users.
+  `,
+  feedback:
+    "The new website clearly reflects our product vision and AI focus. It’s fast, scalable, and gives us full control over content, hiring, and marketing.",
+  images: [
+    "/Portfolio/pionglobal/cms.webp",
+    "/Portfolio/pionglobal/cms1.webp",
+    "/Portfolio/pionglobal/integration.webp"
+  ],
+  imageCaptions: [
+    "CMS-driven content management for blogs and services",
+    "Admin interface for job and applicant management",
+    "Integrated systems supporting scalable operations"
+  ],
+},
+
 
   /* ======================================================
      4. THE MUZIRIS – ECOMMERCE & BUSINESS PLATFORM
