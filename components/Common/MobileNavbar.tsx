@@ -28,7 +28,7 @@ const MobileNavbar = () => {
             {[
               { href: "/", extra: "", label: "About", icon: <FaRegUser /> },
               { href: "/work", extra: "", label: "Work", icon: <FaBriefcase /> },
-              { href: "/pricing", extra: "", label: "Pricing", icon: <GrMoney /> },
+              // { href: "/pricing", extra: "", label: "Pricing", icon: <GrMoney /> },
               { href: "/blogs", extra: pathname.startsWith("/blogs/"), label: "Blogs", icon: <FaBlogger /> },
               { href: "/contact", extra: "", label: "Contact", icon: <FaAddressBook /> },
             ].map(({ href, label, extra, icon }) => (
