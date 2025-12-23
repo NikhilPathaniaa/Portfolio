@@ -55,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       "Brand-focused visual storytelling",
       "End-to-end product launches",
       "Marketing websites for SaaS startups",
-      "Freelance development for high-growth brands",
+      "Development for high-growth brands",
     ],
     address: {
       "@type": "PostalAddress",
