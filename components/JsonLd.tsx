@@ -26,7 +26,7 @@ export function PersonJsonLd() {
           "@type": "Person",
           name: "Nikhil Pathania",
           url: "https://nikhilx.vercel.app",
-          jobTitle: "Freelance Web Developer, UI/UX Designer & Video Creator",
+          jobTitle: "Web Developer, UI/UX Designer & Video Creator",
           sameAs: [
             "https://github.com/yourusername",
             "https://linkedin.com/in/yourusername",
